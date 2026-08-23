@@ -112,7 +112,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Odpowiedzi', value: '1 otrzymana' },
+      { label: 'Odpowiedzi', value: '1 odpowiedź na 2 pisma' },
     ],
   },
   traffic: {
@@ -170,16 +170,16 @@ export const siteData = {
     ],
   },
   kppIntro:
-    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Tabela oraz późniejsze wyjaśnienie KPP wykazują łącznie 4 osoby ranne i nie wykazują osoby zabitej. Do rozmieszczenia zdarzeń na trasie potrzebne są dokładniejsze lokalizacje poszczególnych wpisów.',
+    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Według tabeli i późniejszego wyjaśnienia KPP są wśród nich 4 osoby ranne; nie wykazano osoby zabitej. Rok wypadku z pieszą przy Przyleśnej wymaga sprawdzenia, dlatego rozkład między 2025 i 2026 r. pokazujemy zgodnie z tabelą KPP, ze wskazaniem tej rozbieżności.',
   kppByYear: [
     { label: '2020', shortLabel: '2020', collisions: 5, accidents: 0 },
     { label: '2021', shortLabel: '2021', collisions: 5, accidents: 1 },
     { label: '2022', shortLabel: '2022', collisions: 5, accidents: 0 },
     { label: '2023', shortLabel: '2023', collisions: 9, accidents: 1 },
     { label: '2024', shortLabel: '2024', collisions: 4, accidents: 0 },
-    { label: '2025', shortLabel: '2025', collisions: 3, accidents: 1 },
+    { label: '2025*', shortLabel: '2025*', collisions: 3, accidents: 1 },
     {
-      label: '2026, do 18 sierpnia',
+      label: '2026*, do 18 sierpnia',
       shortLabel: '2026*',
       collisions: 4,
       accidents: 0,
@@ -192,13 +192,13 @@ export const siteData = {
         'Wpis z rejonu Jana Kazimierza 285 dotyczy pieszego poniżej 18 lat.',
     },
     {
-      category: 'Wypadek · 2025',
+      category: 'Wypadek · rok do sprawdzenia',
       description:
-        'Wpis dotyczy dorosłego pieszego na przejściu przy Przyleśnej. KPP później potwierdziła jedną osobę ranną, u której obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni.',
+        'Tabela KPP wskazuje 25 maja 2025 r., a relacje opublikowane 25 maja 2026 r. opisują zdarzenie o odpowiadającym miejscu i okolicznościach. KPP potwierdziła jedną osobę ranną, u której obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni; rok wpisu jest sprawdzany.',
     },
   ],
   pedestrianCaveat:
-    'W dalszej analizie sprawdzimy miejsce, widoczność, prędkość i sposób przekraczania jezdni.',
+    'Gwiazdka oznacza rozbieżność roku wypadku przy Przyleśnej. Do wyjaśnienia pozostaje, czy w tabeli omyłkowo wpisano 2025 zamiast 2026 r., czy chodzi o dwa odrębne zdarzenia.',
   initiative: [
     {
       date: '2020',
@@ -245,10 +245,20 @@ export const siteData = {
       title: 'KPP doprecyzowała zakres swoich działań',
       status: 'Wyjaśnienie',
       confirmed:
-        'KPP wyjaśniła, że własną analizę i dodatkowe działania podejmie na wniosek zarządcy drogi, a formalną opinię do projektu na DW633 wydaje Komendant Stołeczny Policji. Potwierdziła też jedną osobę ranną w wypadku z 25 maja 2025 r.',
+        'KPP wyjaśniła, że własną analizę i dodatkowe działania podejmie na wniosek zarządcy drogi, a formalną opinię do projektu na DW633 wydaje Komendant Stołeczny Policji. Potwierdziła też znaczenie wpisu „1” jako jednej osoby rannej.',
       pending:
         'Do ustalenia w odpowiedziach MZDW i Marszałka: czy uruchomią analizę bezpieczeństwa i przygotowanie projektu.',
       sourceId: 'kpp-response',
+    },
+    {
+      date: '23.08.2026',
+      title: 'Rok wypadku przy Przyleśnej wymaga sprawdzenia',
+      status: 'Weryfikacja',
+      confirmed:
+        'Tabela KPP wskazuje 25 maja 2025 r. Publikacje z 25 maja 2026 r. opisują zdarzenie o odpowiadającym miejscu, uczestnikach i przebiegu.',
+      pending:
+        'KPP powinna potwierdzić właściwy rok oraz wskazać, czy zdarzenie z 2026 r. zostało ujęte w zestawieniu, jeśli wpis z 2025 r. dotyczy innego wypadku.',
+      sourceId: 'accident-date-check',
     },
   ],
   updates: {
@@ -330,6 +340,11 @@ export const siteData = {
   nextIntro:
     'Najbliższy etap to zebranie brakujących dokumentów, obserwacja ruchu pieszego i porównanie wariantów. Odpowiedzi instytucji sprawdzimy punkt po punkcie.',
   nextSteps: [
+    {
+      title: 'Wyjaśnić rok wypadku przy Przyleśnej',
+      description:
+        'KPP powinna potwierdzić, czy wpis z datą 25 maja dotyczy 2025 czy 2026 r. Do tego czasu zachowujemy sumy z tabeli, ale oznaczamy rozkład roczny jako wymagający sprawdzenia.',
+    },
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
@@ -452,9 +467,27 @@ export const siteData = {
       id: 'kpp-response',
       title: 'Pismo KPP-RD-1930/26 i późniejsze doprecyzowanie',
       owner: 'KPP Legionowo, Wydział Ruchu Drogowego',
-      scope: '38 wpisów SEWiK, skutek wypadku z 25.05.2025 r. i podział ról Policji',
+      scope: '38 wpisów SEWiK, skutek wypadku z udziałem pieszej i podział ról Policji',
       asOf: 'pismo 19.08.2026; treść kolejnego e-maila przekazana 22.08.2026',
-      note: 'Pismo i transkrypcja e-maila są przechowywane niepublicznie ze względu na dane adresata i integralność korespondencji.',
+      note: 'Pismo i transkrypcja e-maila są przechowywane niepublicznie. Rok wypadku przy Przyleśnej wymaga potwierdzenia przez KPP.',
+    },
+    {
+      id: 'accident-date-check',
+      title: 'Relacje o potrąceniu pieszej przy Przyleśnej z 25 maja 2026 r.',
+      owner: 'Gazeta Powiatowa / Miejski Reporter',
+      scope: 'miejsce, uczestnicy i przebieg odpowiadające wpisowi KPP oznaczonemu jako 25.05.2025',
+      asOf: 'publikacje sprawdzone 23.08.2026',
+      note: 'Źródła medialne wskazują rozbieżność wymagającą sprawdzenia, lecz nie zastępują potwierdzenia w SEWiK lub aktach sprawy.',
+      links: [
+        {
+          label: 'Gazeta Powiatowa',
+          url: 'https://gazetapowiatowa.pl/artykul/nieporet-w-stanislawowie-n2316161',
+        },
+        {
+          label: 'Miejski Reporter',
+          url: 'https://miejskireporter.pl/potracenie-na-pasach-piesza-w-szpitalu-policja-zatrzymala-prawo-jazdy-kierowcy/',
+        },
+      ],
     },
   ],
 } satisfies SiteData

@@ -8,11 +8,19 @@ describe('dane publicznej strony DW633', () => {
     expect(kppTotals).toEqual({ collisions: 35, accidents: 3, total: 38 })
   })
 
-  it('uwzględnia późniejsze doprecyzowanie KPP bez podtrzymywania bezwarunkowej zapowiedzi analizy', () => {
+  it('uwzględnia doprecyzowanie KPP i oznacza rozbieżność roku wypadku', () => {
     expect(siteData.asOf).toBe('23 sierpnia 2026 r.')
+    expect(siteData.hero.snapshot).toContainEqual({
+      label: 'Odpowiedzi',
+      value: '1 odpowiedź na 2 pisma',
+    })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
+    expect(siteData.kppIntro).toContain('Rok wypadku z pieszą przy Przyleśnej wymaga sprawdzenia')
     expect(siteData.pedestrianEntries[1].description).toContain(
       'obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni',
+    )
+    expect(siteData.pedestrianEntries[1].category).toBe(
+      'Wypadek · rok do sprawdzenia',
     )
     expect(siteData.initiative).toContainEqual(
       expect.objectContaining({
@@ -21,9 +29,22 @@ describe('dane publicznej strony DW633', () => {
         confirmed: expect.stringContaining('na wniosek zarządcy drogi'),
       }),
     )
-    expect(siteData.nextSteps[1].description).toContain('MZDW i Marszałka')
+    expect(siteData.initiative).toContainEqual(
+      expect.objectContaining({
+        date: '23.08.2026',
+        title: 'Rok wypadku przy Przyleśnej wymaga sprawdzenia',
+        sourceId: 'accident-date-check',
+      }),
+    )
+    expect(
+      siteData.nextSteps.find((step) => step.title === 'Ustalić, kto uruchomi analizę i projekt')
+        ?.description,
+    ).toContain('MZDW i Marszałka')
     expect(JSON.stringify(siteData)).not.toContain(
       'czy KPP wykonała zapowiedzianą analizę i przekazała wnioski',
+    )
+    expect(JSON.stringify(siteData)).not.toContain(
+      'Potwierdziła też jedną osobę ranną w wypadku z 25 maja 2025 r.',
     )
   })
 
