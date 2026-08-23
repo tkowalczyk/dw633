@@ -78,4 +78,4 @@ Dokumentacja Cloudflare: [Git integration](https://developers.cloudflare.com/pag
 - W repozytorium nie umieszczamy podpisanych pism, dowodów e-Doręczeń ani skanów zawierających dane prywatne.
 - Odpowiedź KPP i rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
 
-Stan danych widoczny na stronie: 22 sierpnia 2026 r.
+Stan danych widoczny na stronie: 23 sierpnia 2026 r.

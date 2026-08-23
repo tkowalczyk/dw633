@@ -8,6 +8,25 @@ describe('dane publicznej strony DW633', () => {
     expect(kppTotals).toEqual({ collisions: 35, accidents: 3, total: 38 })
   })
 
+  it('uwzględnia późniejsze doprecyzowanie KPP bez podtrzymywania bezwarunkowej zapowiedzi analizy', () => {
+    expect(siteData.asOf).toBe('23 sierpnia 2026 r.')
+    expect(siteData.kppIntro).toContain('4 osoby ranne')
+    expect(siteData.pedestrianEntries[1].description).toContain(
+      'obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni',
+    )
+    expect(siteData.initiative).toContainEqual(
+      expect.objectContaining({
+        date: 'po 20.08.2026',
+        title: 'KPP doprecyzowała zakres swoich działań',
+        confirmed: expect.stringContaining('na wniosek zarządcy drogi'),
+      }),
+    )
+    expect(siteData.nextSteps[1].description).toContain('MZDW i Marszałka')
+    expect(JSON.stringify(siteData)).not.toContain(
+      'czy KPP wykonała zapowiedzianą analizę i przekazała wnioski',
+    )
+  })
+
   it('zachowuje zakres GPR 2025 i wartość 15 753 pojazdów na dobę', () => {
     expect(siteData.traffic.dailyVehicles).toBe(15_753)
     expect(siteData.traffic.caveat).toContain('km 9,678–15,885')

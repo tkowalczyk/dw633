@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '22 sierpnia 2026 r.',
+  asOf: '23 sierpnia 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -145,7 +145,7 @@ export const siteData = {
         shortLabel: 'Jodłowa',
         kind: 'Otoczenie trasy',
         description:
-          'Przy Jodłowej działa przedszkole Jodłowy Zakątek, a przy Leśnym Zakątku — Strefa Edukacji. Ten fragment włączamy do obserwacji dojść i przekraczania jezdni.',
+          'Przy Jodłowej działa przedszkole Jodłowy Zakątek, a przy Leśnym Zakątku działa Strefa Edukacji. Ten fragment włączamy do obserwacji dojść i przekraczania jezdni.',
         progress: 0.4,
         sourceId: 'education-places',
       },
@@ -170,7 +170,7 @@ export const siteData = {
     ],
   },
   kppIntro:
-    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka. Tabela pokazuje ich rozkład w kolejnych latach; do rozmieszczenia zdarzeń na trasie potrzebne są lokalizacje poszczególnych wpisów.',
+    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Tabela oraz późniejsze wyjaśnienie KPP wykazują łącznie 4 osoby ranne i nie wykazują osoby zabitej. Do rozmieszczenia zdarzeń na trasie potrzebne są dokładniejsze lokalizacje poszczególnych wpisów.',
   kppByYear: [
     { label: '2020', shortLabel: '2020', collisions: 5, accidents: 0 },
     { label: '2021', shortLabel: '2021', collisions: 5, accidents: 1 },
@@ -194,7 +194,7 @@ export const siteData = {
     {
       category: 'Wypadek · 2025',
       description:
-        'Wpis dotyczy dorosłego pieszego na przejściu przy Przyleśnej. Dokładna kwalifikacja skutku wymaga wyjaśnienia zapisu „1” w łącznej kolumnie rannych i zabitych.',
+        'Wpis dotyczy dorosłego pieszego na przejściu przy Przyleśnej. KPP później potwierdziła jedną osobę ranną, u której obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni.',
     },
   ],
   pedestrianCaveat:
@@ -235,9 +235,19 @@ export const siteData = {
       title: 'Pierwsza odpowiedź: KPP Legionowo',
       status: 'Odpowiedź częściowa',
       confirmed:
-        'KPP przekazała tabelę SEWiK, opisała regularne patrole i pomiary stacjonarne oraz zapowiedziała analizę zasadności zmiany.',
+        'KPP przekazała tabelę SEWiK, opisała regularne patrole i pomiary stacjonarne oraz zapowiedziała analizę zasadności proponowanej zmiany.',
       pending:
-        'Do sprawdzenia: wyniki pomiarów, ocena konkretnego miejsca i przekazanie wniosków zarządcy drogi.',
+        'Późniejszy e-mail doprecyzował zakres tej zapowiedzi.',
+      sourceId: 'kpp-response',
+    },
+    {
+      date: 'po 20.08.2026',
+      title: 'KPP doprecyzowała zakres swoich działań',
+      status: 'Wyjaśnienie',
+      confirmed:
+        'KPP wyjaśniła, że własną analizę i dodatkowe działania podejmie na wniosek zarządcy drogi, a formalną opinię do projektu na DW633 wydaje Komendant Stołeczny Policji. Potwierdziła też jedną osobę ranną w wypadku z 25 maja 2025 r.',
+      pending:
+        'Do ustalenia w odpowiedziach MZDW i Marszałka: czy uruchomią analizę bezpieczeństwa i przygotowanie projektu.',
       sourceId: 'kpp-response',
     },
   ],
@@ -260,7 +270,7 @@ export const siteData = {
       {
         title: 'Pierwsza odpowiedź KPP Legionowo',
         description:
-          'Dane z SEWiK, zapowiedź dalszej analizy i termin kolejnej kontroli sprawy.',
+          'Dane z SEWiK i pierwsza zapowiedź dalszej analizy. KPP później doprecyzowała, że własne działania podejmie na wniosek zarządcy drogi.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2296400137883964/',
       },
     ],
@@ -326,9 +336,9 @@ export const siteData = {
         '1 września 2026 r. przypada robocza kontrola pism do MZDW, Marszałka i Gminy. Jeśli instytucja prawidłowo przedłuży termin, wpiszemy nową datę kontroli.',
     },
     {
-      title: 'Sprawdzić wnioski o działania i zapowiedź KPP',
+      title: 'Ustalić, kto uruchomi analizę i projekt',
       description:
-        '18 września 2026 r. trzeba sprawdzić stan wniosków KPA oraz to, czy KPP wykonała zapowiedzianą analizę i przekazała wnioski zarządcy drogi.',
+        '18 września 2026 r. trzeba sprawdzić stan wniosków do MZDW i Marszałka oraz ustalić, czy uruchomią analizę, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -440,11 +450,11 @@ export const siteData = {
     },
     {
       id: 'kpp-response',
-      title: 'Pismo KPP-RD-1930/26',
+      title: 'Pismo KPP-RD-1930/26 i późniejsze doprecyzowanie',
       owner: 'KPP Legionowo, Wydział Ruchu Drogowego',
-      scope: '38 wpisów SEWiK z okresu 1.01.2020–18.08.2026',
-      asOf: '19.08.2026',
-      note: 'Oryginał jest przechowywany niepublicznie ze względu na dane adresata.',
+      scope: '38 wpisów SEWiK, skutek wypadku z 25.05.2025 r. i podział ról Policji',
+      asOf: 'pismo 19.08.2026; treść kolejnego e-maila przekazana 22.08.2026',
+      note: 'Pismo i transkrypcja e-maila są przechowywane niepublicznie ze względu na dane adresata i integralność korespondencji.',
     },
   ],
 } satisfies SiteData
