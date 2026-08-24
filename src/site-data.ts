@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '23 sierpnia 2026 r.',
+  asOf: '24 sierpnia 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -170,19 +170,19 @@ export const siteData = {
     ],
   },
   kppIntro:
-    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Według tabeli i późniejszego wyjaśnienia KPP są wśród nich 4 osoby ranne; nie wykazano osoby zabitej. Rok wypadku z pieszą przy Przyleśnej wymaga sprawdzenia, dlatego rozkład między 2025 i 2026 r. pokazujemy zgodnie z tabelą KPP, ze wskazaniem tej rozbieżności.',
+    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Według tabeli i późniejszych wyjaśnień KPP są wśród nich 4 osoby ranne; nie wykazano osoby zabitej. Policja potwierdziła, że wypadek z pieszą przy Przyleśnej miał miejsce 25 maja 2026 r., a rok 2025 w pierwotnej tabeli był omyłką pisarską.',
   kppByYear: [
     { label: '2020', shortLabel: '2020', collisions: 5, accidents: 0 },
     { label: '2021', shortLabel: '2021', collisions: 5, accidents: 1 },
     { label: '2022', shortLabel: '2022', collisions: 5, accidents: 0 },
     { label: '2023', shortLabel: '2023', collisions: 9, accidents: 1 },
     { label: '2024', shortLabel: '2024', collisions: 4, accidents: 0 },
-    { label: '2025*', shortLabel: '2025*', collisions: 3, accidents: 1 },
+    { label: '2025', shortLabel: '2025', collisions: 3, accidents: 0 },
     {
-      label: '2026*, do 18 sierpnia',
-      shortLabel: '2026*',
+      label: '2026, do 18 sierpnia',
+      shortLabel: '2026',
       collisions: 4,
-      accidents: 0,
+      accidents: 1,
     },
   ],
   pedestrianEntries: [
@@ -192,13 +192,13 @@ export const siteData = {
         'Wpis z rejonu Jana Kazimierza 285 dotyczy pieszego poniżej 18 lat.',
     },
     {
-      category: 'Wypadek · rok do sprawdzenia',
+      category: 'Wypadek · 2026',
       description:
-        'Tabela KPP wskazuje 25 maja 2025 r., a relacje opublikowane 25 maja 2026 r. opisują zdarzenie o odpowiadającym miejscu i okolicznościach. KPP potwierdziła jedną osobę ranną, u której obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni; rok wpisu jest sprawdzany.',
+        'Wypadek przy przejściu w rejonie Przyleśnej miał miejsce 25 maja 2026 r. KPP potwierdziła jedną osobę ranną, u której obrażenia lub rozstrój zdrowia trwały powyżej siedmiu dni.',
     },
   ],
   pedestrianCaveat:
-    'Gwiazdka oznacza rozbieżność roku wypadku przy Przyleśnej. Do wyjaśnienia pozostaje, czy w tabeli omyłkowo wpisano 2025 zamiast 2026 r., czy chodzi o dwa odrębne zdarzenia.',
+    'KPP potwierdziła, że rok 2025 w pierwotnej tabeli był omyłką pisarską. Korekta przenosi jeden wypadek do 2026 r. bez zmiany łącznej liczby zdarzeń, wypadków ani osób rannych.',
   initiative: [
     {
       date: '2020',
@@ -251,14 +251,14 @@ export const siteData = {
       sourceId: 'kpp-response',
     },
     {
-      date: '23.08.2026',
-      title: 'Rok wypadku przy Przyleśnej wymaga sprawdzenia',
-      status: 'Weryfikacja',
+      date: '24.08.2026',
+      title: 'KPP potwierdziła rok wypadku',
+      status: 'Wyjaśnione',
       confirmed:
-        'Tabela KPP wskazuje 25 maja 2025 r. Publikacje z 25 maja 2026 r. opisują zdarzenie o odpowiadającym miejscu, uczestnikach i przebiegu.',
+        'Prawidłowa data to 25 maja 2026 r. KPP potwierdziła, że rok 2025 w pierwotnej tabeli był omyłką pisarską.',
       pending:
-        'KPP powinna potwierdzić właściwy rok oraz wskazać, czy zdarzenie z 2026 r. zostało ujęte w zestawieniu, jeśli wpis z 2025 r. dotyczy innego wypadku.',
-      sourceId: 'accident-date-check',
+        'Korekta nie zmienia sum. Dalszy krok zależy od odpowiedzi MZDW i Marszałka w sprawie uruchomienia analizy oraz projektu.',
+      sourceId: 'kpp-response',
     },
   ],
   updates: {
@@ -340,11 +340,6 @@ export const siteData = {
   nextIntro:
     'Najbliższy etap to zebranie brakujących dokumentów, obserwacja ruchu pieszego i porównanie wariantów. Odpowiedzi instytucji sprawdzimy punkt po punkcie.',
   nextSteps: [
-    {
-      title: 'Wyjaśnić rok wypadku przy Przyleśnej',
-      description:
-        'KPP powinna potwierdzić, czy wpis z datą 25 maja dotyczy 2025 czy 2026 r. Do tego czasu zachowujemy sumy z tabeli, ale oznaczamy rozkład roczny jako wymagający sprawdzenia.',
-    },
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
@@ -465,19 +460,19 @@ export const siteData = {
     },
     {
       id: 'kpp-response',
-      title: 'Pismo KPP-RD-1930/26 i późniejsze doprecyzowanie',
+      title: 'Pismo KPP-RD-1930/26 i późniejsze wyjaśnienia',
       owner: 'KPP Legionowo, Wydział Ruchu Drogowego',
-      scope: '38 wpisów SEWiK, skutek wypadku z udziałem pieszej i podział ról Policji',
-      asOf: 'pismo 19.08.2026; treść kolejnego e-maila przekazana 22.08.2026',
-      note: 'Pismo i transkrypcja e-maila są przechowywane niepublicznie. Rok wypadku przy Przyleśnej wymaga potwierdzenia przez KPP.',
+      scope: '38 wpisów SEWiK, skutek i data wypadku z udziałem pieszej oraz podział ról Policji',
+      asOf: 'pismo 19.08.2026; treści kolejnych e-maili przekazane 22 i 24.08.2026',
+      note: 'Pismo i transkrypcje e-maili są przechowywane niepublicznie. KPP potwierdziła 25.05.2026 r. i omyłkę roku w pierwotnej tabeli.',
     },
     {
       id: 'accident-date-check',
       title: 'Relacje o potrąceniu pieszej przy Przyleśnej z 25 maja 2026 r.',
       owner: 'Gazeta Powiatowa / Miejski Reporter',
-      scope: 'miejsce, uczestnicy i przebieg odpowiadające wpisowi KPP oznaczonemu jako 25.05.2025',
+      scope: 'miejsce, uczestnicy i przebieg odpowiadające skorygowanemu wpisowi KPP z 25.05.2026',
       asOf: 'publikacje sprawdzone 23.08.2026',
-      note: 'Źródła medialne wskazują rozbieżność wymagającą sprawdzenia, lecz nie zastępują potwierdzenia w SEWiK lub aktach sprawy.',
+      note: 'Publikacje pozwoliły wykryć rozbieżność. KPP następnie potwierdziła prawidłowy rok 2026.',
       links: [
         {
           label: 'Gazeta Powiatowa',
