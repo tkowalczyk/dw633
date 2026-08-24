@@ -388,10 +388,18 @@ app.innerHTML = `
               <filter id="road-shadow" x="-30%" y="-20%" width="160%" height="140%">
                 <feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity="0.13" />
               </filter>
+              <g id="route-car-shape">
+                <rect class="ambient-car__body" x="-15" y="-8" width="30" height="16" rx="6" />
+                <path class="ambient-car__window" d="M -8 -5.5 L -3 -5.5 L -3 5.5 L -8 5.5 L -11 3.5 L -11 -3.5 Z" />
+                <path class="ambient-car__window" d="M 3 -5.5 L 8 -5.5 L 11 -3.5 L 11 3.5 L 8 5.5 L 3 5.5 Z" />
+                <path class="ambient-car__roofline" d="M 0 -5.5 V 5.5" />
+                <circle class="ambient-car__light" cx="13" cy="-4" r="1.1" />
+                <circle class="ambient-car__light" cx="13" cy="4" r="1.1" />
+              </g>
             </defs>
             <path id="route-line" class="route-road" d="M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70" pathLength="1" />
-            <path class="route-centerline" d="M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70" pathLength="1" />
             <path class="route-progress" d="M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70" pathLength="1" />
+            <path class="route-centerline" d="M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70" pathLength="1" />
             <g class="route-traffic-stat route-traffic-stat--daily" aria-hidden="true" transform="translate(24 132)">
               <rect width="168" height="112" rx="18" />
               <text class="route-traffic-stat__label" x="16" y="25">GPR 2025</text>
@@ -409,10 +417,10 @@ app.innerHTML = `
               <circle class="route-traveler__halo" r="22" />
               <circle class="route-traveler__core" r="8" />
             </g>
-            <g class="ambient-car ambient-car--north-one" aria-hidden="true"><rect x="-8" y="-15" width="16" height="30" rx="6" /></g>
-            <g class="ambient-car ambient-car--south-one" aria-hidden="true"><rect x="-8" y="-15" width="16" height="30" rx="6" /></g>
-            <g class="ambient-car ambient-car--north-two" aria-hidden="true"><rect x="-8" y="-15" width="16" height="30" rx="6" /></g>
-            <g class="ambient-car ambient-car--south-two" aria-hidden="true"><rect x="-8" y="-15" width="16" height="30" rx="6" /></g>
+            <g class="ambient-car ambient-car--north-one" aria-hidden="true"><use href="#route-car-shape" /></g>
+            <g class="ambient-car ambient-car--south-one" aria-hidden="true"><use href="#route-car-shape" /></g>
+            <g class="ambient-car ambient-car--north-two" aria-hidden="true"><use href="#route-car-shape" /></g>
+            <g class="ambient-car ambient-car--south-two" aria-hidden="true"><use href="#route-car-shape" /></g>
           </svg>
           <div class="route-visual__footer">
             <span>Południe · Przyleśna</span>
