@@ -9,10 +9,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('24 sierpnia 2026 r.')
+    expect(siteData.asOf).toBe('25 sierpnia 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Odpowiedzi',
-      value: '1 odpowiedź na 2 pisma',
+      value: '2 pisma z instytucji',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -58,6 +58,24 @@ describe('dane publicznej strony DW633', () => {
     )
     expect(JSON.stringify(siteData)).not.toContain('rok do sprawdzenia')
     expect(JSON.stringify(siteData)).not.toContain('Oczekiwanie na odpowiedź')
+  })
+
+  it('odnotowuje nowy termin UMWM bez przedstawiania go jako odpowiedzi merytorycznej', () => {
+    expect(siteData.initiative).toContainEqual(
+      expect.objectContaining({
+        date: '24.08.2026',
+        title: 'UMWM wyznaczył nowy termin odpowiedzi',
+        confirmed: expect.stringContaining('18 września 2026 r.'),
+        pending: expect.stringContaining('nie zawiera jeszcze dokumentów'),
+        sourceId: 'umwm-extension',
+      }),
+    )
+    expect(
+      siteData.nextSteps.find(
+        (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
+      )?.description,
+    ).toContain('MZDW i Gminy')
+    expect(JSON.stringify(siteData)).toContain('odpowiedź UMWM na wniosek o dokumenty')
   })
 
   it('zachowuje zakres GPR 2025 i wartość 15 753 pojazdów na dobę', () => {
@@ -171,12 +189,12 @@ describe('dane publicznej strony DW633', () => {
     )
   })
 
-  it('nie wystawia publicznego URL dla prywatnej odpowiedzi KPP i rejestru doręczeń', () => {
+  it('nie wystawia publicznego URL dla prywatnych odpowiedzi i rejestru doręczeń', () => {
     const privateSources = siteData.sources.filter((source) =>
-      ['kpp-response', 'delivery-register'].includes(source.id),
+      ['kpp-response', 'umwm-extension', 'delivery-register'].includes(source.id),
     )
 
-    expect(privateSources).toHaveLength(2)
+    expect(privateSources).toHaveLength(3)
     expect(
       privateSources.every(
         (source) => source.url === undefined && source.links === undefined,

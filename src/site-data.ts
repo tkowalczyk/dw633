@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '24 sierpnia 2026 r.',
+  asOf: '25 sierpnia 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -112,7 +112,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Odpowiedzi', value: '1 odpowiedź na 2 pisma' },
+      { label: 'Odpowiedzi', value: '2 pisma z instytucji' },
     ],
   },
   traffic: {
@@ -260,6 +260,16 @@ export const siteData = {
         'Korekta nie zmienia sum. Dalszy krok zależy od odpowiedzi MZDW i Marszałka w sprawie uruchomienia analizy oraz projektu.',
       sourceId: 'kpp-response',
     },
+    {
+      date: '24.08.2026',
+      title: 'UMWM wyznaczył nowy termin odpowiedzi',
+      status: 'Nowy termin',
+      confirmed:
+        'Urząd wyznaczył 18 września 2026 r. jako nowy termin rozpatrzenia wniosku o dokumenty organizacji ruchu na DW633 i pełną dokumentację projektu BOM nr 266.',
+      pending:
+        'Pismo nie zawiera jeszcze dokumentów ani odpowiedzi na poszczególne punkty wniosku.',
+      sourceId: 'umwm-extension',
+    },
   ],
   updates: {
     intro:
@@ -343,12 +353,12 @@ export const siteData = {
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        '1 września 2026 r. przypada robocza kontrola pism do MZDW, Marszałka i Gminy. Jeśli instytucja prawidłowo przedłuży termin, wpiszemy nową datę kontroli.',
+        '1 września 2026 r. przypada robocza kontrola pism do MZDW i Gminy. Dla wniosku do Marszałka o organizację ruchu i BOM nr 266 urząd wyznaczył nowy termin: 18 września 2026 r.',
     },
     {
       title: 'Ustalić, kto uruchomi analizę i projekt',
       description:
-        '18 września 2026 r. trzeba sprawdzić stan wniosków do MZDW i Marszałka oraz ustalić, czy uruchomią analizę, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
+        '18 września 2026 r. trzeba oddzielnie sprawdzić wnioski o działania do MZDW i Marszałka oraz odpowiedź UMWM na wniosek o dokumenty. Wtedy będzie można ustalić, czy ruszą analiza, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -465,6 +475,14 @@ export const siteData = {
       scope: '38 wpisów SEWiK, skutek i data wypadku z udziałem pieszej oraz podział ról Policji',
       asOf: 'pismo 19.08.2026; treści kolejnych e-maili przekazane 22 i 24.08.2026',
       note: 'Pismo i transkrypcje e-maili są przechowywane niepublicznie. KPP potwierdziła 25.05.2026 r. i omyłkę roku w pierwotnej tabeli.',
+    },
+    {
+      id: 'umwm-extension',
+      title: 'Pismo OR-OP-I.1431.113.2026.JG',
+      owner: 'Urząd Marszałkowski Województwa Mazowieckiego',
+      scope: 'nowy termin dla wniosku o organizację ruchu na DW633 i dokumentację projektu BOM nr 266',
+      asOf: 'pismo z 24.08.2026',
+      note: 'Urząd wyznaczył termin 18.09.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
     },
     {
       id: 'accident-date-check',
