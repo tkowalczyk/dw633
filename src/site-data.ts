@@ -293,6 +293,12 @@ export const siteData = {
           'Dane z SEWiK i pierwsza zapowiedź dalszej analizy. KPP później doprecyzowała, że własne działania podejmie na wniosek zarządcy drogi.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2296400137883964/',
       },
+      {
+        title: 'Korekta KPP i nowy termin UMWM',
+        description:
+          'KPP potwierdziła prawidłowy rok wypadku, a UMWM wyznaczył 18 września jako nowy termin odpowiedzi na wniosek o dokumenty.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2299661007557877/',
+      },
     ],
   },
   knowledge: {
