@@ -76,6 +76,6 @@ Dokumentacja Cloudflare: [Git integration](https://developers.cloudflare.com/pag
 
 - Schemat odcinka służy orientacji; dystans około 1 km pochodzi z pomocniczego pomiaru OSM.
 - W repozytorium nie umieszczamy podpisanych pism, dowodów e-Doręczeń ani skanów zawierających dane prywatne.
-- Odpowiedzi KPP i UMWM oraz rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
+- Odpowiedzi KPP, UMWM i Gminy oraz rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
 
-Stan danych widoczny na stronie: 25 sierpnia 2026 r.
+Stan danych widoczny na stronie: 28 sierpnia 2026 r.

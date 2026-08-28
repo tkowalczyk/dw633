@@ -9,10 +9,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('25 sierpnia 2026 r.')
+    expect(siteData.asOf).toBe('28 sierpnia 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
-      label: 'Odpowiedzi',
-      value: '2 pisma z instytucji',
+      label: 'Pisma z instytucji',
+      value: '3 otrzymane',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -52,7 +52,7 @@ describe('dane publicznej strony DW633', () => {
     expect(
       siteData.nextSteps.find((step) => step.title === 'Ustalić, kto uruchomi analizę i projekt')
         ?.description,
-    ).toContain('MZDW i Marszałka')
+    ).toContain('MZDW, Marszałka i Gminy')
     expect(JSON.stringify(siteData)).not.toContain(
       'czy KPP wykonała zapowiedzianą analizę i przekazała wnioski',
     )
@@ -74,8 +74,30 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
       )?.description,
-    ).toContain('MZDW i Gminy')
+    ).toContain('18 września')
     expect(JSON.stringify(siteData)).toContain('odpowiedź UMWM na wniosek o dokumenty')
+  })
+
+  it('odnotowuje termin Gminy tylko dla wniosku o dokumenty', () => {
+    expect(siteData.initiative).toContainEqual(
+      expect.objectContaining({
+        date: '25.08.2026',
+        title: 'Gmina wyznaczyła nowy termin odpowiedzi',
+        confirmed: expect.stringContaining('12 października 2026 r.'),
+        pending: expect.stringContaining('osobnego wniosku o wsparcie działań'),
+        sourceId: 'gmina-extension',
+      }),
+    )
+    expect(
+      siteData.nextSteps.find(
+        (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
+      )?.description,
+    ).toContain('Gmina wyznaczyła 12 października')
+    expect(
+      siteData.nextSteps.find(
+        (step) => step.title === 'Ustalić, kto uruchomi analizę i projekt',
+      )?.description,
+    ).toContain('MZDW, Marszałka i Gminy')
   })
 
   it('zachowuje zakres GPR 2025 i wartość 15 753 pojazdów na dobę', () => {
@@ -192,10 +214,12 @@ describe('dane publicznej strony DW633', () => {
 
   it('nie wystawia publicznego URL dla prywatnych odpowiedzi i rejestru doręczeń', () => {
     const privateSources = siteData.sources.filter((source) =>
-      ['kpp-response', 'umwm-extension', 'delivery-register'].includes(source.id),
+      ['kpp-response', 'umwm-extension', 'gmina-extension', 'delivery-register'].includes(
+        source.id,
+      ),
     )
 
-    expect(privateSources).toHaveLength(3)
+    expect(privateSources).toHaveLength(4)
     expect(
       privateSources.every(
         (source) => source.url === undefined && source.links === undefined,

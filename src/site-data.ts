@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '25 sierpnia 2026 r.',
+  asOf: '28 sierpnia 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -112,7 +112,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Odpowiedzi', value: '2 pisma z instytucji' },
+      { label: 'Pisma z instytucji', value: '3 otrzymane' },
     ],
   },
   traffic: {
@@ -270,6 +270,16 @@ export const siteData = {
         'Pismo nie zawiera jeszcze dokumentów ani odpowiedzi na poszczególne punkty wniosku.',
       sourceId: 'umwm-extension',
     },
+    {
+      date: '25.08.2026',
+      title: 'Gmina wyznaczyła nowy termin odpowiedzi',
+      status: 'Nowy termin',
+      confirmed:
+        'Gmina wyznaczyła 12 października 2026 r. jako nowy termin odpowiedzi na wniosek o dokumenty dotyczące działań przy DW633.',
+      pending:
+        'Pismo nie zawiera jeszcze dokumentów i nie dotyczy osobnego wniosku o wsparcie działań, złożonego na podstawie art. 241 KPA.',
+      sourceId: 'gmina-extension',
+    },
   ],
   updates: {
     intro:
@@ -359,12 +369,12 @@ export const siteData = {
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        '1 września 2026 r. przypada robocza kontrola pism do MZDW i Gminy. Dla wniosku do Marszałka o organizację ruchu i BOM nr 266 urząd wyznaczył nowy termin: 18 września 2026 r.',
+        '1 września 2026 r. przypada robocza kontrola wniosku do MZDW. UMWM wyznaczył 18 września dla wniosku o dokumenty organizacji ruchu i projektu BOM nr 266. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
     },
     {
       title: 'Ustalić, kto uruchomi analizę i projekt',
       description:
-        '18 września 2026 r. trzeba oddzielnie sprawdzić wnioski o działania do MZDW i Marszałka oraz odpowiedź UMWM na wniosek o dokumenty. Wtedy będzie można ustalić, czy ruszą analiza, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
+        '18 września 2026 r. trzeba oddzielnie sprawdzić wnioski o działania do MZDW, Marszałka i Gminy oraz odpowiedź UMWM na wniosek o dokumenty. Wtedy będzie można ustalić, czy ruszą analiza, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -486,9 +496,17 @@ export const siteData = {
       id: 'umwm-extension',
       title: 'Pismo OR-OP-I.1431.113.2026.JG',
       owner: 'Urząd Marszałkowski Województwa Mazowieckiego',
-      scope: 'nowy termin dla wniosku o organizację ruchu na DW633 i dokumentację projektu BOM nr 266',
+      scope: 'nowy termin dla wniosku o dokumenty organizacji ruchu na DW633 i projektu BOM nr 266',
       asOf: 'pismo z 24.08.2026',
       note: 'Urząd wyznaczył termin 18.09.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+    },
+    {
+      id: 'gmina-extension',
+      title: 'Pismo PI.1431.169.2026',
+      owner: 'Wójt Gminy Nieporęt',
+      scope: 'nowy termin dla wniosku o dokumenty dotyczące działań Gminy przy DW633',
+      asOf: 'pismo z 25.08.2026',
+      note: 'Gmina wyznaczyła termin 12.10.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
     },
     {
       id: 'accident-date-check',
