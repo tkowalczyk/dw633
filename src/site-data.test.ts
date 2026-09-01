@@ -9,10 +9,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('28 sierpnia 2026 r.')
+    expect(siteData.asOf).toBe('1 września 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '3 otrzymane',
+      value: '4 otrzymane',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -98,6 +98,23 @@ describe('dane publicznej strony DW633', () => {
         (step) => step.title === 'Ustalić, kto uruchomi analizę i projekt',
       )?.description,
     ).toContain('MZDW, Marszałka i Gminy')
+  })
+
+  it('odnotowuje termin MZDW tylko dla wniosku o dokumenty', () => {
+    expect(siteData.initiative).toContainEqual(
+      expect.objectContaining({
+        date: '31.08.2026',
+        title: 'MZDW wyznaczył nowy termin odpowiedzi',
+        confirmed: expect.stringContaining('25 września 2026 r.'),
+        pending: expect.stringContaining('osobnego wniosku o oględziny'),
+        sourceId: 'mzdw-extension',
+      }),
+    )
+    expect(
+      siteData.nextSteps.find(
+        (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
+      )?.description,
+    ).toContain('MZDW wyznaczył 25 września')
   })
 
   it('zachowuje zakres GPR 2025 i wartość 15 753 pojazdów na dobę', () => {
@@ -215,12 +232,16 @@ describe('dane publicznej strony DW633', () => {
 
   it('nie wystawia publicznego URL dla prywatnych odpowiedzi i rejestru doręczeń', () => {
     const privateSources = siteData.sources.filter((source) =>
-      ['kpp-response', 'umwm-extension', 'gmina-extension', 'delivery-register'].includes(
-        source.id,
-      ),
+      [
+        'kpp-response',
+        'umwm-extension',
+        'gmina-extension',
+        'mzdw-extension',
+        'delivery-register',
+      ].includes(source.id),
     )
 
-    expect(privateSources).toHaveLength(4)
+    expect(privateSources).toHaveLength(5)
     expect(
       privateSources.every(
         (source) => source.url === undefined && source.links === undefined,

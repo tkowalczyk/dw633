@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '28 sierpnia 2026 r.',
+  asOf: '1 września 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -112,7 +112,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '3 otrzymane' },
+      { label: 'Pisma z instytucji', value: '4 otrzymane' },
     ],
   },
   traffic: {
@@ -280,6 +280,16 @@ export const siteData = {
         'Pismo nie zawiera jeszcze dokumentów i nie dotyczy osobnego wniosku o wsparcie działań, złożonego na podstawie art. 241 KPA.',
       sourceId: 'gmina-extension',
     },
+    {
+      date: '31.08.2026',
+      title: 'MZDW wyznaczył nowy termin odpowiedzi',
+      status: 'Nowy termin',
+      confirmed:
+        'MZDW wyznaczył 25 września 2026 r. jako termin udostępnienia informacji i dokumentów dotyczących badanego odcinka DW633.',
+      pending:
+        'Pismo nie zawiera jeszcze dokumentów i nie dotyczy osobnego wniosku o oględziny, analizę bezpieczeństwa ruchu i warianty.',
+      sourceId: 'mzdw-extension',
+    },
   ],
   updates: {
     intro:
@@ -375,7 +385,7 @@ export const siteData = {
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        '1 września 2026 r. przypada robocza kontrola wniosku do MZDW. UMWM wyznaczył 18 września dla wniosku o dokumenty organizacji ruchu i projektu BOM nr 266. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
+        'UMWM wyznaczył 18 września dla wniosku o dokumenty organizacji ruchu i projektu BOM nr 266. MZDW wyznaczył 25 września dla wniosku o dokumenty dotyczące badanego odcinka. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
     },
     {
       title: 'Ustalić, kto uruchomi analizę i projekt',
@@ -513,6 +523,14 @@ export const siteData = {
       scope: 'nowy termin dla wniosku o dokumenty dotyczące działań Gminy przy DW633',
       asOf: 'pismo z 25.08.2026',
       note: 'Gmina wyznaczyła termin 12.10.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+    },
+    {
+      id: 'mzdw-extension',
+      title: 'Pismo W-5.0143.230.2026.1.AW',
+      owner: 'Mazowiecki Zarząd Dróg Wojewódzkich',
+      scope: 'nowy termin dla wniosku o dokumenty dotyczące badanego odcinka DW633',
+      asOf: 'pismo z 31.08.2026',
+      note: 'MZDW wyznaczył termin 25.09.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
     },
     {
       id: 'accident-date-check',
