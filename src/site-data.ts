@@ -95,7 +95,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '1 września 2026 r.',
+  asOf: '2 września 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
@@ -324,6 +324,12 @@ export const siteData = {
         description:
           'Gmina wyznaczyła 12 października jako termin odpowiedzi na wniosek o dokumenty. Zawiadomienia Gminy i UMWM nie obejmują osobnych wniosków o działania.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2302641127259865/',
+      },
+      {
+        title: 'Terminy odpowiedzi i role instytucji',
+        description:
+          'Pełny harmonogram pierwszej rundy oraz wyjaśnienie, dlaczego potrzebne są odpowiedzi KPP, MZDW, Marszałka i Gminy.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2307088346815143/',
       },
     ],
   },
