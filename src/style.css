@@ -16,6 +16,9 @@
   --shadow: 0 24px 70px rgb(19 45 42 / 10%);
   --radius: 24px;
   --content: 1180px;
+  --section-space: clamp(3rem, min(5vw, 9vh), 5rem);
+  --hero-space: clamp(3.5rem, min(6vw, 10vh), 6rem);
+  --heading-space: clamp(2rem, min(3vw, 5vh), 3rem);
   color: var(--ink);
   background: var(--paper);
   font-family:
@@ -180,7 +183,7 @@ h3 {
 .section {
   width: min(var(--content), calc(100% - 2rem));
   margin-inline: auto;
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: var(--section-space);
   scroll-margin-top: 5rem;
 }
 
@@ -190,7 +193,7 @@ h3 {
 
 .section-heading {
   max-width: 800px;
-  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: var(--heading-space);
 }
 
 .section-heading > p:not(.eyebrow) {
@@ -227,11 +230,10 @@ h3 {
 
 .hero {
   display: grid;
-  min-height: calc(100svh - 74px);
   grid-template-columns: minmax(0, 1.4fr) minmax(340px, 0.75fr);
   align-items: center;
   gap: clamp(3rem, 8vw, 7rem);
-  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-block: var(--hero-space);
 }
 
 .hero__copy {
@@ -418,7 +420,7 @@ h3 {
 }
 
 .traffic {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: var(--section-space);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -784,7 +786,7 @@ h3 {
 }
 
 .route {
-  padding-bottom: clamp(4rem, 8vw, 7rem);
+  padding-bottom: var(--section-space);
 }
 
 .section-heading--route {
