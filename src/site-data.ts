@@ -98,7 +98,7 @@ export const siteData = {
   asOf: '2 września 2026 r.',
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
-    title: 'Sprawdzamy bezpieczeństwo pieszych na DW633',
+    title: 'DW633 przyjazna pieszym',
     lead: {
       beforeLocation: 'Między przejściem i przystankami ',
       locationLabel: '„Przyleśna”',

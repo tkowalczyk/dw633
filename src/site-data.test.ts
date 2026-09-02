@@ -4,6 +4,10 @@ import { kppTotals, siteData, trafficScale } from './site-data'
 import mainSource from './main.ts?raw'
 
 describe('dane publicznej strony DW633', () => {
+  it('używa wybranego nagłówka strony', () => {
+    expect(siteData.hero.title).toBe('DW633 przyjazna pieszym')
+  })
+
   it('sumuje roczne dane KPP do 35 kolizji, 3 wypadków i 38 zdarzeń', () => {
     expect(kppTotals).toEqual({ collisions: 35, accidents: 3, total: 38 })
   })
