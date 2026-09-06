@@ -36,7 +36,7 @@ pnpm check
 
 Testy korzystają z polecenia `agent-browser` dostępnego w PATH. Nie instalują osobnego narzędzia do sterowania przeglądarką.
 
-Kontrola obejmuje lint, testy Vitest, TypeScript, produkcyjny build oraz testy przeglądarkowe. Skrypt uruchamia lokalny podgląd Cloudflare Pages na porcie 8788, testy przez zainstalowany `agent-browser` i zamyka obie sesje po kontroli. Zrzuty trafiają do `test-results/agent-browser/`. CDP własnej sesji służy wyłącznie do wyłączenia JS, opóźnienia skryptu i pomiarów wydajności. Wynik buildu znajduje się w `dist/`. Podgląd gotowego buildu:
+Kontrola obejmuje lint, testy Vitest, TypeScript, produkcyjny build oraz testy przeglądarkowe. Skrypt uruchamia lokalny podgląd Cloudflare Pages na porcie 8788, testy przez zainstalowany `agent-browser` i zamyka sesje po kontroli. Zrzuty trafiają do `test-results/agent-browser/`. CDP własnej sesji służy wyłącznie do wyłączenia JS, opóźnienia skryptu i pomiarów wydajności. Wynik buildu znajduje się w `dist/`. Podgląd gotowego buildu:
 
 ```bash
 pnpm exec wrangler pages dev dist
@@ -50,7 +50,9 @@ Treści, liczby, oś czasu, punkty schematu, źródła i lista wpisów z Faceboo
 
 Pozostałe pliki mają rozdzielone role:
 
-- `src/render-home.ts`: pełna treść HTML i położenie punktów schematu obliczane podczas buildu;
+- `src/render-home.ts`: HTML głównej z trzema najnowszymi wydarzeniami i położeniem punktów schematu;
+- `src/render-walk.ts`: podstrona chodnika z pełną historią, stanem wniosków i aktualizacjami;
+- `src/render-actions.ts` i `src/render-navigation.ts`: wspólne renderowanie wydarzeń, źródeł i nawigacji;
 - `vite.config.ts`: wstawianie treści do dokumentu podczas budowania i pracy serwera lokalnego;
 - `src/main.ts`: interakcje na istniejącym dokumencie;
 - `src/style.css`: układ, style responsywne i wariant `prefers-reduced-motion`;
@@ -64,6 +66,8 @@ Po zmianie danych lub metadanych zawsze uruchom `pnpm check`.
 Treść strony znajduje się w pierwszej odpowiedzi HTML. Bez JS opisy odcinka są widoczne kolejno pod schematem. Przy włączonych interakcjach zachowana jest prezentacja sterowana przewijaniem. Raport pierwszej zmiany sposobu renderowania, pomiary i zrzuty: [zadanie #3](reports/issue-3/README.md).
 
 Build tworzy także `dist/404.html`. Pages serwuje ten dokument z kodem 404 dla nieznanych ścieżek. Komunikat i link powrotu pochodzą z `siteData.notFound`; strona korzysta ze wspólnego CSS i działa bez JS. `pnpm check` sprawdza też błędny adres zagnieżdżony, dostępność zasobów i brak błędów w sitemapie. Wyniki lokalne: [zadanie #4](reports/issue-4/README.md).
+
+Build tworzy `/chodnik-stanislawow-pierwszy/` z osobnymi metadanymi i wpisem w sitemapie. Treść wstępu i pytań pochodzi z `siteData.walk`, a data stanu, chronologia, terminy i aktualizacje z dotychczasowych rekordów. `initiative` zachowuje kolejność od najstarszego wydarzenia do najnowszego, także przy datach przybliżonych lub równych. Główna pokazuje trzy ostatnie rekordy w odwrotnej kolejności. Nowy tekst i testy: `src/render-walk.*`; wyniki kontroli: [zadanie #5](reports/issue-5/README.md).
 
 ## Publikacja w Cloudflare Pages
 

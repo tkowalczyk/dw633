@@ -165,11 +165,14 @@ h3 {
 
 .site-header nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: clamp(0.85rem, 2.7vw, 2.2rem);
 }
 
 .site-header nav a {
+  white-space: nowrap;
   color: var(--ink-soft);
   font-size: 0.84rem;
   font-weight: 650;
@@ -194,6 +197,24 @@ h3 {
 .section-heading {
   max-width: 800px;
   margin-bottom: var(--heading-space);
+}
+
+.walk-page .section {
+  max-width: 880px;
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+}
+
+.walk-page h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.walk-page h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+}
+
+.site-header nav a[aria-current="page"] {
+  color: var(--forest-dark);
+  text-decoration: underline;
 }
 
 .section-heading > p:not(.eyebrow) {

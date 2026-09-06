@@ -49,6 +49,14 @@ export type KnowledgeItem = {
 
 type SiteData = {
   asOf: string
+  walk: {
+    title: string
+    pageTitle: string
+    description: string
+    intro: string
+    questions: Array<{ title: string; paragraphs: string[]; sourceIds: string[] }>
+    waiting: { title: string; documents: string; actions: string; note: string }
+  }
   notFound: { title: string; homeLink: string }
   hero: {
     eyebrow: string
@@ -97,6 +105,37 @@ type SiteData = {
 
 export const siteData = {
   asOf: '2 września 2026 r.',
+  walk: {
+    title: 'Chodnik i przejścia w Stanisławowie Pierwszym przy DW633',
+    pageTitle: 'Chodnik i przejścia w Stanisławowie Pierwszym | Stan działań na DW633',
+    description: 'Historia sprawy chodnika i przejść przy Jana Kazimierza w Stanisławowie Pierwszym. Wnioski do instytucji, terminy odpowiedzi i dalsze kroki na DW633.',
+    intro:
+      'Zbieramy dokumenty i odpowiedzi w sprawie bezpiecznej trasy pieszej przy ulicy Jana Kazimierza. Tutaj można prześledzić wcześniejsze próby, wysłane wnioski i kolejne kroki.',
+    questions: [
+      {
+        title: 'Co wiadomo o chodniku przy Jana Kazimierza?',
+        paragraphs: [
+          'Celem inicjatywy jest ciągła trasa piesza po stronie, po której brakuje chodnika, oraz bezpieczne przekraczanie jezdni pomiędzy istniejącymi przejściami.',
+          'Dotychczasowe dokumenty opisują wcześniejsze próby: projekt Budżetu Obywatelskiego Mazowsza (BOM) nr 266 i zadanie projektowe Gminy z 2023 r. Ich przebieg przedstawia chronologia poniżej. Do wyboru rozwiązania potrzebne są oględziny, analiza bezpieczeństwa i porównanie wariantów.',
+        ],
+        sourceIds: ['bom-266', 'budget-2023'],
+      },
+      {
+        title: 'Jakiego odcinka dotyczą wnioski?',
+        paragraphs: [
+          'Chodzi o DW633, ulicę Jana Kazimierza w Stanisławowie Pierwszym, w gminie Nieporęt: od rejonu przejścia i przystanków „Przyleśna” do ulicy Sonaty. Przyleśna to nazwa przystanków.',
+          'Oficjalny projekt doświetlenia wymienia przejścia przy Przyleśnej i Sonaty. Wnioski dotyczą ciągłości dojścia i luki pomiędzy tymi przejściami.',
+        ],
+        sourceIds: ['stops-mzdw', 'bom-crossings'],
+      },
+    ],
+    waiting: {
+      title: 'Na jakie odpowiedzi czekamy?',
+      documents: 'Wnioski o dokumenty',
+      actions: 'Wnioski o działania',
+      note: 'Zawiadomienia określają terminy udostępnienia dokumentów; odpowiedzi merytoryczne mają dopiero nadejść. Są to osobne sprawy od wniosków o działania.',
+    },
+  },
   notFound: {
     title: 'Nie znaleziono strony',
     homeLink: 'Wróć na stronę główną',

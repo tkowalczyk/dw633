@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { renderWalk } from './render-walk.ts'
 import indexSource from '../index.html?raw'
 import { kppTotals, siteData, trafficScale } from './site-data'
 import mainSource from './main.ts?raw'
@@ -172,8 +173,11 @@ describe('dane publicznej strony DW633', () => {
       'https://www.facebook.com/groups/1759173624939954/permalink/2302641127259865/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2307088346815143/',
     ])
-    expect(renderSource).toContain('siteData.updates.items.map(renderSocialUpdate)')
-    expect(renderSource).toContain('target="_blank" rel="noreferrer"')
+    const html = renderWalk()
+    for (const update of siteData.updates.items) {
+      expect(html).toContain(`href="${update.url}" target="_blank" rel="noreferrer"`)
+      expect(html).toContain(update.description)
+    }
   })
 
   it('ma komplet metadanych dla dużego podglądu w mediach społecznościowych', () => {

@@ -1,11 +1,11 @@
+import { renderNavigation } from './render-navigation.ts'
+import { renderInitiativeEvent, sourceLink } from './render-actions.ts'
 import { svgPathProperties } from 'svg-path-properties'
 import {
   kppTotals,
   siteData,
   trafficScale,
-  type InitiativeEvent,
   type KnowledgeItem,
-  type SocialUpdate,
   type Source,
 } from './site-data.ts'
 
@@ -99,24 +99,6 @@ function renderObservationWindows(): string {
     .join('')
 }
 
-function sourceLink(sourceId: string, prefix = 'Źródło'): string {
-  const source = sourceById.get(sourceId)
-
-  if (!source) {
-    throw new Error(`Brak źródła: ${sourceId}`)
-  }
-
-  const label = `${source.owner}, ${source.scope}; stan danych: ${source.asOf}`
-  const linkedReferences = source.links
-    ?.map((link) => `<a href="${link.url}">${link.label}</a>`)
-    .join(', ')
-  const content = source.url
-    ? `<a href="${source.url}">${label}</a>`
-    : `<span>${label}${linkedReferences ? ` (${linkedReferences})` : ''}</span>`
-
-  return `<small class="source-note"><span>${prefix}:</span> ${content}</small>`
-}
-
 function renderRoutePointLabels(): string {
   return siteData.route.points
     .map((point, index) => {
@@ -200,38 +182,6 @@ function renderKppRows(): string {
     .join('')
 }
 
-function renderInitiativeEvent(event: InitiativeEvent): string {
-  return `
-    <li class="history-card">
-      <div class="history-card__date">${event.date}</div>
-      <div>
-        <p class="eyebrow">${event.status}</p>
-        <h3>${event.title}</h3>
-        <p>${event.confirmed}</p>
-        <p class="history-card__pending"><strong>Następny krok:</strong> ${event.pending}</p>
-        ${sourceLink(event.sourceId)}
-      </div>
-    </li>
-  `
-}
-
-function renderSocialUpdate(update: SocialUpdate, index: number): string {
-  const number = String(index + 1).padStart(2, '0')
-
-  return `
-    <li class="update-card">
-      <a href="${update.url}" target="_blank" rel="noreferrer" aria-label="Przeczytaj post ${index + 1} na Facebooku: ${update.title}">
-        <span class="update-card__number" aria-hidden="true">${number}</span>
-        <div>
-          <h4>${update.title}</h4>
-          <p>${update.description}</p>
-          <span class="update-card__link">Przeczytaj post <span aria-hidden="true">↗</span></span>
-        </div>
-      </a>
-    </li>
-  `
-}
-
 function renderKnowledgeCard(item: KnowledgeItem): string {
   return `
     <li class="knowledge-card">
@@ -268,20 +218,7 @@ function renderSource(source: Source, index: number): string {
 
 export function renderHome(): string {
   return `
-  <a class="skip-link" href="#tresc">Przejdź do treści</a>
-
-  <header class="site-header">
-    <a class="site-brand" href="#start" aria-label="DW633: początek strony">
-      <span class="site-brand__route">633</span>
-      <span>Bezpieczeństwo pieszych</span>
-    </a>
-    <nav aria-label="Główna nawigacja">
-      <a href="#odcinek">Odcinek</a>
-      <a href="#dane">Dane</a>
-      <a href="#dzialania">Działania</a>
-      <a href="#zrodla">Źródła</a>
-    </nav>
-  </header>
+  ${renderNavigation(true)}
 
   <main id="tresc">
     <section class="hero section" id="start" aria-labelledby="hero-title">
@@ -491,17 +428,8 @@ export function renderHome(): string {
         <p class="eyebrow">Chronologia inicjatywy</p>
         <h2 id="history-title">Co już się wydarzyło i jaki jest następny krok</h2>
       </div>
-      <ol class="history-list">${siteData.initiative.map(renderInitiativeEvent).join('')}</ol>
-      <div class="updates" aria-labelledby="updates-title">
-        <div class="updates__heading">
-          <div>
-            <p class="eyebrow">Aktualizacje</p>
-            <h3 id="updates-title">Rozmowa i kolejne kroki</h3>
-          </div>
-          <p>${siteData.updates.intro}</p>
-        </div>
-        <ol class="update-list">${siteData.updates.items.map(renderSocialUpdate).join('')}</ol>
-      </div>
+      <ol class="history-list">${siteData.initiative.slice(-3).reverse().map(renderInitiativeEvent).join('')}</ol>
+      <a class="text-link" href="/chodnik-stanislawow-pierwszy/">Historia działań i odpowiedzi instytucji</a>
     </section>
 
     <section class="knowledge section" aria-labelledby="knowledge-title">
