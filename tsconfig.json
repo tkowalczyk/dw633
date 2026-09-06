@@ -20,5 +20,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "scripts", "*.config.ts"]
+  "include": ["src", "scripts", "*.config.ts", "*.browser.test.ts"]
 }

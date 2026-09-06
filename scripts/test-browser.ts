@@ -18,7 +18,7 @@ try {
     await setTimeout(500)
   }
   if (!ready) throw new Error(`Pages preview did not start:\n${log}`)
-  const tests = spawn(process.execPath, ['--test', 'src/render-home.browser.test.ts'], { stdio: 'inherit' })
+  const tests = spawn(process.execPath, ['--test', 'src/render-home.browser.test.ts', '404.browser.test.ts'], { stdio: 'inherit' })
   const [code] = await once(tests, 'exit')
   process.exitCode = Number(code ?? 1)
 } finally {

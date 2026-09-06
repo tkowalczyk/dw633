@@ -39,8 +39,10 @@ Testy korzystają z polecenia `agent-browser` dostępnego w PATH. Nie instalują
 Kontrola obejmuje lint, testy Vitest, TypeScript, produkcyjny build oraz testy przeglądarkowe. Skrypt uruchamia lokalny podgląd Cloudflare Pages na porcie 8788, testy przez zainstalowany `agent-browser` i zamyka obie sesje po kontroli. Zrzuty trafiają do `test-results/agent-browser/`. CDP własnej sesji służy wyłącznie do wyłączenia JS, opóźnienia skryptu i pomiarów wydajności. Wynik buildu znajduje się w `dist/`. Podgląd gotowego buildu:
 
 ```bash
-pnpm preview
+pnpm exec wrangler pages dev dist
 ```
+
+Ten podgląd odtwarza obsługę błędnych adresów przez hosting. `pnpm dev` i `pnpm preview` służą do pracy z Vite; nie potwierdzają reguł 404 w Pages.
 
 ## Aktualizacja treści
 
@@ -54,11 +56,14 @@ Pozostałe pliki mają rozdzielone role:
 - `src/style.css`: układ, style responsywne i wariant `prefers-reduced-motion`;
 - `src/site-data.test.ts`: kontrola liczb, linków, metadanych oraz granic publikacji;
 - `src/render-home.browser.test.ts`: kontrola odpowiedzi HTTP, metadanych, klawiatury i treści z JS oraz bez JS;
+- `404.html` i `404.browser.test.ts`: strona błędu oraz testy statusów HTTP, powrotu bez JS i sitemapy;
 - `public/`: Open Graph, favicony, manifest i nagłówki dla hostingu.
 
 Po zmianie danych lub metadanych zawsze uruchom `pnpm check`.
 
 Treść strony znajduje się w pierwszej odpowiedzi HTML. Bez JS opisy odcinka są widoczne kolejno pod schematem. Przy włączonych interakcjach zachowana jest prezentacja sterowana przewijaniem. Raport pierwszej zmiany sposobu renderowania, pomiary i zrzuty: [zadanie #3](reports/issue-3/README.md).
+
+Build tworzy także `dist/404.html`. Pages serwuje ten dokument z kodem 404 dla nieznanych ścieżek. Komunikat i link powrotu pochodzą z `siteData.notFound`; strona korzysta ze wspólnego CSS i działa bez JS. `pnpm check` sprawdza też błędny adres zagnieżdżony, dostępność zasobów i brak błędów w sitemapie. Wyniki lokalne: [zadanie #4](reports/issue-4/README.md).
 
 ## Publikacja w Cloudflare Pages
 

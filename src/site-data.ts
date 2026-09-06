@@ -49,6 +49,7 @@ export type KnowledgeItem = {
 
 type SiteData = {
   asOf: string
+  notFound: { title: string; homeLink: string }
   hero: {
     eyebrow: string
     title: string
@@ -96,6 +97,10 @@ type SiteData = {
 
 export const siteData = {
   asOf: '2 września 2026 r.',
+  notFound: {
+    title: 'Nie znaleziono strony',
+    homeLink: 'Wróć na stronę główną',
+  },
   hero: {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'DW633 przyjazna pieszym',
