@@ -1728,10 +1728,6 @@ footer a {
     gap: 0.85rem;
   }
 
-  .site-header nav a:nth-child(3) {
-    display: none;
-  }
-
   .section,
   .section--wide,
   .kpp,
@@ -1904,6 +1900,39 @@ footer a {
     grid-template-columns: 1fr;
     gap: 0.65rem;
   }
+}
+
+.route-scrolly:not(.is-enhanced) {
+  display: block;
+}
+
+.route-scrolly:not(.is-enhanced) .route-visual {
+  position: relative;
+  top: auto;
+  height: min(78vh, 760px);
+  min-height: 540px;
+}
+
+.route-scrolly:not(.is-enhanced) .route-traveler {
+  display: none;
+}
+
+.route-scrolly:not(.is-enhanced) .route-steps {
+  padding: 1rem 0 0;
+  pointer-events: auto;
+}
+
+.route-scrolly:not(.is-enhanced) .route-step {
+  min-height: auto;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  pointer-events: auto;
+}
+
+.route-scrolly:not(.is-enhanced) .route-step__card {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

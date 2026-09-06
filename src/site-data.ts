@@ -100,10 +100,10 @@ export const siteData = {
     eyebrow: 'DW633 · ul. Jana Kazimierza · Stanisławów Pierwszy',
     title: 'DW633 przyjazna pieszym',
     lead: {
-      beforeLocation: 'Między przejściem i przystankami ',
-      locationLabel: '„Przyleśna”',
-      afterLocation:
-        ' a ul. Sonaty sprawdzamy warunki dojścia do szkoły, przedszkoli i przystanków oraz miejsca przekraczania jezdni.',
+      beforeLocation:
+        'Sprawdzamy bezpieczeństwo pieszych przy drodze wojewódzkiej nr 633 w Stanisławowie Pierwszym, w gminie Nieporęt. Chodzi o ulicę Jana Kazimierza, od rejonu przystanków ',
+      locationLabel: '«Przyleśna»',
+      afterLocation: ' do ulicy Sonaty.',
       locationUrl:
         'https://www.google.com/maps/search/?api=1&query=Przystanek+Przyle%C5%9Bna%2C+Stanis%C5%82aw%C3%B3w+Pierwszy',
     },

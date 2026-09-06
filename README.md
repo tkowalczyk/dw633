@@ -19,11 +19,11 @@ Strona jest statyczna. Nie ma backendu, formularzy, analityki ani trackerów.
 
 ## Uruchomienie lokalne
 
-Wymagany jest Node.js 22 oraz npm.
+Wymagany jest Node.js 22.18 lub nowszy, pnpm 11.25.0 oraz zainstalowany `agent-browser` z Chrome (sprawdzono wersję 0.36.0 CLI).
 
 ```bash
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
 Vite wyświetli lokalny adres, zwykle `http://localhost:5173/`.
@@ -31,13 +31,15 @@ Vite wyświetli lokalny adres, zwykle `http://localhost:5173/`.
 ## Kontrola i build
 
 ```bash
-npm run check
+pnpm check
 ```
 
-Polecenie uruchamia lint, testy oraz produkcyjny build. Wynik trafia do katalogu `dist/`. Podgląd gotowego buildu:
+Testy korzystają z polecenia `agent-browser` dostępnego w PATH. Nie instalują osobnego narzędzia do sterowania przeglądarką.
+
+Kontrola obejmuje lint, testy Vitest, TypeScript, produkcyjny build oraz testy przeglądarkowe. Skrypt uruchamia lokalny podgląd Cloudflare Pages na porcie 8788, testy przez zainstalowany `agent-browser` i zamyka obie sesje po kontroli. Zrzuty trafiają do `test-results/agent-browser/`. CDP własnej sesji służy wyłącznie do wyłączenia JS, opóźnienia skryptu i pomiarów wydajności. Wynik buildu znajduje się w `dist/`. Podgląd gotowego buildu:
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## Aktualizacja treści
@@ -46,12 +48,17 @@ Treści, liczby, oś czasu, punkty schematu, źródła i lista wpisów z Faceboo
 
 Pozostałe pliki mają rozdzielone role:
 
-- `src/main.ts`: semantyczny HTML i zachowanie animacji;
+- `src/render-home.ts`: pełna treść HTML i położenie punktów schematu obliczane podczas buildu;
+- `vite.config.ts`: wstawianie treści do dokumentu podczas budowania i pracy serwera lokalnego;
+- `src/main.ts`: interakcje na istniejącym dokumencie;
 - `src/style.css`: układ, style responsywne i wariant `prefers-reduced-motion`;
 - `src/site-data.test.ts`: kontrola liczb, linków, metadanych oraz granic publikacji;
+- `src/render-home.browser.test.ts`: kontrola odpowiedzi HTTP, metadanych, klawiatury i treści z JS oraz bez JS;
 - `public/`: Open Graph, favicony, manifest i nagłówki dla hostingu.
 
-Po zmianie danych lub metadanych zawsze uruchom `npm run check`.
+Po zmianie danych lub metadanych zawsze uruchom `pnpm check`.
+
+Treść strony znajduje się w pierwszej odpowiedzi HTML. Bez JS opisy odcinka są widoczne kolejno pod schematem. Przy włączonych interakcjach zachowana jest prezentacja sterowana przewijaniem. Raport pierwszej zmiany sposobu renderowania, pomiary i zrzuty: [zadanie #3](reports/issue-3/README.md).
 
 ## Publikacja w Cloudflare Pages
 
@@ -62,15 +69,15 @@ Repozytorium jest gotowe do wdrożenia przez integrację Git w Cloudflare Pages:
 | Repozytorium | `tkowalczyk/dw633` |
 | Gałąź produkcyjna | `main` |
 | Framework preset | `Vite` |
-| Build command | `npm run build` |
+| Build command | `pnpm build` |
 | Build output directory | `dist` |
 | Root directory | `/` |
+| Zmienna `PNPM_VERSION` | `11.25.0` |
+| Zmienna `NODE_VERSION` | `22.18.0` |
 
-W panelu Cloudflare wybierz **Workers & Pages → Create application → Pages → Import an existing Git repository**, wskaż repozytorium i użyj ustawień z tabeli. Każdy kolejny push do `main` może wtedy uruchamiać nowy build.
+Projekt Pages `dw633` jest połączony z repozytorium, a domena `dw633.pl` jest już skonfigurowana. Push do `main` uruchamia wdrożenie produkcyjne. Po zakończeniu buildu sprawdź opublikowany HTML i numer commita w Pages.
 
-Po sprawdzeniu wersji `*.pages.dev` dodaj `dw633.pl` w ustawieniach projektu Pages jako domenę niestandardową. Jeżeli domena nie jest jeszcze obsługiwana przez Cloudflare DNS, najpierw trzeba dodać jej strefę i wykonać zmianę serwerów nazw u rejestratora. Nie zmieniaj ręcznie rekordów DNS przed zakończeniem wdrożenia testowego.
-
-Dokumentacja Cloudflare: [Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/) · [Custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
+Dokumentacja Cloudflare: [Build image i wersje narzędzi](https://developers.cloudflare.com/pages/configuration/build-image/) · [Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/) · [Custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
 
 ## Granice publikacji
 
@@ -78,4 +85,4 @@ Dokumentacja Cloudflare: [Git integration](https://developers.cloudflare.com/pag
 - W repozytorium nie umieszczamy podpisanych pism, dowodów e-Doręczeń ani skanów zawierających dane prywatne.
 - Odpowiedzi KPP, MZDW, UMWM i Gminy oraz rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
 
-Stan danych widoczny na stronie: 1 września 2026 r.
+Stan danych widoczny na stronie: 2 września 2026 r.

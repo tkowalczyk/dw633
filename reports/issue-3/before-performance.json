@@ -1,0 +1,77 @@
+{
+  "url": "http://127.0.0.1:8789/",
+  "browser": "152.0.7977.76",
+  "cpuSlowdown": 4,
+  "latencyMs": 150,
+  "downloadBytesPerSecond": 200000,
+  "cache": "disabled",
+  "sampleAfterLoadMs": 3000,
+  "results": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 1,
+      "lcpMs": 1140,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 2,
+      "lcpMs": 668,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 3,
+      "lcpMs": 620,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "run": 1,
+      "lcpMs": 804,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "run": 2,
+      "lcpMs": 648,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "run": 3,
+      "lcpMs": 656,
+      "cls": 0,
+      "scriptEncodedBytes": 12614,
+      "scriptDecodedBytes": 39673
+    }
+  ]
+}

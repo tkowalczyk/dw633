@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import indexSource from '../index.html?raw'
 import { kppTotals, siteData, trafficScale } from './site-data'
 import mainSource from './main.ts?raw'
+import renderSource from './render-home.ts?raw'
 
 describe('dane publicznej strony DW633', () => {
   it('używa wybranego nagłówka strony', () => {
@@ -142,7 +143,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('prowadzi narrację od celu i działania zamiast od asekuracyjnych zastrzeżeń', () => {
-    const visibleCopy = `${JSON.stringify(siteData)} ${mainSource}`
+    const visibleCopy = `${JSON.stringify(siteData)} ${renderSource}`
     const defensivePhrases = [
       'Nie przesądzamy dziś',
       'Piesi są symbolem obecności, nie liczbą',
@@ -157,8 +158,8 @@ describe('dane publicznej strony DW633', () => {
     expect(siteData.hero.lead.locationUrl).toBe(
       'https://www.google.com/maps/search/?api=1&query=Przystanek+Przyle%C5%9Bna%2C+Stanis%C5%82aw%C3%B3w+Pierwszy',
     )
-    expect(mainSource).toContain('class="hero__map-link"')
-    expect(mainSource).toContain('aria-label="Przyleśna — pokaż w Google Maps"')
+    expect(renderSource).toContain('class="hero__map-link"')
+    expect(renderSource).toContain('aria-label="Przyleśna — pokaż w Google Maps"')
   })
 
   it('zbiera opublikowane aktualizacje z Facebooka w rozszerzalnej liście', () => {
@@ -171,8 +172,8 @@ describe('dane publicznej strony DW633', () => {
       'https://www.facebook.com/groups/1759173624939954/permalink/2302641127259865/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2307088346815143/',
     ])
-    expect(mainSource).toContain('siteData.updates.items.map(renderSocialUpdate)')
-    expect(mainSource).toContain('target="_blank" rel="noreferrer"')
+    expect(renderSource).toContain('siteData.updates.items.map(renderSocialUpdate)')
+    expect(renderSource).toContain('target="_blank" rel="noreferrer"')
   })
 
   it('ma komplet metadanych dla dużego podglądu w mediach społecznościowych', () => {
@@ -194,10 +195,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('zwija opis danych i animacji, pozostawiając źródło na wierzchu', () => {
-    const detailsStart = mainSource.indexOf('<details class="traffic__details">')
-    const detailsEnd = mainSource.indexOf('</details>', detailsStart)
-    const sourcePosition = mainSource.indexOf('${sourceLink(siteData.traffic.sourceId)}')
-    const explanationPosition = mainSource.indexOf(
+    const detailsStart = renderSource.indexOf('<details class="traffic__details">')
+    const detailsEnd = renderSource.indexOf('</details>', detailsStart)
+    const sourcePosition = renderSource.indexOf('${sourceLink(siteData.traffic.sourceId)}')
+    const explanationPosition = renderSource.indexOf(
       '<p class="traffic__interval">Średnia dobowa',
     )
 
