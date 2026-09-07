@@ -1,0 +1,45 @@
+▶ strona 404
+  ✔ nieznane adresy zwracają błąd 404 bez przekierowania (179.086917ms)
+  ✔ komunikat i powrót klawiaturą działają bez JS na telefonie i komputerze (3429.79ms)
+  ✔ strona główna, robots, sitemap i zasoby nadal zwracają właściwą treść z kodem 200 (181.768167ms)
+  ✔ sitemap pomija stronę błędu i adresy testowe (168.02125ms)
+✔ strona 404 (3959.541875ms)
+▶ katalog dokumentów DW633
+  ✔ wszystkie wewnętrzne odsyłacze gotowego serwisu mają działające adresy i kotwice (252.68225ms)
+  ✔ gotowy katalog zachowuje publiczne rekordy, a build nie zawiera prywatnych załączników (27.926625ms)
+  ✔ warianty adresów prowadzą do kanonicznych URL z końcowym ukośnikiem (461.192375ms)
+  ✔ sitemap zawiera dokładnie cztery wygenerowane strony z własnymi canonical (145.315916ms)
+  ✔ pozwala przejść klawiaturą od odpowiedzi KPP do tabeli, źródła i z powrotem bez JS (8267.691917ms)
+  ✔ łączy wszystkie strony i przypisy z katalogiem, zachowując bezpośrednie źródła (163.563416ms)
+  ✔ udostępnia pełny HTML katalogu pod własnym adresem i z własnymi metadanymi (196.71425ms)
+✔ katalog dokumentów DW633 (9516.223583ms)
+✔ pełna treść w odpowiedzi HTTP i przy wyłączonym JS (2092.279916ms)
+✔ lokalny tytuł, canonical i metadane udostępniania (1460.76275ms)
+✔ lokalizacja, link przystanków i cel pod H1 (1441.083ms)
+✔ opisy, klawiatura i rozwijanie danych bez JS w obu rozmiarach (4009.23525ms)
+✔ punkty schematu leżą na drodze bez JS (1330.492625ms)
+✔ opóźniony skrypt zachowuje dokument i uruchamia nawigację (3696.735833ms)
+✔ widoczne opisy i nieruchoma scena przy ograniczeniu animacji (2236.412625ms)
+▶ ruch i zdarzenia na DW633
+  ✔ czytelna tabela i nawigacja klawiaturą działają bez JS na telefonie i komputerze (6137.167416ms)
+  ✔ menu, skrót głównej i sitemap prowadzą do istniejących stron i kotwic (1980.255667ms)
+  ✔ wyjaśnia kategorie zdarzeń i zachowuje informacje o pieszych (24.02925ms)
+  ✔ udostępnia roczną tabelę KPP, GPR i objaśnienia z zakresem oraz źródłami (54.995042ms)
+  ✔ ma własny tytuł, opis i adres kanoniczny w gotowym HTML (164.189875ms)
+  ✔ bezpośrednie wejście i odświeżenie zwracają temat podstrony w HTML z kodem 200 (50.34925ms)
+✔ ruch i zdarzenia na DW633 (8411.90375ms)
+▶ chodnik i przejścia
+  ✔ czytelna podstrona i nawigacja klawiaturą działają bez JS na telefonie i komputerze (7349.912291ms)
+  ✔ menu i sitemap prowadzą do istniejących stron i sekcji (1551.555417ms)
+  ✔ ma własny tytuł, opis i canonical w gotowym HTML (57.469875ms)
+  ✔ pełna historia, pytania, stan wniosków i aktualizacje pochodzą z publicznych danych (28.639959ms)
+  ✔ bezpośrednie wejście i odświeżenie zwracają gotowy HTML z kodem 200 (56.614584ms)
+✔ chodnik i przejścia (9045.043208ms)
+ℹ tests 29
+ℹ suites 4
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16358.448625

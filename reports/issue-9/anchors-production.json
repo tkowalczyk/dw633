@@ -1,0 +1,146 @@
+[
+  {
+    "width": 390,
+    "phase": "before-reload",
+    "header": {
+      "bottom": 118.703125,
+      "height": 118.703125,
+      "left": 0,
+      "right": 390,
+      "top": 0,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "readyState": "complete",
+    "scrollBehavior": "smooth",
+    "scrollMargin": "136px",
+    "scrollRestoration": "auto",
+    "scrollY": 3291,
+    "target": {
+      "bottom": 472.25,
+      "height": 336.0625,
+      "left": 10,
+      "right": 380,
+      "top": 136.1875,
+      "width": 370,
+      "x": 10,
+      "y": 136.1875
+    },
+    "timeOrigin": 1788770031815.4,
+    "url": "https://dw633.pl/dokumenty-dw633/#kpp",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "visible": true
+  },
+  {
+    "width": 390,
+    "phase": "after-reload",
+    "header": {
+      "bottom": 118.703125,
+      "height": 118.703125,
+      "left": 0,
+      "right": 390,
+      "top": 0,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "readyState": "complete",
+    "scrollBehavior": "smooth",
+    "scrollMargin": "136px",
+    "scrollRestoration": "auto",
+    "scrollY": 3291,
+    "target": {
+      "bottom": 472.25,
+      "height": 336.0625,
+      "left": 10,
+      "right": 380,
+      "top": 136.1875,
+      "width": 370,
+      "x": 10,
+      "y": 136.1875
+    },
+    "timeOrigin": 1788770033111.2,
+    "url": "https://dw633.pl/dokumenty-dw633/#kpp",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "visible": true
+  },
+  {
+    "width": 1440,
+    "phase": "before-reload",
+    "header": {
+      "bottom": 74,
+      "height": 74,
+      "left": 0,
+      "right": 1440,
+      "top": 0,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "readyState": "complete",
+    "scrollBehavior": "smooth",
+    "scrollMargin": "136px",
+    "scrollRestoration": "auto",
+    "scrollY": 1769,
+    "target": {
+      "bottom": 438.21875,
+      "height": 301.953125,
+      "left": 280,
+      "right": 712,
+      "top": 136.265625,
+      "width": 432,
+      "x": 280,
+      "y": 136.265625
+    },
+    "timeOrigin": 1788770035753.5,
+    "url": "https://dw633.pl/dokumenty-dw633/#kpp",
+    "viewport": {
+      "height": 900,
+      "width": 1440
+    },
+    "visible": true
+  },
+  {
+    "width": 1440,
+    "phase": "after-reload",
+    "header": {
+      "bottom": 74,
+      "height": 74,
+      "left": 0,
+      "right": 1440,
+      "top": 0,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "readyState": "complete",
+    "scrollBehavior": "smooth",
+    "scrollMargin": "136px",
+    "scrollRestoration": "auto",
+    "scrollY": 1769,
+    "target": {
+      "bottom": 438.21875,
+      "height": 301.953125,
+      "left": 280,
+      "right": 712,
+      "top": 136.265625,
+      "width": 432,
+      "x": 280,
+      "y": 136.265625
+    },
+    "timeOrigin": 1788770036684.9,
+    "url": "https://dw633.pl/dokumenty-dw633/#kpp",
+    "viewport": {
+      "height": 900,
+      "width": 1440
+    },
+    "visible": true
+  }
+]

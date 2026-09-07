@@ -1,0 +1,11 @@
+▶ katalog dokumentów DW633
+  ✔ pozwala przejść klawiaturą od odpowiedzi KPP do tabeli, źródła i z powrotem bez JS (7794.68325ms)
+✔ katalog dokumentów DW633 (7795.914875ms)
+ℹ tests 1
+ℹ suites 1
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7884.202875

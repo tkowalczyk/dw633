@@ -1,0 +1,25 @@
+{
+  "header": {
+    "bottom": 118.703125,
+    "height": 118.703125,
+    "left": 0,
+    "right": 390,
+    "top": 0,
+    "width": 390,
+    "x": 0,
+    "y": 0
+  },
+  "readyState": "complete",
+  "scrollBehavior": "smooth",
+  "scrollMargin": null,
+  "scrollRestoration": "auto",
+  "scrollY": 0,
+  "target": null,
+  "timeOrigin": 1788769941043.5,
+  "url": "http://127.0.0.1:8788/dokumenty-dw633/#kpp",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "visible": false
+}

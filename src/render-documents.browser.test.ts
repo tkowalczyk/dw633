@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import { describe, test } from 'node:test'
+import { setTimeout } from 'node:timers/promises'
 import { Browser } from '../scripts/browser.ts'
 import { siteData } from './site-data.ts'
 
@@ -95,9 +96,56 @@ describe('katalog dokumentów DW633', () => {
   })
 
   test('pozwala przejść klawiaturą od odpowiedzi KPP do tabeli, źródła i z powrotem bez JS', async () => {
+    // Issue #9: load and the destination URL can precede smooth-scroll completion.
+    // The reader must reach the stationary, visible KPP card before its reload.
+    // Keep keyboard navigation, disabled page JS, both viewports and the existing
+    // position bound. Missing targets and obscured cards must still fail.
     const browser = new Browser()
     await browser.command('open')
     const cdp = await browser.instrument()
+    const anchorState = `(() => {
+      const target = document.querySelector('#kpp');
+      const rect = target?.getBoundingClientRect();
+      const header = document.querySelector('header')?.getBoundingClientRect();
+      return {
+        url: location.href, readyState: document.readyState, timeOrigin: performance.timeOrigin,
+        scrollY, viewport: { width: innerWidth, height: innerHeight },
+        target: rect?.toJSON() ?? null, header: header?.toJSON() ?? null,
+        scrollMargin: target ? getComputedStyle(target).scrollMarginTop : null,
+        scrollBehavior: getComputedStyle(document.documentElement).scrollBehavior,
+        scrollRestoration: history.scrollRestoration,
+        visible: location.pathname + location.hash === '/dokumenty-dw633/#kpp'
+          && document.readyState === 'complete' && !!target && !!header
+          && target.checkVisibility({ visibilityProperty: true })
+          && rect.top >= header.bottom && rect.top < header.bottom + 80
+      };
+    })()`
+    const waitForKpp = async (width: number, phase: string) => {
+      const file = `test-results/agent-browser/documents-anchor-${width}-${phase}`
+      try {
+        const deadline = Date.now() + 25_000
+        let previous: { scrollY: number; timeOrigin: number } | undefined
+        while (true) {
+          const current = await browser.evaluate<{ visible: boolean; scrollY: number; timeOrigin: number }>(anchorState)
+          // Two matching samples prevent a passing position during smooth scrolling.
+          if (previous && current.visible && current.scrollY === previous.scrollY && current.timeOrigin === previous.timeOrigin) {
+            await writeFile(`${file}.json`, JSON.stringify(current, null, 2) + '\n')
+            return
+          }
+          assert.ok(Date.now() < deadline, `KPP did not settle below the header within 25000ms: ${phase}`)
+          previous = current
+          await setTimeout(100)
+        }
+      } catch (error) {
+        try {
+          await writeFile(`${file}-failure.json`, JSON.stringify(await browser.evaluate(anchorState), null, 2) + '\n')
+          await browser.command('screenshot', `${file}-failure.png`)
+        } catch (diagnosticError) {
+          console.error('Could not save KPP anchor diagnostics:', diagnosticError)
+        }
+        throw error
+      }
+    }
     try {
       await cdp.send('Emulation.setScriptExecutionDisabled', { value: true })
       await mkdir('test-results/agent-browser', { recursive: true })
@@ -106,24 +154,30 @@ describe('katalog dokumentów DW633', () => {
         await browser.command('open', new URL('/chodnik-stanislawow-pierwszy/#dzialania', base).href)
         await browser.command('focus', '.history-card a[href="/ruch-i-wypadki-dw633/#zdarzenia"]')
         await browser.command('press', 'Enter')
+        await browser.command('wait', '--url', new URL('/ruch-i-wypadki-dw633/#zdarzenia', base).href)
+        await browser.command('wait', '--load', 'load')
         assert.equal(await browser.evaluate('location.pathname + location.hash'), '/ruch-i-wypadki-dw633/#zdarzenia')
         await browser.command('focus', '#zdarzenia a[href="/dokumenty-dw633/#kpp"]')
         await browser.command('press', 'Enter')
+        await browser.command('wait', '--url', new URL(`${path}#kpp`, base).href)
+        await browser.command('wait', '--load', 'load')
         assert.equal(await browser.evaluate('location.pathname + location.hash'), `${path}#kpp`)
+        await waitForKpp(width, 'before-reload')
         await browser.command('reload')
-        await browser.command('wait', '--fn', `(() => {
-          const rect = document.querySelector('#kpp').getBoundingClientRect();
-          const headerBottom = document.querySelector('header').getBoundingClientRect().bottom;
-          return rect.top >= headerBottom && rect.top < headerBottom + 80;
-        })()`)
+        await waitForKpp(width, 'after-reload')
         await browser.command('screenshot', `test-results/agent-browser/documents-no-js-${width}-kpp.png`)
         await browser.command('focus', '#kpp a[href="/ruch-i-wypadki-dw633/#zdarzenia"]')
         assert.notEqual(await browser.evaluate('getComputedStyle(document.activeElement).outlineStyle'), 'none')
         await browser.command('press', 'Enter')
+        await browser.command('wait', '--url', new URL('/ruch-i-wypadki-dw633/#zdarzenia', base).href)
+        await browser.command('wait', '--load', 'load')
         assert.equal(await browser.evaluate('location.pathname + location.hash'), '/ruch-i-wypadki-dw633/#zdarzenia')
         await browser.command('focus', 'nav a[href="/dokumenty-dw633/"]')
         await browser.command('press', 'Enter')
+        await browser.command('wait', '--url', new URL(path, base).href)
+        await browser.command('wait', '--load', 'load')
         await browser.command('reload')
+        assert.equal(await browser.evaluate('location.pathname'), path)
         assert.equal(await browser.evaluate('document.documentElement.scrollWidth <= innerWidth'), true)
         assert.equal(await browser.evaluate(`Array.from(document.querySelectorAll('nav a, h1, .source-card')).every(element => {
           const rect = element.getBoundingClientRect();

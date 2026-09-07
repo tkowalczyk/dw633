@@ -1,0 +1,34 @@
+{
+  "header": {
+    "bottom": 118.703125,
+    "height": 118.703125,
+    "left": 0,
+    "right": 390,
+    "top": 0,
+    "width": 390,
+    "x": 0,
+    "y": 0
+  },
+  "readyState": "complete",
+  "scrollBehavior": "smooth",
+  "scrollMargin": "0px",
+  "scrollRestoration": "auto",
+  "scrollY": 3427,
+  "target": {
+    "bottom": 336.25,
+    "height": 336.0625,
+    "left": 10,
+    "right": 380,
+    "top": 0.1875,
+    "width": 370,
+    "x": 10,
+    "y": 0.1875
+  },
+  "timeOrigin": 1788769914059.6,
+  "url": "http://127.0.0.1:8788/dokumenty-dw633/#kpp",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "visible": false
+}
