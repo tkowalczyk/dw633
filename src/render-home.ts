@@ -6,7 +6,6 @@ import {
   siteData,
   trafficScale,
   type KnowledgeItem,
-  type Source,
 } from './site-data.ts'
 
 const routePath = 'M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70'
@@ -169,27 +168,6 @@ function renderKnowledgeCard(item: KnowledgeItem): string {
         <h4>${item.title}</h4>
         <p>${item.description}</p>
         ${item.sourceId ? sourceLink(item.sourceId) : ''}
-      </div>
-    </li>
-  `
-}
-
-function renderSource(source: Source, index: number): string {
-  const title = source.url
-    ? `<a href="${source.url}">${source.title}</a>`
-    : `<span>${source.title}</span>`
-  const links = source.links
-    ?.map((link) => `<a href="${link.url}">${link.label}</a>`)
-    .join(', ')
-
-  return `
-    <li class="source-card">
-      <span class="source-card__number">${String(index + 1).padStart(2, '0')}</span>
-      <div>
-        <h3>${title}</h3>
-        <p>${source.owner} · ${source.scope}</p>
-        <small>Stan danych: ${source.asOf}. ${source.note}</small>
-        ${links ? `<small class="source-card__links">Odnośniki: ${links}</small>` : ''}
       </div>
     </li>
   `
@@ -430,9 +408,9 @@ export function renderHome(): string {
       <div class="section-heading">
         <p class="eyebrow">Dokumenty i dane pierwotne</p>
         <h2 id="sources-title">Źródła</h2>
-        <p>Publiczne źródła są podlinkowane poniżej. Materiały zawierające dane prywatne przechowujemy w dokumentacji sprawy.</p>
+        <p>${siteData.documents.homeIntro}</p>
+        <a class="text-link" href="/dokumenty-dw633/">${siteData.documents.linkLabel}</a>
       </div>
-      <ol class="source-list">${siteData.sources.map(renderSource).join('')}</ol>
     </section>
   </main>
 

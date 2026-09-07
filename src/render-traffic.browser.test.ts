@@ -82,7 +82,7 @@ describe('ruch i zdarzenia na DW633', () => {
       const html = await (await fetch(new URL(currentPath, base))).text()
       const nav = html.match(/<nav\b[\s\S]*?<\/nav>/)?.[0] || ''
       assert.match(nav, /href="\/ruch-i-wypadki-dw633\/"[^>]*>Ruch i zdarzenia<\/a>/)
-      assert.doesNotMatch(html, /href="\/dokumenty-dw633\//)
+      assert.match(html, /href="\/dokumenty-dw633\/"/)
       if (currentPath === path) {
         assert.match(nav, /href="\/ruch-i-wypadki-dw633\/" aria-current="page"/)
         assert.equal((nav.match(/aria-current="page"/g) || []).length, 1)

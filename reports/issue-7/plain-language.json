@@ -1,0 +1,36 @@
+{
+  "scope": "Nowy opis meta, wstęp katalogu i objaśnienie głównej",
+  "average": 9.285714285714286,
+  "max": 13,
+  "over25": 0,
+  "sentences": [
+    {
+      "text": "Źródła danych i historii działań przy DW633 w Stanisławowie Pierwszym.",
+      "words": 10
+    },
+    {
+      "text": "Dokumenty instytucji, zakres informacji i odsyłacze do opracowań.",
+      "words": 8
+    },
+    {
+      "text": "Tutaj sprawdzisz, skąd pochodzą dane i opisy działań przy DW633.",
+      "words": 10
+    },
+    {
+      "text": "Każda pozycja podaje autora, zakres informacji i datę.",
+      "words": 8
+    },
+    {
+      "text": "Publiczne materiały otworzysz z odnośników; korespondencję zawierającą dane prywatne opisujemy bez udostępniania załączników.",
+      "words": 13
+    },
+    {
+      "text": "Katalog zbiera źródła danych i historii działań.",
+      "words": 7
+    },
+    {
+      "text": "Przy każdym materiale podajemy jego zakres, datę i ograniczenia.",
+      "words": 9
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "base": "http://127.0.0.1:8788/",
+  "results": [
+    {
+      "from": "/",
+      "href": "#tresc",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "#start",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "#odcinek",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "#dane",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "#dzialania",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "#zrodla",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/chodnik-stanislawow-pierwszy/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/ruch-i-wypadki-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#gpr-2025",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#stops-mzdw",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#education-places",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#school-area",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#bom-crossings",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#kpp",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/ruch-i-wypadki-dw633/#zdarzenia",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#mzdw-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#gmina-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#umwm-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#spatial-data",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/",
+      "href": "/dokumenty-dw633/#budget-2023",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "#tresc",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/#odcinek",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/#dane",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/#dzialania",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/#zrodla",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/chodnik-stanislawow-pierwszy/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/ruch-i-wypadki-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#bom-266",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#budget-2023",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#stops-mzdw",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#bom-crossings",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#umwm-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#mzdw-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#gmina-extension",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#kpp",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/dokumenty-dw633/#delivery-register",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/chodnik-stanislawow-pierwszy/",
+      "href": "/ruch-i-wypadki-dw633/#zdarzenia",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "#tresc",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/#odcinek",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/#dane",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/#dzialania",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/#zrodla",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/chodnik-stanislawow-pierwszy/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/ruch-i-wypadki-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/dokumenty-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/dokumenty-dw633/#gpr-2025",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/dokumenty-dw633/#kpp",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/ruch-i-wypadki-dw633/",
+      "href": "/dokumenty-dw633/#event-categories",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "#tresc",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/#odcinek",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/#dane",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/#dzialania",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/#zrodla",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/chodnik-stanislawow-pierwszy/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/ruch-i-wypadki-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/dokumenty-dw633/",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/ruch-i-wypadki-dw633/#zdarzenia",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/ruch-i-wypadki-dw633/#ruch",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/dokumenty-dw633/",
+      "href": "/chodnik-stanislawow-pierwszy/#dzialania",
+      "status": 200,
+      "anchorFound": true
+    },
+    {
+      "from": "/seo-test-brak-20260906/",
+      "href": "/",
+      "status": 200,
+      "anchorFound": true
+    }
+  ]
+}

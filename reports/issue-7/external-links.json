@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-09-07T06:49:49.777Z",
+  "results": [
+    {
+      "id": "event-categories",
+      "url": "https://ksp.policja.gov.pl/wrd/sprawy/informacje-dla-obywateli/zdarzenia-drogowe/119593,ZDARZENIA-DROGOWE.html",
+      "status": 200,
+      "finalUrl": "https://ksp.policja.gov.pl/wrd/sprawy/informacje-dla-obywateli/zdarzenia-drogowe/119593,ZDARZENIA-DROGOWE.html",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "gpr-2025",
+      "url": "https://www.gov.pl/web/gddkia/generalny-pomiar-ruchu-2025",
+      "status": 200,
+      "finalUrl": "https://www.gov.pl/web/gddkia/generalny-pomiar-ruchu-2025",
+      "type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "stops-mzdw",
+      "url": "https://api.mzdw.pl/storage/files/2390/wykaz-przystank%C3%B3w-26.03.2026-%281%29.pdf",
+      "status": 200,
+      "finalUrl": "https://api.mzdw.pl/storage/files/2390/wykaz-przystank%C3%B3w-26.03.2026-%281%29.pdf",
+      "type": "application/pdf"
+    },
+    {
+      "id": "bom-crossings",
+      "url": "https://bom.mazovia.pl/projekt/251",
+      "status": 200,
+      "finalUrl": "https://bom.mazovia.pl/projekt/251",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "bom-266",
+      "url": "https://bom.mazovia.pl/gminy/mazovia/news/9/3q/ft/5/Wykaz_projekt%C3%B3w_BOM_po_ocenie.pdf?WFTH=",
+      "status": 200,
+      "finalUrl": "https://bom.mazovia.pl/gminy/mazovia/news/9/3q/ft/5/Wykaz_projekt%C3%B3w_BOM_po_ocenie.pdf?WFTH=",
+      "type": "application/pdf"
+    },
+    {
+      "id": "budget-2023",
+      "url": "https://nieporet.esesja.pl/zalaczniki/295600/zarz130sprawozdanie-wykonanie-budzetu_2782350.pdf",
+      "status": 200,
+      "finalUrl": "https://nieporet.esesja.pl/zalaczniki/295600/zarz130sprawozdanie-wykonanie-budzetu_2782350.pdf",
+      "type": "application/pdf"
+    },
+    {
+      "id": "school-area",
+      "url": "https://spsp.nieporet.pl/",
+      "status": 200,
+      "finalUrl": "https://spsp.nieporet.pl/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "school-area",
+      "url": "https://www.modelowaedukacja.eu/przedszkole",
+      "status": 200,
+      "finalUrl": "https://www.modelowaedukacja.eu/przedszkole",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "school-area",
+      "url": "https://earlystage.pl/pl/szkola/stanislawow-pierwszy",
+      "status": 200,
+      "finalUrl": "https://earlystage.pl/pl/szkola/stanislawow-pierwszy",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "education-places",
+      "url": "https://jodlowyzakatek.edu.pl/kontakt/",
+      "status": 200,
+      "finalUrl": "https://jodlowyzakatek.edu.pl/kontakt/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "education-places",
+      "url": "https://strefa-edukacji.com/kontakt/",
+      "status": 200,
+      "finalUrl": "https://strefa-edukacji.com/kontakt/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "spatial-data",
+      "url": "https://nieporet.e-mapa.net/",
+      "status": 200,
+      "finalUrl": "https://nieporet.e-mapa.net/",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "accident-date-check",
+      "url": "https://gazetapowiatowa.pl/artykul/nieporet-w-stanislawowie-n2316161",
+      "status": 200,
+      "finalUrl": "https://gazetapowiatowa.pl/artykul/nieporet-w-stanislawowie-n2316161",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "accident-date-check",
+      "url": "https://miejskireporter.pl/potracenie-na-pasach-piesza-w-szpitalu-policja-zatrzymala-prawo-jazdy-kierowcy/",
+      "status": 200,
+      "finalUrl": "https://miejskireporter.pl/potracenie-na-pasach-piesza-w-szpitalu-policja-zatrzymala-prawo-jazdy-kierowcy/",
+      "type": "text/html; charset=UTF-8"
+    }
+  ]
+}

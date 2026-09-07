@@ -1,4 +1,4 @@
-export function renderNavigation(page: 'home' | 'walk' | 'traffic'): string {
+export function renderNavigation(page: 'home' | 'walk' | 'traffic' | 'documents'): string {
   const home = page === 'home'
   return `
   <a class="skip-link" href="#tresc">Przejdź do treści</a>
@@ -15,6 +15,7 @@ export function renderNavigation(page: 'home' | 'walk' | 'traffic'): string {
       <a href="${home ? '' : '/'}#zrodla">Źródła</a>
       <a href="/chodnik-stanislawow-pierwszy/"${page === 'walk' ? ' aria-current="page"' : ''}>Chodnik i przejścia</a>
       <a href="/ruch-i-wypadki-dw633/"${page === 'traffic' ? ' aria-current="page"' : ''}>Ruch i zdarzenia</a>
+      <a href="/dokumenty-dw633/"${page === 'documents' ? ' aria-current="page"' : ''}>Dokumenty</a>
     </nav>
   </header>
   `

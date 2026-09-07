@@ -49,6 +49,10 @@ export type KnowledgeItem = {
 
 type SiteData = {
   asOf: string
+  documents: {
+    title: string; pageTitle: string; description: string; intro: string; homeIntro: string; linkLabel: string
+    readings: Array<{ sourceIds: string[]; url: string; label: string }>
+  }
   trafficPage: {
     title: string; pageTitle: string; description: string; intro: string
     gprTitle: string; gprScope: string; gprExplanation: string
@@ -110,6 +114,20 @@ type SiteData = {
 
 export const siteData = {
   asOf: '2 września 2026 r.',
+  documents: {
+    title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
+    pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
+    description: 'Źródła danych i historii działań przy DW633 w Stanisławowie Pierwszym. Dokumenty instytucji, zakres informacji i odsyłacze do opracowań.',
+    intro: 'Tutaj sprawdzisz, skąd pochodzą dane i opisy działań przy DW633. Każda pozycja podaje autora, zakres informacji i datę. Publiczne materiały otworzysz z odnośników; korespondencję zawierającą dane prywatne opisujemy bez udostępniania załączników.',
+    homeIntro: 'Katalog zbiera źródła danych i historii działań. Przy każdym materiale podajemy jego zakres, datę i ograniczenia.',
+    linkLabel: 'Przejdź do katalogu dokumentów DW633',
+    readings: [
+      { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
+      { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
+      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
+    ],
+  },
   trafficPage: {
     title: 'Ruch, kolizje i wypadki na DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Ruch, kolizje i wypadki na DW633 | Stanisławów Pierwszy',

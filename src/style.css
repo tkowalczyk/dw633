@@ -200,18 +200,21 @@ h3 {
 }
 
 .walk-page .section,
-.traffic-page .section {
+.traffic-page .section,
+.documents-page .section {
   max-width: 880px;
   padding-block: clamp(2rem, 4vw, 3.5rem);
 }
 
 .walk-page h1,
-.traffic-page h1 {
+.traffic-page h1,
+.documents-page h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 .walk-page h2,
-.traffic-page h2 {
+.traffic-page h2,
+.documents-page h2 {
   font-size: clamp(1.8rem, 3.2vw, 2.8rem);
 }
 
@@ -1597,6 +1600,7 @@ tfoot td {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--surface);
+  scroll-margin-top: 8.5rem;
 }
 
 .source-card__number {

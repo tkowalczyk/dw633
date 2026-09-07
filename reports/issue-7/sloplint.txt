@@ -1,0 +1,80 @@
+src/site-data.ts
+score: 9/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 30  confidence: high
+no findings
+
+words: 3219   sentences: 71   mean sentence length: 45.34
+burstiness: 0.95  (human tends > 0.45)
+type-token ratio: 0.45  (human tends > 0.45)
+trigram repetition: 0.14  (human tends < 0.04)
+
+src/render-documents.ts
+score: 0/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 0  confidence: high
+no findings
+
+words: 162   sentences: 7   mean sentence length: 23.14
+burstiness: 1.17  (human tends > 0.45)
+type-token ratio: 0.46  (human tends > 0.45)
+trigram repetition: 0.03  (human tends < 0.04)
+
+src/render-actions.ts
+score: 1/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 2  confidence: high
+no findings
+
+words: 204   sentences: 14   mean sentence length: 14.57
+burstiness: 1.07  (human tends > 0.45)
+type-token ratio: 0.42  (human tends > 0.45)
+trigram repetition: 0.02  (human tends < 0.04)
+
+src/render-home.ts
+score: 20/100  clean       (mostly human-sounding)
+pattern: 12  uniformity: 38  confidence: high
+  L189  [style/em-dash] "—"  (Myślnik w rytmie AI. W polskim zwykle wystarczy kropka, przecinek albo nawias.)
+  L258  [style/em-dash] "—"  (Myślnik w rytmie AI. W polskim zwykle wystarczy kropka, przecinek albo nawias.)
+
+words: 1819   sentences: 46   mean sentence length: 39.54
+burstiness: 1.33  (human tends > 0.45)
+type-token ratio: 0.33  (human tends > 0.45)
+trigram repetition: 0.16  (human tends < 0.04)
+
+src/render-navigation.ts
+score: 3/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 9  confidence: medium
+no findings
+
+words: 115   sentences: 10   mean sentence length: 11.5
+burstiness: 0.59  (human tends > 0.45)
+type-token ratio: 0.49  (human tends > 0.45)
+trigram repetition: 0.07  (human tends < 0.04)
+
+reports/issue-7/README.md
+score: 0/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 0  confidence: high
+no findings
+
+words: 702   sentences: 57   mean sentence length: 12.32
+burstiness: 1.28  (human tends > 0.45)
+type-token ratio: 0.58  (human tends > 0.45)
+trigram repetition: 0.01  (human tends < 0.04)
+
+reports/issue-7/nowe-opisy.txt
+score: 6/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 21  confidence: high
+no findings
+
+words: 122   sentences: 8   mean sentence length: 15.25
+burstiness: 0.48  (human tends > 0.45)
+type-token ratio: 0.62  (human tends > 0.45)
+trigram repetition: 0.11  (human tends < 0.04)
+
+reports/issue-7/tekst-podstrony.txt
+score: 9/100  clean       (mostly human-sounding)
+pattern: 0  uniformity: 30  confidence: high
+no findings
+
+words: 738   sentences: 45   mean sentence length: 16.4
+burstiness: 0.59  (human tends > 0.45)
+type-token ratio: 0.54  (human tends > 0.45)
+trigram repetition: 0.18  (human tends < 0.04)

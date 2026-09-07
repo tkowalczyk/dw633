@@ -2,6 +2,15 @@ import { siteData, type InitiativeEvent, type SocialUpdate } from './site-data.t
 
 const sourceById = new Map(siteData.sources.map(source => [source.id, source]))
 
+export function sourceAnchor(sourceId: string): string {
+  return sourceId === 'kpp-response' ? 'kpp' : sourceId
+}
+
+export function analysisLink(sourceId: string): string {
+  const reading = siteData.documents.readings.find(item => item.sourceIds.includes(sourceId))
+  return reading ? `<a class="text-link" href="${reading.url}">${reading.label}</a>` : ''
+}
+
 export function sourceLink(sourceId: string, prefix = 'Źródło'): string {
   const source = sourceById.get(sourceId)
 
@@ -17,7 +26,7 @@ export function sourceLink(sourceId: string, prefix = 'Źródło'): string {
     ? `<a href="${source.url}">${label}</a>`
     : `<span>${label}${linkedReferences ? ` (${linkedReferences})` : ''}</span>`
 
-  return `<small class="source-note"><span>${prefix}:</span> ${content}</small>`
+  return `<small class="source-note"><span>${prefix}:</span> ${content} · <a href="/dokumenty-dw633/#${sourceAnchor(sourceId)}">Opis źródła</a></small>`
 }
 
 export function renderInitiativeEvent(event: InitiativeEvent): string {
@@ -30,6 +39,7 @@ export function renderInitiativeEvent(event: InitiativeEvent): string {
         <p>${event.confirmed}</p>
         <p class="history-card__pending"><strong>Następny krok:</strong> ${event.pending}</p>
         ${sourceLink(event.sourceId)}
+        ${event.sourceId === 'kpp-response' ? analysisLink(event.sourceId) : ''}
       </div>
     </li>
   `

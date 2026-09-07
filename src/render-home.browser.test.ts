@@ -60,7 +60,7 @@ test('pełna treść w odpowiedzi HTTP i przy wyłączonym JS', async () => {
     assert.equal(data.ids, true)
     for (const text of [
       siteData.trafficPage.kppPeriod, ...siteData.route.points.map(p => p.description),
-      ...siteData.initiative.slice(-3).map(p => p.confirmed), ...siteData.sources.map(p => p.title),
+      ...siteData.initiative.slice(-3).map(p => p.confirmed), siteData.documents.homeIntro, siteData.documents.linkLabel,
     ]) assert.ok(data.text.includes(text), text)
   })
 })

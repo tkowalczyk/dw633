@@ -1,0 +1,94 @@
+$ pnpm lint && pnpm test && pnpm build && pnpm test:browser
+$ eslint . --max-warnings=0
+$ vitest run
+
+ RUN  v4.1.11 <repozytorium strony>
+
+
+ Test Files  4 passed (4)
+      Tests  26 passed (26)
+   Start at  08:55:08
+   Duration  159ms (transform 157ms, setup 0ms, import 199ms, tests 40ms, environment 0ms)
+
+$ tsc && vite build
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 9 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/sitemap.xml                               0.34 kB │ gzip: 0.19 kB
+dist/404.html                                  0.50 kB │ gzip: 0.33 kB
+dist/ruch-i-wypadki-dw633/index.html           8.43 kB │ gzip: 2.81 kB
+dist/dokumenty-dw633/index.html               13.61 kB │ gzip: 3.92 kB
+dist/chodnik-stanislawow-pierwszy/index.html  21.96 kB │ gzip: 5.10 kB
+dist/index.html                               37.00 kB │ gzip: 8.55 kB
+dist/assets/style-Dr8wtcwN.css                29.18 kB │ gzip: 7.02 kB
+dist/assets/index-DxvKPxdC.js                  2.01 kB │ gzip: 0.94 kB
+
+✓ built in 50ms
+$ node scripts/test-browser.ts
+▶ strona 404
+  ✔ nieznane adresy zwracają błąd 404 bez przekierowania (41.412917ms)
+  ✔ komunikat i powrót klawiaturą działają bez JS na telefonie i komputerze (4846.653875ms)
+  ✔ strona główna, robots, sitemap i zasoby nadal zwracają właściwą treść z kodem 200 (31.116ms)
+  ✔ sitemap pomija stronę błędu i adresy testowe (17.384625ms)
+✔ strona 404 (4937.440584ms)
+▶ katalog dokumentów DW633
+  ✔ wszystkie wewnętrzne odsyłacze gotowego serwisu mają działające adresy i kotwice (59.789209ms)
+  ✔ gotowy katalog zachowuje publiczne rekordy, a build nie zawiera prywatnych załączników (7.405583ms)
+  ✔ warianty adresów prowadzą do kanonicznych URL z końcowym ukośnikiem (71.444292ms)
+  ✔ sitemap zawiera dokładnie cztery wygenerowane strony z własnymi canonical (19.119792ms)
+  ✔ pozwala przejść klawiaturą od odpowiedzi KPP do tabeli, źródła i z powrotem bez JS (8695.158917ms)
+  ✔ łączy wszystkie strony i przypisy z katalogiem, zachowując bezpośrednie źródła (15.321625ms)
+  ✔ udostępnia pełny HTML katalogu pod własnym adresem i z własnymi metadanymi (14.063ms)
+✔ katalog dokumentów DW633 (8883.221083ms)
+✖ pełna treść w odpowiedzi HTTP i przy wyłączonym JS (3186.408084ms)
+✔ lokalny tytuł, canonical i metadane udostępniania (1452.998208ms)
+✔ lokalizacja, link przystanków i cel pod H1 (1275.112834ms)
+✔ opisy, klawiatura i rozwijanie danych bez JS w obu rozmiarach (4252.137667ms)
+✔ punkty schematu leżą na drodze bez JS (1149.151167ms)
+✔ opóźniony skrypt zachowuje dokument i uruchamia nawigację (3626.846667ms)
+✔ widoczne opisy i nieruchoma scena przy ograniczeniu animacji (2035.206833ms)
+▶ ruch i zdarzenia na DW633
+  ✔ czytelna tabela i nawigacja klawiaturą działają bez JS na telefonie i komputerze (8077.592125ms)
+  ✔ menu, skrót głównej i sitemap prowadzą do istniejących stron i kotwic (274.846334ms)
+  ✔ wyjaśnia kategorie zdarzeń i zachowuje informacje o pieszych (4.8045ms)
+  ✔ udostępnia roczną tabelę KPP, GPR i objaśnienia z zakresem oraz źródłami (17.037083ms)
+  ✔ ma własny tytuł, opis i adres kanoniczny w gotowym HTML (13.254167ms)
+  ✔ bezpośrednie wejście i odświeżenie zwracają temat podstrony w HTML z kodem 200 (7.835542ms)
+✔ ruch i zdarzenia na DW633 (8396.254125ms)
+▶ chodnik i przejścia
+  ✔ czytelna podstrona i nawigacja klawiaturą działają bez JS na telefonie i komputerze (8173.607667ms)
+  ✔ menu i sitemap prowadzą do istniejących stron i sekcji (187.688084ms)
+  ✔ ma własny tytuł, opis i canonical w gotowym HTML (6.983292ms)
+  ✔ pełna historia, pytania, stan wniosków i aktualizacje pochodzą z publicznych danych (4.554333ms)
+  ✔ bezpośrednie wejście i odświeżenie zwracają gotowy HTML z kodem 200 (7.969375ms)
+✔ chodnik i przejścia (8381.715833ms)
+ℹ tests 29
+ℹ suites 4
+ℹ pass 28
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17077.211167
+
+✖ failing tests:
+
+test at src/render-home.browser.test.ts:42:1
+✖ pełna treść w odpowiedzi HTTP i przy wyłączonym JS (3186.408084ms)
+  AssertionError [ERR_ASSERTION]: Zdarzenia drogowe: kolizja i wypadek
+      at <repozytorium strony>/src/render-home.browser.test.ts:64:15
+      at async withBrowser (<repozytorium strony>/src/render-home.browser.test.ts:19:9)
+      at async TestContext.<anonymous> (<repozytorium strony>/src/render-home.browser.test.ts:49:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.
