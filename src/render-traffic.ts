@@ -44,7 +44,7 @@ export function renderTraffic(): string {
             </table>
           </div>
         </div>
-        <h3>Korekta roku wypadku i osoby ranne</h3>
+        <h3 class="section-subheading">Korekta roku wypadku i osoby ranne</h3>
         <p>${siteData.kppIntro}</p>
         <p>${siteData.pedestrianCaveat}</p>
         <div class="pedestrian-events">

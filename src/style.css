@@ -199,11 +199,19 @@ h3 {
   margin-bottom: var(--heading-space);
 }
 
+.section-subheading {
+  margin-top: var(--heading-space);
+}
+
 .walk-page .section,
 .traffic-page .section,
 .documents-page .section {
   max-width: 880px;
   padding-block: clamp(2rem, 4vw, 3.5rem);
+}
+
+.documents-page .section + .section {
+  padding-top: 0;
 }
 
 .walk-page h1,

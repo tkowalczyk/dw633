@@ -24,7 +24,7 @@ export function renderWalk(): string {
         <p>${siteData.nextSteps[0].description}</p>
         <p>${siteData.walk.waiting.note}</p>
         ${['umwm-extension', 'mzdw-extension', 'gmina-extension'].map(id => sourceLink(id)).join('')}
-        <h3>${siteData.walk.waiting.actions}</h3>
+        <h3 class="section-subheading">${siteData.walk.waiting.actions}</h3>
         <p>${siteData.nextSteps[1].description}</p>
         ${sourceLink('kpp-response')}
       </section>
