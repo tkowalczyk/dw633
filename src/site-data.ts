@@ -49,6 +49,11 @@ export type KnowledgeItem = {
 
 type SiteData = {
   asOf: string
+  trafficPage: {
+    title: string; pageTitle: string; description: string; intro: string
+    gprTitle: string; gprScope: string; gprExplanation: string
+    kppPeriod: string; kppScope: string; categories: string
+  }
   walk: {
     title: string
     pageTitle: string
@@ -105,6 +110,18 @@ type SiteData = {
 
 export const siteData = {
   asOf: '2 września 2026 r.',
+  trafficPage: {
+    title: 'Ruch, kolizje i wypadki na DW633 w Stanisławowie Pierwszym',
+    pageTitle: 'Ruch, kolizje i wypadki na DW633 | Stanisławów Pierwszy',
+    description: 'Natężenie ruchu z GPR 2025 i dane KPP z okresu 1.01.2020-18.08.2026 dla DW633 w Stanisławowie Pierwszym. Tabela roczna, korekta daty i zakres danych.',
+    intro: 'Zebraliśmy pomiar ruchu pojazdów i historię zdarzeń przy ulicy Jana Kazimierza. Te dane pomagają określić, co trzeba jeszcze sprawdzić przed wyborem rozwiązań dla pieszych.',
+    gprTitle: 'Generalny Pomiar Ruchu (GPR) 2025',
+    gprScope: 'Odcinek pomiarowy jest dłuższy od badanej trasy Przyleśna-Sonaty.',
+    gprExplanation: 'To przeliczenie średniej dobowej, rozłożonej równomiernie na 24 godziny.',
+    kppPeriod: '1.01.2020-18.08.2026',
+    kppScope: 'Komenda Powiatowa Policji (KPP) w Legionowie opisała zestawienie jako dotyczące odcinka Przyleśna-Sonaty. Dane pochodzą z Systemu Ewidencji Wypadków i Kolizji (SEWiK). Ostatni rok obejmuje okres do 18 sierpnia 2026 r.',
+    categories: 'Kolizja może oznaczać szkody materialne lub obrażenia powodujące rozstrój zdrowia nie dłuższy niż siedem dni. Wypadek to zdarzenie z osobą ranną lub zabitą. Kategorie w tabeli zachowują kwalifikację przekazaną przez KPP.',
+  },
   walk: {
     title: 'Chodnik i przejścia w Stanisławowie Pierwszym przy DW633',
     pageTitle: 'Chodnik i przejścia w Stanisławowie Pierwszym | Stan działań na DW633',
@@ -214,7 +231,7 @@ export const siteData = {
     ],
   },
   kppIntro:
-    'KPP przekazała 38 wpisów SEWiK z lat 2020–2026, opisanych jako dotyczące badanego odcinka: 35 kolizji i 3 wypadki. Według tabeli i późniejszych wyjaśnień KPP są wśród nich 4 osoby ranne; nie wykazano osoby zabitej. Policja potwierdziła, że wypadek z pieszą przy Przyleśnej miał miejsce 25 maja 2026 r., a rok 2025 w pierwotnej tabeli był omyłką pisarską.',
+    'Według tabeli i późniejszych wyjaśnień KPP są wśród nich 4 osoby ranne; nie wykazano osoby zabitej. Policja potwierdziła datę wypadku z pieszą przy Przyleśnej: 25 maja 2026 r.',
   kppByYear: [
     { label: '2020', shortLabel: '2020', collisions: 5, accidents: 0 },
     { label: '2021', shortLabel: '2021', collisions: 5, accidents: 1 },
@@ -395,7 +412,10 @@ export const siteData = {
       },
       {
         type: 'known',
-        title: 'KPP zarejestrowała 35 kolizji i 3 wypadki',
+        get title(): string {
+          const totals = kppTotals()
+          return `Dane KPP: kolizje ${totals.collisions}, wypadki ${totals.accidents}`
+        },
         description:
           'Zakres czasowy to 1.01.2020–18.08.2026. Dwa wpisy dotyczą udziału pieszych.',
         sourceId: 'kpp-response',
@@ -454,6 +474,15 @@ export const siteData = {
     },
   ],
   sources: [
+    {
+      id: 'event-categories',
+      title: 'Zdarzenia drogowe: kolizja i wypadek',
+      owner: 'Wydział Ruchu Drogowego Komendy Stołecznej Policji',
+      scope: 'objaśnienie pojęć kolizji i wypadku',
+      asOf: 'strona sprawdzona 7.09.2026',
+      note: 'Objaśnienie pojęć; kwalifikacja lokalnych wpisów pochodzi z odpowiedzi KPP Legionowo.',
+      url: 'https://ksp.policja.gov.pl/wrd/sprawy/informacje-dla-obywateli/zdarzenia-drogowe/119593,ZDARZENIA-DROGOWE.html',
+    },
     {
       id: 'gpr-2025',
       title: 'Generalny Pomiar Ruchu 2025: wyniki podstawowe',
@@ -554,7 +583,7 @@ export const siteData = {
       id: 'kpp-response',
       title: 'Pismo KPP-RD-1930/26 i późniejsze wyjaśnienia',
       owner: 'KPP Legionowo, Wydział Ruchu Drogowego',
-      scope: '38 wpisów SEWiK, skutek i data wypadku z udziałem pieszej oraz podział ról Policji',
+      scope: 'zestawienie SEWiK, skutek i data wypadku z udziałem pieszej oraz podział ról Policji',
       asOf: 'pismo 19.08.2026; treści kolejnych e-maili przekazane 22 i 24.08.2026',
       note: 'Pismo i transkrypcje e-maili są przechowywane niepublicznie. KPP potwierdziła 25.05.2026 r. i omyłkę roku w pierwotnej tabeli.',
     },
@@ -606,16 +635,17 @@ export const siteData = {
 const minutesPerDay = 24 * 60
 
 export const trafficScale = {
-  averagePerMinute: siteData.traffic.dailyVehicles / minutesPerDay,
-  averageSecondsBetween:
-    (minutesPerDay * 60) / siteData.traffic.dailyVehicles,
+  get averagePerMinute() { return siteData.traffic.dailyVehicles / minutesPerDay },
+  get averageSecondsBetween() { return (minutesPerDay * 60) / siteData.traffic.dailyVehicles },
 }
 
-export const kppTotals = siteData.kppByYear.reduce(
-  (totals, year) => ({
-    collisions: totals.collisions + year.collisions,
-    accidents: totals.accidents + year.accidents,
-    total: totals.total + year.collisions + year.accidents,
-  }),
-  { collisions: 0, accidents: 0, total: 0 },
-)
+export function kppTotals(): { collisions: number; accidents: number; total: number } {
+  return siteData.kppByYear.reduce(
+    (totals, year) => ({
+      collisions: totals.collisions + year.collisions,
+      accidents: totals.accidents + year.accidents,
+      total: totals.total + year.collisions + year.accidents,
+    }),
+    { collisions: 0, accidents: 0, total: 0 },
+  )
+}

@@ -59,7 +59,7 @@ test('pełna treść w odpowiedzi HTTP i przy wyłączonym JS', async () => {
     assert.equal(data.nav, 1)
     assert.equal(data.ids, true)
     for (const text of [
-      '2026, do 18 sierpnia', ...siteData.route.points.map(p => p.description),
+      siteData.trafficPage.kppPeriod, ...siteData.route.points.map(p => p.description),
       ...siteData.initiative.slice(-3).map(p => p.confirmed), ...siteData.sources.map(p => p.title),
     ]) assert.ok(data.text.includes(text), text)
   })

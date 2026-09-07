@@ -11,7 +11,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('sumuje roczne dane KPP do 35 kolizji, 3 wypadków i 38 zdarzeń', () => {
-    expect(kppTotals).toEqual({ collisions: 35, accidents: 3, total: 38 })
+    expect(kppTotals()).toEqual({ collisions: 35, accidents: 3, total: 38 })
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {

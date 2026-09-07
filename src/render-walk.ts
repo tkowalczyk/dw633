@@ -4,7 +4,7 @@ import { renderInitiativeEvent, renderSocialUpdate, sourceLink } from './render-
 
 export function renderWalk(): string {
   return `
-    ${renderNavigation(false)}
+    ${renderNavigation('walk')}
     <main id="tresc" class="walk-page">
       <section class="section" aria-labelledby="walk-title">
         <p class="eyebrow">Stan na ${siteData.asOf}</p>

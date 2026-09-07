@@ -78,7 +78,7 @@ describe('chodnik i przejścia', () => {
       const nav = html.match(/<nav\b[\s\S]*?<\/nav>/)?.[0] || ''
       assert.ok(nav.includes(`href="${path}"`))
       assert.ok(nav.includes('Chodnik i przejścia'))
-      assert.doesNotMatch(html, /href="\/(?:ruch-i-wypadki-dw633|dokumenty-dw633)\//)
+      assert.doesNotMatch(html, /href="\/dokumenty-dw633\//)
       if (currentPath === path) {
         assert.match(html, /href="\/">Wróć na stronę główną<\/a>/)
         assert.ok(nav.includes('href="/#dane"'))

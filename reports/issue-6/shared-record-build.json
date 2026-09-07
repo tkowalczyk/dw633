@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-07",
+  "changedYear": 2020,
+  "testCounts": {
+    "collisions": 42,
+    "accidents": 2
+  },
+  "result": {
+    "homeTotals": true,
+    "annualRow": true,
+    "tableTotals": true,
+    "noStaleTotals": true
+  }
+}

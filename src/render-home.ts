@@ -12,9 +12,6 @@ import {
 const routePath = 'M 274 830 C 238 690, 302 570, 270 440 C 238 315, 292 200, 264 70'
 const routeGeometry = new svgPathProperties(routePath)
 const sourceById = new Map(siteData.sources.map((source) => [source.id, source]))
-const averageVehiclesPerMinute = Math.round(trafficScale.averagePerMinute)
-const trafficStreamDuration =
-  trafficScale.averageSecondsBetween * averageVehiclesPerMinute
 const trafficGapPattern = [3.2, 7.8, 4.4, 6.9, 2.9, 8.6, 5.1, 4.2, 7.4, 3.5, 6.3]
 const trafficGapPatternTotal = trafficGapPattern.reduce((sum, gap) => sum + gap, 0)
 const trafficDirections: Array<'forward' | 'reverse'> = [
@@ -30,10 +27,6 @@ const trafficDirections: Array<'forward' | 'reverse'> = [
   'forward',
   'reverse',
 ]
-const averageSecondsBetween = trafficScale.averageSecondsBetween.toLocaleString(
-  'pl-PL',
-  { maximumFractionDigits: 1 },
-)
 
 function publicSourceUrl(sourceId: string): string {
   const source = sourceById.get(sourceId)
@@ -45,7 +38,7 @@ function publicSourceUrl(sourceId: string): string {
   return source.url
 }
 
-function renderTrafficStream(): string {
+function renderTrafficStream(trafficStreamDuration: number): string {
   return trafficGapPattern
     .map((_, index) => {
       const direction = trafficDirections[index]
@@ -144,6 +137,7 @@ function inflectCount(count: number, singular: string, plural: string): string {
 
 function renderKppBars(): string {
   const maxEvents = Math.max(
+    1,
     ...siteData.kppByYear.map((year) => year.collisions + year.accidents),
   )
 
@@ -164,21 +158,6 @@ function renderKppBars(): string {
         </li>
       `
     })
-    .join('')
-}
-
-function renderKppRows(): string {
-  return siteData.kppByYear
-    .map(
-      (year) => `
-        <tr>
-          <th scope="row">${year.label}</th>
-          <td>${year.collisions}</td>
-          <td>${year.accidents}</td>
-          <td>${year.collisions + year.accidents}</td>
-        </tr>
-      `,
-    )
     .join('')
 }
 
@@ -217,8 +196,12 @@ function renderSource(source: Source, index: number): string {
 }
 
 export function renderHome(): string {
+  const totals = kppTotals()
+  const averageVehiclesPerMinute = Math.round(trafficScale.averagePerMinute)
+  const trafficStreamDuration = trafficScale.averageSecondsBetween * trafficGapPattern.length
+  const averageSecondsBetween = trafficScale.averageSecondsBetween.toLocaleString('pl-PL', { maximumFractionDigits: 1 })
   return `
-  ${renderNavigation(true)}
+  ${renderNavigation('home')}
 
   <main id="tresc">
     <section class="hero section" id="start" aria-labelledby="hero-title">
@@ -287,7 +270,7 @@ export function renderHome(): string {
             <span>dwa kierunki · naturalnie nierówne odstępy</span>
           </div>
           <div class="traffic__stream" style="--stream-duration: ${trafficStreamDuration.toFixed(3)}s" aria-hidden="true">
-            ${renderTrafficStream()}
+            ${renderTrafficStream(trafficStreamDuration)}
             ${renderPedestrians()}
           </div>
           ${sourceLink(siteData.traffic.sourceId)}
@@ -318,7 +301,7 @@ export function renderHome(): string {
           </div>
           <svg class="route-svg" viewBox="0 0 520 900" role="img" aria-labelledby="route-svg-title route-svg-desc">
             <title id="route-svg-title">Schemat odcinka DW633 od Przyleśnej do Sonaty</title>
-            <desc id="route-svg-desc">Droga biegnie z południa na północ. Zaznaczono przejścia na obu końcach, przystanki Przyleśna, rejon placówek edukacyjnych i szkołę. Animowane pojazdy przedstawiają przeliczenie dobowej średniej GPR na około 11 pojazdów na minutę. Punkty ułożono w kolejności występowania na trasie.</desc>
+            <desc id="route-svg-desc">Droga biegnie z południa na północ. Zaznaczono przejścia na obu końcach, przystanki Przyleśna, rejon placówek edukacyjnych i szkołę. Animowane pojazdy przedstawiają przeliczenie dobowej średniej GPR na około ${averageVehiclesPerMinute} pojazdów na minutę. Punkty ułożono w kolejności występowania na trasie.</desc>
             <defs>
               <filter id="road-shadow" x="-30%" y="-20%" width="160%" height="140%">
                 <feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity="0.13" />
@@ -338,7 +321,7 @@ export function renderHome(): string {
             <g class="route-traffic-stat route-traffic-stat--daily" aria-hidden="true" transform="translate(24 132)">
               <rect width="168" height="112" rx="18" />
               <text class="route-traffic-stat__label" x="16" y="25">GPR 2025</text>
-              <text class="route-traffic-stat__value" x="16" y="69">15 753</text>
+              <text class="route-traffic-stat__value" x="16" y="69">${siteData.traffic.dailyVehicles.toLocaleString('pl-PL')}</text>
               <text class="route-traffic-stat__unit" x="16" y="94">pojazdy / dobę</text>
             </g>
             <g class="route-traffic-stat route-traffic-stat--minute" aria-hidden="true" transform="translate(348 326)">
@@ -362,7 +345,7 @@ export function renderHome(): string {
             <span>około 1 km**</span>
           </div>
           <div class="route-visual__notes">
-            <p class="route-visual__note">* Tempo aut odpowiada dobowej średniej 10,9 pojazdu na minutę dla odcinka GPR km 9,678–15,885. <a href="${publicSourceUrl('gpr-2025')}">GPR 2025</a>.</p>
+            <p class="route-visual__note">* Tempo aut odpowiada dobowej średniej ${trafficScale.averagePerMinute.toLocaleString('pl-PL', { maximumFractionDigits: 1 })} pojazdu na minutę dla odcinka GPR km 9,678–15,885. <a href="${publicSourceUrl('gpr-2025')}">GPR 2025</a>.</p>
             <p class="route-visual__note">** Długość według geometrii OSM: ok. 996,9 m. © autorzy OpenStreetMap, <a href="https://www.openstreetmap.org/copyright">ODbL</a>.</p>
           </div>
         </div>
@@ -373,16 +356,16 @@ export function renderHome(): string {
 
     <section class="kpp section" id="dane" aria-labelledby="kpp-title">
       <div class="section-heading">
-        <p class="eyebrow">Dane KPP Legionowo · 1.01.2020–18.08.2026</p>
+        <p class="eyebrow">Dane historyczne KPP Legionowo · ${siteData.trafficPage.kppPeriod}</p>
         <h2 id="kpp-title">Kolizje i wypadki to dwie różne kategorie</h2>
-        <p>${siteData.kppIntro}</p>
+        <p>${siteData.trafficPage.kppScope}</p>
         ${sourceLink('kpp-response')}
       </div>
 
       <div class="kpp-totals" aria-label="Łączne dane KPP">
-        <div><strong>${kppTotals.collisions}</strong><span>kolizji</span></div>
-        <div><strong>${kppTotals.accidents}</strong><span>wypadki</span></div>
-        <div class="kpp-totals__all"><strong>${kppTotals.total}</strong><span>zdarzeń razem</span></div>
+        <div><strong>${totals.collisions}</strong><span>kolizji</span></div>
+        <div><strong>${totals.accidents}</strong><span>wypadki</span></div>
+        <div class="kpp-totals__all"><strong>${totals.total}</strong><span>zdarzeń razem</span></div>
       </div>
 
       <div class="chart-card">
@@ -393,34 +376,7 @@ export function renderHome(): string {
         <ul class="chart" aria-label="Liczba kolizji i wypadków w kolejnych latach">${renderKppBars()}</ul>
       </div>
 
-      <details class="data-table">
-        <summary>Pełna tabela danych rocznych</summary>
-        <div class="table-scroll" tabindex="0">
-          <table>
-            <caption>Dane SEWiK przekazane przez KPP Legionowo</caption>
-            <thead><tr><th scope="col">Rok</th><th scope="col">Kolizje</th><th scope="col">Wypadki</th><th scope="col">Razem</th></tr></thead>
-            <tbody>${renderKppRows()}</tbody>
-            <tfoot><tr><th scope="row">Razem</th><td>${kppTotals.collisions}</td><td>${kppTotals.accidents}</td><td>${kppTotals.total}</td></tr></tfoot>
-          </table>
-        </div>
-      </details>
-
-      <div class="pedestrian-events">
-        <div>
-          <p class="eyebrow">Piesi w danych SEWiK</p>
-          <h3>Dwa wpisy wymagają osobnej analizy</h3>
-        </div>
-        <ul>
-          ${siteData.pedestrianEntries
-            .map(
-              (entry) => `
-                <li><strong>${entry.category}</strong><span>${entry.description}</span></li>
-              `,
-            )
-            .join('')}
-        </ul>
-        <p>${siteData.pedestrianCaveat}</p>
-      </div>
+      <a class="text-link" href="/ruch-i-wypadki-dw633/#zdarzenia">Pełna tabela, korekta i zakres danych KPP</a>
     </section>
 
     <section class="history section" id="dzialania" aria-labelledby="history-title">

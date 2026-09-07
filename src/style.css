@@ -199,16 +199,19 @@ h3 {
   margin-bottom: var(--heading-space);
 }
 
-.walk-page .section {
+.walk-page .section,
+.traffic-page .section {
   max-width: 880px;
   padding-block: clamp(2rem, 4vw, 3.5rem);
 }
 
-.walk-page h1 {
+.walk-page h1,
+.traffic-page h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
-.walk-page h2 {
+.walk-page h2,
+.traffic-page h2 {
   font-size: clamp(1.8rem, 3.2vw, 2.8rem);
 }
 
