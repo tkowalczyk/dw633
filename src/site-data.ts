@@ -113,7 +113,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '2 września 2026 r.',
+  asOf: '14 września 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -124,7 +124,7 @@ export const siteData = {
     readings: [
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -151,9 +151,27 @@ export const siteData = {
         title: 'Co wiadomo o chodniku przy Jana Kazimierza?',
         paragraphs: [
           'Celem inicjatywy jest ciągła trasa piesza po stronie, po której brakuje chodnika, oraz bezpieczne przekraczanie jezdni pomiędzy istniejącymi przejściami.',
-          'Dotychczasowe dokumenty opisują wcześniejsze próby: projekt Budżetu Obywatelskiego Mazowsza (BOM) nr 266 i zadanie projektowe Gminy z 2023 r. Ich przebieg przedstawia chronologia poniżej. Do wyboru rozwiązania potrzebne są oględziny, analiza bezpieczeństwa i porównanie wariantów.',
+          'Gmina w piśmie z 11 września informuje o przygotowywaniu umów z MZDW dotyczących brakujących chodników. Wcześniejsze próby obejmowały projekt Budżetu Obywatelskiego Mazowsza (BOM) nr 266 i zadanie projektowe z 2023 r. Do wyboru rozwiązania potrzebne są oględziny, analiza bezpieczeństwa i porównanie wariantów.',
         ],
-        sourceIds: ['bom-266', 'budget-2023'],
+        sourceIds: ['gmina-actions', 'bom-266', 'budget-2023'],
+      },
+      {
+        title: 'Co zawiera odpowiedź Gminy z 11 września?',
+        paragraphs: [
+          'Gmina podaje, że na początku 2026 r. przekazała MZDW postulaty mieszkańców, także dotyczące odcinka Sonaty-Przyleśna. 29 lipca otrzymała propozycje umów o pomocy rzeczowej przy brakujących chodnikach wzdłuż DW633. Te działania poprzedzają nasze sierpniowe wnioski.',
+          'Według pisma trwa przygotowanie zawarcia umów i planowanie zadań na 2027 r. oraz kolejne lata. Gmina zapowiada przekazanie planu Radzie Gminy w ramach prac nad budżetem i wieloletnią prognozą finansową, czyli planem finansów na kolejne lata. Sprawę prowadzi Dział Inwestycji.',
+          'Gmina wskazuje też nowo wybudowaną sygnalizację przy szkole oraz odcinkowe remonty chodnika jako efekty dotychczasowej współpracy. Pismo nie podaje daty uruchomienia sygnalizacji ani dokładnego zakresu remontów.',
+        ],
+        sourceIds: ['gmina-actions'],
+      },
+      {
+        title: 'Czego odpowiedź Gminy jeszcze nie wyjaśnia?',
+        paragraphs: [
+          'Brakuje dokładnego zakresu i strony drogi, kwot oraz harmonogramu. Pismo nie potwierdza podpisania umów ani przyznania pieniędzy. Rok 2027 oznacza horyzont planowania budżetu, a nie potwierdzony termin budowy.',
+          'Gmina nie odniosła się do udziału w oględzinach i przekazania danych o dojściach dzieci. Nie wyjaśniła też zakresu koncepcji bezpiecznego przekraczania jezdni pomiędzy istniejącymi przejściami ani związku z niewykonanym zadaniem z 2023 r. Przygotowano prośbę o doprecyzowanie tych spraw.',
+          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Potrzebne jest potwierdzenie dokładnych granic planowanego zadania względem rejonu przystanków „Przyleśna” wskazanego w naszym wniosku.',
+        ],
+        sourceIds: ['gmina-actions', 'budget-2023'],
       },
       {
         title: 'Jakiego odcinka dotyczą wnioski?',
@@ -168,7 +186,7 @@ export const siteData = {
       title: 'Na jakie odpowiedzi czekamy?',
       documents: 'Wnioski o dokumenty',
       actions: 'Wnioski o działania',
-      note: 'Zawiadomienia określają terminy udostępnienia dokumentów; odpowiedzi merytoryczne mają dopiero nadejść. Są to osobne sprawy od wniosków o działania.',
+      note: 'To terminy zapisane w otrzymanych zawiadomieniach. Odpowiedź Gminy z 11 września dotyczy osobnego wniosku o działania. Nie zmienia terminu 12 października dla dokumentów.',
     },
   },
   notFound: {
@@ -191,7 +209,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '4 otrzymane' },
+      { label: 'Pisma z instytucji', value: '5 otrzymanych' },
     ],
   },
   traffic: {
@@ -369,6 +387,16 @@ export const siteData = {
         'Pismo nie zawiera jeszcze dokumentów i nie dotyczy osobnego wniosku o oględziny, analizę bezpieczeństwa ruchu i warianty.',
       sourceId: 'mzdw-extension',
     },
+    {
+      date: '11.09.2026',
+      title: 'Gmina przygotowuje umowy dotyczące chodników',
+      status: 'Odpowiedź częściowa',
+      confirmed:
+        'Gmina podaje, że 29 lipca otrzymała propozycje umów z MZDW dotyczących brakujących chodników przy DW633. Trwa przygotowanie ich zawarcia i planowanie zadań na 2027 r. i kolejne lata. Wcześniejsze postulaty obejmowały też odcinek Sonaty-Przyleśna.',
+      pending:
+        'Doprecyzować zakres, stronę drogi, etap umów, kwoty i harmonogram oraz udział Gminy w oględzinach. Pismo nie potwierdza podpisania umów ani terminu budowy.',
+      sourceId: 'gmina-actions',
+    },
   ],
   updates: {
     intro:
@@ -468,7 +496,7 @@ export const siteData = {
       'GPR pokazuje skalę ruchu na dłuższym odcinku, OSM pomaga oszacować długość trasy, mapy publiczne pokazują układ terenu, a SEWiK historię zdarzeń. Do wyboru rozwiązania potrzebne są jeszcze pomiary terenowe i analiza BRD.',
   },
   nextIntro:
-    'Najbliższy etap to zebranie brakujących dokumentów, obserwacja ruchu pieszego i porównanie wariantów. Odpowiedzi instytucji sprawdzimy punkt po punkcie.',
+    'Po odpowiedzi Gminy trzeba ustalić zakres przygotowywanych umów i zadań budżetowych. Równolegle zbieramy dokumenty potrzebne do oględzin i porównania wariantów.',
   nextSteps: [
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
@@ -478,7 +506,12 @@ export const siteData = {
     {
       title: 'Ustalić, kto uruchomi analizę i projekt',
       description:
-        '18 września 2026 r. trzeba oddzielnie sprawdzić wnioski o działania do MZDW, Marszałka i Gminy oraz odpowiedź UMWM na wniosek o dokumenty. Wtedy będzie można ustalić, czy ruszą analiza, lokalne działania KPP i przygotowanie projektu do opinii Komendanta Stołecznego Policji.',
+        '18 września 2026 r. sprawdzimy wnioski o działania do MZDW i Marszałka oraz odpowiedź UMWM na wniosek o dokumenty. Gmina odpowiedziała częściowo 11 września. Do doprecyzowania pozostają oględziny, zakres koncepcji i udział w przygotowaniu bezpiecznego przekraczania jezdni.',
+    },
+    {
+      title: 'Doprecyzować umowy i plan budżetowy Gminy',
+      description:
+        'Przygotowano prośbę o wskazanie zakresu i strony drogi, etapu umów oraz proponowanych kwot i lat realizacji. Trzeba też ustalić, czy zapowiedziany plan przekazano Radzie Gminy i co zmieniło się od niewykonanego zadania z 2023 r.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -628,6 +661,14 @@ export const siteData = {
       scope: 'nowy termin dla wniosku o dokumenty dotyczące badanego odcinka DW633',
       asOf: 'pismo z 31.08.2026',
       note: 'MZDW wyznaczył termin 25.09.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+    },
+    {
+      id: 'gmina-actions',
+      title: 'Pismo IZ.7021.110.2026: wsparcie działań przy DW633',
+      owner: 'Wójt Gminy Nieporęt',
+      scope: 'odpowiedź na wniosek o działania: propozycje umów z MZDW, planowanie budżetu i koordynacja',
+      asOf: 'pismo z 11.09.2026; przeanalizowane 14.09.2026',
+      note: 'Odpowiedź częściowa. Gmina podaje datę otrzymania propozycji 29.07.2026 i planowanie na 2027 r. oraz kolejne lata. Pismo nie potwierdza podpisania umów, przyznania środków ani terminu budowy. Oryginał pozostaje niepubliczny ze względu na prywatny adres odbiorcy.',
     },
     {
       id: 'accident-date-check',

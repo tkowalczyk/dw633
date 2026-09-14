@@ -26,6 +26,7 @@ export function renderWalk(): string {
         ${['umwm-extension', 'mzdw-extension', 'gmina-extension'].map(id => sourceLink(id)).join('')}
         <h3 class="section-subheading">${siteData.walk.waiting.actions}</h3>
         <p>${siteData.nextSteps[1].description}</p>
+        ${sourceLink('gmina-actions')}
         ${sourceLink('kpp-response')}
       </section>
       <section class="history section" id="dzialania" aria-labelledby="history-title">
