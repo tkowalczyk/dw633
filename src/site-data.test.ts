@@ -15,10 +15,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('14 września 2026 r.')
+    expect(siteData.asOf).toBe('17 września 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '5 otrzymanych',
+      value: '6 otrzymanych',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -80,7 +80,7 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
       )?.description,
-    ).toContain('18 września')
+    ).toContain('15 października')
     expect(JSON.stringify(siteData)).toContain('odpowiedź UMWM na wniosek o dokumenty')
   })
 
@@ -103,7 +103,7 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Ustalić, kto uruchomi analizę i projekt',
       )?.description,
-    ).toContain('Gmina odpowiedziała częściowo 11 września')
+    ).toContain('Częściową odpowiedź Gminy otrzymano 14 września')
   })
 
   it('odnotowuje termin MZDW tylko dla wniosku o dokumenty', () => {

@@ -113,7 +113,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '14 września 2026 r.',
+  asOf: '17 września 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -124,7 +124,7 @@ export const siteData = {
     readings: [
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -156,9 +156,9 @@ export const siteData = {
         sourceIds: ['gmina-actions', 'bom-266', 'budget-2023'],
       },
       {
-        title: 'Co zawiera odpowiedź Gminy z 11 września?',
+        title: 'Co zawiera odpowiedź Gminy otrzymana 14 września?',
         paragraphs: [
-          'Gmina podaje, że na początku 2026 r. przekazała MZDW postulaty mieszkańców, także dotyczące odcinka Sonaty-Przyleśna. 29 lipca otrzymała propozycje umów o pomocy rzeczowej przy brakujących chodnikach wzdłuż DW633. Te działania poprzedzają nasze sierpniowe wnioski.',
+          'Pismo sporządzono 11 września, a otrzymano 14 września. Gmina podaje, że na początku 2026 r. przekazała MZDW postulaty mieszkańców, także dotyczące odcinka Sonaty-Przyleśna. 29 lipca otrzymała propozycje umów o pomocy rzeczowej przy brakujących chodnikach wzdłuż DW633. Te działania poprzedzają nasze sierpniowe wnioski.',
           'Według pisma trwa przygotowanie zawarcia umów i planowanie zadań na 2027 r. oraz kolejne lata. Gmina zapowiada przekazanie planu Radzie Gminy w ramach prac nad budżetem i wieloletnią prognozą finansową, czyli planem finansów na kolejne lata. Sprawę prowadzi Dział Inwestycji.',
           'Gmina wskazuje też nowo wybudowaną sygnalizację przy szkole oraz odcinkowe remonty chodnika jako efekty dotychczasowej współpracy. Pismo nie podaje daty uruchomienia sygnalizacji ani dokładnego zakresu remontów.',
         ],
@@ -168,8 +168,8 @@ export const siteData = {
         title: 'Czego odpowiedź Gminy jeszcze nie wyjaśnia?',
         paragraphs: [
           'Brakuje dokładnego zakresu i strony drogi, kwot oraz harmonogramu. Pismo nie potwierdza podpisania umów ani przyznania pieniędzy. Rok 2027 oznacza horyzont planowania budżetu, a nie potwierdzony termin budowy.',
-          'Gmina nie odniosła się do udziału w oględzinach i przekazania danych o dojściach dzieci. Nie wyjaśniła też zakresu koncepcji bezpiecznego przekraczania jezdni pomiędzy istniejącymi przejściami ani związku z niewykonanym zadaniem z 2023 r. Przygotowano prośbę o doprecyzowanie tych spraw.',
-          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Potrzebne jest potwierdzenie dokładnych granic planowanego zadania względem rejonu przystanków „Przyleśna” wskazanego w naszym wniosku.',
+          'Gmina nie odniosła się do udziału w oględzinach i przekazania danych o dojściach dzieci. Nie wyjaśniła też zakresu koncepcji bezpiecznego przekraczania jezdni pomiędzy istniejącymi przejściami ani związku z niewykonanym zadaniem z 2023 r.',
+          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Przygotowano jedno pytanie: czy rozmowy i przygotowywane umowy obejmują chodnik po zachodniej stronie Jana Kazimierza, zwłaszcza na odcinku Przyleśna-Sonaty. Pytanie nie zostało jeszcze wysłane.',
         ],
         sourceIds: ['gmina-actions', 'budget-2023'],
       },
@@ -186,7 +186,7 @@ export const siteData = {
       title: 'Na jakie odpowiedzi czekamy?',
       documents: 'Wnioski o dokumenty',
       actions: 'Wnioski o działania',
-      note: 'To terminy zapisane w otrzymanych zawiadomieniach. Odpowiedź Gminy z 11 września dotyczy osobnego wniosku o działania. Nie zmienia terminu 12 października dla dokumentów.',
+      note: 'To terminy zapisane w otrzymanych zawiadomieniach. Odpowiedź Gminy otrzymana 14 września, sporządzona 11 września, dotyczy osobnego wniosku o działania. Nie zmienia terminu 12 października dla dokumentów.',
     },
   },
   notFound: {
@@ -209,7 +209,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '5 otrzymanych' },
+      { label: 'Pisma z instytucji', value: '6 otrzymanych' },
     ],
   },
   traffic: {
@@ -364,7 +364,7 @@ export const siteData = {
       confirmed:
         'Urząd wyznaczył 18 września 2026 r. jako nowy termin rozpatrzenia wniosku o dokumenty organizacji ruchu na DW633 i pełną dokumentację projektu BOM nr 266.',
       pending:
-        'Pismo nie zawiera jeszcze dokumentów ani odpowiedzi na poszczególne punkty wniosku.',
+        'Pismo nie zawiera jeszcze dokumentów ani odpowiedzi na poszczególne punkty wniosku. Późniejsze zawiadomienie z 16 września zmieniło ten termin na 15 października.',
       sourceId: 'umwm-extension',
     },
     {
@@ -388,14 +388,24 @@ export const siteData = {
       sourceId: 'mzdw-extension',
     },
     {
-      date: '11.09.2026',
+      date: '14.09.2026',
       title: 'Gmina przygotowuje umowy dotyczące chodników',
       status: 'Odpowiedź częściowa',
       confirmed:
-        'Gmina podaje, że 29 lipca otrzymała propozycje umów z MZDW dotyczących brakujących chodników przy DW633. Trwa przygotowanie ich zawarcia i planowanie zadań na 2027 r. i kolejne lata. Wcześniejsze postulaty obejmowały też odcinek Sonaty-Przyleśna.',
+        'Odpowiedź otrzymano 14 września; pismo sporządzono 11 września. Gmina podaje, że 29 lipca otrzymała propozycje umów z MZDW dotyczących brakujących chodników przy DW633. Trwa przygotowanie ich zawarcia i planowanie zadań na 2027 r. i kolejne lata. Wcześniejsze postulaty obejmowały też odcinek Sonaty-Przyleśna.',
       pending:
-        'Doprecyzować zakres, stronę drogi, etap umów, kwoty i harmonogram oraz udział Gminy w oględzinach. Pismo nie potwierdza podpisania umów ani terminu budowy.',
+        'Potwierdzić, czy przygotowania obejmują chodnik po zachodniej stronie Jana Kazimierza na odcinku Przyleśna-Sonaty. Pismo nie potwierdza podpisania umów ani terminu budowy.',
       sourceId: 'gmina-actions',
+    },
+    {
+      date: '16.09.2026',
+      title: 'UMWM ponownie przesunął termin odpowiedzi',
+      status: 'Nowy termin',
+      confirmed:
+        'Pismo sporządzono i otrzymano 16 września. Urząd Marszałkowski wyznaczył 15 października 2026 r. zamiast 18 września dla wniosku o dokumenty organizacji ruchu i projektu BOM nr 266. Ponownie wskazał obszerny zakres danych z ostatnich dziesięciu lat.',
+      pending:
+        'Zawiadomienie nie zawiera dokumentów ani odpowiedzi na pytania. Nie obejmuje osobnego wniosku o działania na rzecz bezpieczeństwa pieszych.',
+      sourceId: 'umwm-extension-2',
     },
   ],
   updates: {
@@ -496,22 +506,22 @@ export const siteData = {
       'GPR pokazuje skalę ruchu na dłuższym odcinku, OSM pomaga oszacować długość trasy, mapy publiczne pokazują układ terenu, a SEWiK historię zdarzeń. Do wyboru rozwiązania potrzebne są jeszcze pomiary terenowe i analiza BRD.',
   },
   nextIntro:
-    'Po odpowiedzi Gminy trzeba ustalić zakres przygotowywanych umów i zadań budżetowych. Równolegle zbieramy dokumenty potrzebne do oględzin i porównania wariantów.',
+    'Po odpowiedzi Gminy chcemy potwierdzić, czy przygotowania obejmują zachodni chodnik na odcinku Przyleśna-Sonaty. Równolegle zbieramy dokumenty potrzebne do oględzin i porównania wariantów.',
   nextSteps: [
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        'UMWM wyznaczył 18 września dla wniosku o dokumenty organizacji ruchu i projektu BOM nr 266. MZDW wyznaczył 25 września dla wniosku o dokumenty dotyczące badanego odcinka. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
+        'Na odpowiedź UMWM na wniosek o dokumenty organizacji ruchu i projektu BOM nr 266 czekamy do 15 października. Urząd ponownie przesunął termin pismem otrzymanym 16 września. MZDW wyznaczył 25 września dla wniosku o dokumenty dotyczące badanego odcinka. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
     },
     {
       title: 'Ustalić, kto uruchomi analizę i projekt',
       description:
-        '18 września 2026 r. sprawdzimy wnioski o działania do MZDW i Marszałka oraz odpowiedź UMWM na wniosek o dokumenty. Gmina odpowiedziała częściowo 11 września. Do doprecyzowania pozostają oględziny, zakres koncepcji i udział w przygotowaniu bezpiecznego przekraczania jezdni.',
+        '18 września 2026 r. sprawdzimy wnioski o działania do MZDW i Marszałka. Nowy termin UMWM dotyczy wyłącznie dokumentów. Częściową odpowiedź Gminy otrzymano 14 września; sporządzono ją 11 września. Do doprecyzowania pozostają oględziny, zakres koncepcji i udział w przygotowaniu bezpiecznego przekraczania jezdni.',
     },
     {
-      title: 'Doprecyzować umowy i plan budżetowy Gminy',
+      title: 'Potwierdzić zachodni chodnik na badanym odcinku',
       description:
-        'Przygotowano prośbę o wskazanie zakresu i strony drogi, etapu umów oraz proponowanych kwot i lat realizacji. Trzeba też ustalić, czy zapowiedziany plan przekazano Radzie Gminy i co zmieniło się od niewykonanego zadania z 2023 r.',
+        'Przygotowano jedno pytanie do Gminy o zakres rozmów i umów, których propozycje otrzymała 29 lipca. Czy obejmują chodnik po zachodniej stronie Jana Kazimierza, zwłaszcza od rejonu przejścia i przystanków „Przyleśna” do ul. Sonaty? Projekt pozostaje niewysłany.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -644,7 +654,15 @@ export const siteData = {
       owner: 'Urząd Marszałkowski Województwa Mazowieckiego',
       scope: 'nowy termin dla wniosku o dokumenty organizacji ruchu na DW633 i projektu BOM nr 266',
       asOf: 'pismo z 24.08.2026',
-      note: 'Urząd wyznaczył termin 18.09.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+      note: 'Pierwsze zawiadomienie wyznaczało termin 18.09.2026 r.; kolejne, z 16 września, przesunęło go na 15.10.2026 r. Pismo nie zawiera żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+    },
+    {
+      id: 'umwm-extension-2',
+      title: 'Pismo OR-OP-I.1431.113.2026.JG z 16 września: ponowne przedłużenie',
+      owner: 'Urząd Marszałkowski Województwa Mazowieckiego',
+      scope: 'kolejny termin dla wniosku o dokumenty organizacji ruchu na DW633 i projektu BOM nr 266',
+      asOf: 'sporządzone i otrzymane 16.09.2026',
+      note: 'Urząd wyznaczył 15.10.2026 r. zamiast 18.09.2026 r., ponownie wskazując obszerny zakres danych z dziesięciu lat. Zawiadomienie nie zawiera dokumentów i nie dotyczy osobnego wniosku o działania. Oryginał pozostaje niepubliczny ze względu na dane adresata.',
     },
     {
       id: 'gmina-extension',
@@ -667,7 +685,7 @@ export const siteData = {
       title: 'Pismo IZ.7021.110.2026: wsparcie działań przy DW633',
       owner: 'Wójt Gminy Nieporęt',
       scope: 'odpowiedź na wniosek o działania: propozycje umów z MZDW, planowanie budżetu i koordynacja',
-      asOf: 'pismo z 11.09.2026; przeanalizowane 14.09.2026',
+      asOf: 'sporządzone 11.09.2026; otrzymane 14.09.2026',
       note: 'Odpowiedź częściowa. Gmina podaje datę otrzymania propozycji 29.07.2026 i planowanie na 2027 r. oraz kolejne lata. Pismo nie potwierdza podpisania umów, przyznania środków ani terminu budowy. Oryginał pozostaje niepubliczny ze względu na prywatny adres odbiorcy.',
     },
     {
