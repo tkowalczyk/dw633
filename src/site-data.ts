@@ -176,7 +176,7 @@ export const siteData = {
         paragraphs: [
           'Brakuje dokładnego zakresu i strony drogi, kwot oraz harmonogramu. Pismo nie potwierdza podpisania umów ani przyznania pieniędzy. Rok 2027 oznacza horyzont planowania budżetu, a nie potwierdzony termin budowy.',
           'Gmina nie odniosła się do udziału w oględzinach i przekazania danych o dojściach dzieci. Nie wyjaśniła też zakresu koncepcji bezpiecznego przekraczania jezdni pomiędzy istniejącymi przejściami ani związku z niewykonanym zadaniem z 2023 r.',
-          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Przygotowano jedno pytanie: czy rozmowy i przygotowywane umowy obejmują chodnik po zachodniej stronie Jana Kazimierza, zwłaszcza na odcinku Przyleśna-Sonaty. Pytanie nie zostało jeszcze wysłane.',
+          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Wysłano pytanie o to, czy rozmowy i przygotowywane umowy obejmują zachodni chodnik na odcinku Przyleśna-Sonaty. Czekamy na doprecyzowanie zakresu.',
         ],
         sourceIds: ['gmina-actions', 'budget-2023'],
       },
@@ -472,6 +472,14 @@ export const siteData = {
           'Pełny harmonogram pierwszej rundy oraz wyjaśnienie, dlaczego potrzebne są odpowiedzi KPP, MZDW, Marszałka i Gminy.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2307088346815143/',
       },
+      {
+        month: '2026-09',
+        monthLabel: 'Wrzesień 2026',
+        title: 'Odpowiedź Gminy i kolejny termin Urzędu Marszałkowskiego',
+        description:
+          'Gmina opisuje przygotowania do umów dotyczących chodników. Urząd Marszałkowski przesunął termin przekazania dokumentów na 15 października.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2320813645442613/',
+      },
     ],
   },
   knowledge: {
@@ -545,7 +553,12 @@ export const siteData = {
     {
       title: 'Potwierdzić zachodni chodnik na badanym odcinku',
       description:
-        'Przygotowano jedno pytanie do Gminy o zakres rozmów i umów, których propozycje otrzymała 29 lipca. Czy obejmują chodnik po zachodniej stronie Jana Kazimierza, zwłaszcza od rejonu przejścia i przystanków „Przyleśna” do ul. Sonaty? Projekt pozostaje niewysłany.',
+        'Wysłano jedno pytanie do Gminy o zakres rozmów i umów, których propozycje otrzymała 29 lipca. Czy obejmują chodnik po zachodniej stronie Jana Kazimierza, zwłaszcza od rejonu przejścia i przystanków „Przyleśna” do ul. Sonaty? Czekamy na odpowiedź.',
+    },
+    {
+      title: 'Otrzymać gotową część dokumentów',
+      description:
+        'Do Urzędu Marszałkowskiego wysłano odpowiedź podtrzymującą wniosek o dokumenty. Poproszono o wcześniejsze przekazanie gotowej części materiałów, bez czekania na skompletowanie pozostałych.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',

@@ -164,7 +164,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('zbiera opublikowane aktualizacje z Facebooka w rozszerzalnej liście', () => {
-    expect(siteData.updates.items).toHaveLength(6)
+    expect(siteData.updates.items).toHaveLength(7)
     expect(siteData.updates.items.map((update) => update.url)).toEqual([
       'https://www.facebook.com/groups/1759173624939954/permalink/2287523548771623/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2293366984853946/',
@@ -172,6 +172,7 @@ describe('dane publicznej strony DW633', () => {
       'https://www.facebook.com/groups/1759173624939954/permalink/2299661007557877/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2302641127259865/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2307088346815143/',
+      'https://www.facebook.com/groups/1759173624939954/permalink/2320813645442613/',
     ])
     const html = renderWalk()
     for (const update of siteData.updates.items) {
