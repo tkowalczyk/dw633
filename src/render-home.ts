@@ -1,5 +1,5 @@
 import { renderNavigation } from './render-navigation.ts'
-import { renderInitiativeEvent, sourceLink } from './render-actions.ts'
+import { renderFacebookTimeline, renderInitiativeEvent, sourceLink } from './render-actions.ts'
 import { svgPathProperties } from 'svg-path-properties'
 import {
   kppTotals,
@@ -412,6 +412,7 @@ export function renderHome(): string {
         <a class="text-link" href="/dokumenty-dw633/">${siteData.documents.linkLabel}</a>
       </div>
     </section>
+    ${renderFacebookTimeline()}
   </main>
 
   <footer>

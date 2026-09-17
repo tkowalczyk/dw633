@@ -35,6 +35,8 @@ export type InitiativeEvent = {
 }
 
 export type SocialUpdate = {
+  month: string
+  monthLabel: string
   title: string
   description: string
   url: string
@@ -96,7 +98,12 @@ type SiteData = {
   pedestrianCaveat: string
   initiative: InitiativeEvent[]
   updates: {
+    title: string
     intro: string
+    hint: string
+    previousLabel: string
+    nextLabel: string
+    linkLabel: string
     items: SocialUpdate[]
   }
   knowledge: {
@@ -409,40 +416,57 @@ export const siteData = {
     },
   ],
   updates: {
+    title: 'Posty na Facebooku',
     intro:
       'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania.',
+    hint: 'Od najstarszego wpisu. Przesuń kafelki, aby zobaczyć kolejne.',
+    previousLabel: 'Poprzednie posty',
+    nextLabel: 'Następne posty',
+    linkLabel: 'Przeczytaj post na Facebooku',
     items: [
       {
+        month: '2026-08',
+        monthLabel: 'Sierpień 2026',
         title: 'Pytanie o odcinek Przyleśna–Sonaty',
         description:
           'Początek rozmowy z mieszkańcami o codziennych przejściach, wcześniejszych projektach i miejscach wymagających sprawdzenia.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2287523548771623/',
       },
       {
+        month: '2026-08',
+        monthLabel: 'Sierpień 2026',
         title: 'Pierwsze ustalenia i osiem pism',
         description:
           'Podsumowanie zebranych dokumentów oraz pism wysłanych do MZDW, Marszałka, KPP Legionowo i Gminy Nieporęt.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2293366984853946/',
       },
       {
+        month: '2026-08',
+        monthLabel: 'Sierpień 2026',
         title: 'Pierwsza odpowiedź KPP Legionowo',
         description:
           'Dane z SEWiK i pierwsza zapowiedź dalszej analizy. KPP później doprecyzowała, że własne działania podejmie na wniosek zarządcy drogi.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2296400137883964/',
       },
       {
+        month: '2026-08',
+        monthLabel: 'Sierpień 2026',
         title: 'Korekta KPP i nowy termin UMWM',
         description:
           'KPP potwierdziła prawidłowy rok wypadku, a UMWM wyznaczył 18 września jako nowy termin odpowiedzi na wniosek o dokumenty.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2299661007557877/',
       },
       {
+        month: '2026-08',
+        monthLabel: 'Sierpień 2026',
         title: 'Termin Gminy i osobne wnioski o działania',
         description:
           'Gmina wyznaczyła 12 października jako termin odpowiedzi na wniosek o dokumenty. Zawiadomienia Gminy i UMWM nie obejmują osobnych wniosków o działania.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2302641127259865/',
       },
       {
+        month: '2026-09',
+        monthLabel: 'Wrzesień 2026',
         title: 'Terminy odpowiedzi i role instytucji',
         description:
           'Pełny harmonogram pierwszej rundy oraz wyjaśnienie, dlaczego potrzebne są odpowiedzi KPP, MZDW, Marszałka i Gminy.',

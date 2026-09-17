@@ -61,3 +61,37 @@ export function renderSocialUpdate(update: SocialUpdate, index: number): string 
     </li>
   `
 }
+
+export function renderFacebookTimeline(): string {
+  const updates = siteData.updates
+  return `
+    <section class="facebook section" id="facebook" aria-labelledby="facebook-title">
+      <div class="facebook__heading">
+        <div>
+          <h2 id="facebook-title">${updates.title}</h2>
+          <p>${updates.intro}</p>
+        </div>
+        <div class="facebook__controls" data-facebook-controls hidden>
+          <button type="button" data-facebook-previous aria-controls="facebook-posts" aria-label="${updates.previousLabel}" disabled><span aria-hidden="true">←</span></button>
+          <button type="button" data-facebook-next aria-controls="facebook-posts" aria-label="${updates.nextLabel}"><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="facebook__hint" id="facebook-hint">${updates.hint}</p>
+      <ol class="facebook__track" id="facebook-posts" tabindex="0" aria-labelledby="facebook-title" aria-describedby="facebook-hint">
+        ${updates.items.map((update, index) => `
+          <li class="facebook__entry">
+            <div class="facebook__date">
+              <span class="facebook__point" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>
+              <time datetime="${update.month}">${update.monthLabel}</time>
+            </div>
+            <a class="facebook__card" href="${update.url}" target="_blank" rel="noreferrer">
+              <h3>${update.title}</h3>
+              <p>${update.description}</p>
+              <span class="facebook__link">${updates.linkLabel} <span aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+        `).join('')}
+      </ol>
+    </section>
+  `
+}

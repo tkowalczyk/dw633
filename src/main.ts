@@ -72,3 +72,29 @@ function setupRouteScroll(): void {
 }
 
 setupRouteScroll()
+
+function setupFacebookTimeline(): void {
+  const track = document.querySelector<HTMLOListElement>('#facebook-posts')
+  const controls = document.querySelector<HTMLElement>('[data-facebook-controls]')
+  const previous = document.querySelector<HTMLButtonElement>('[data-facebook-previous]')
+  const next = document.querySelector<HTMLButtonElement>('[data-facebook-next]')
+  if (!track || !controls || !previous || !next) return
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const updateControls = (): void => {
+    previous.disabled = track.scrollLeft <= 1
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1
+  }
+  const move = (direction: number): void => {
+    const step = track.firstElementChild?.getBoundingClientRect().width ?? track.clientWidth
+    track.scrollBy({ left: direction * step, behavior: reduceMotion.matches ? 'instant' : 'smooth' })
+  }
+  previous.addEventListener('click', () => move(-1))
+  next.addEventListener('click', () => move(1))
+  track.addEventListener('scroll', updateControls, { passive: true })
+  window.addEventListener('resize', updateControls)
+  controls.hidden = false
+  updateControls()
+}
+
+setupFacebookTimeline()

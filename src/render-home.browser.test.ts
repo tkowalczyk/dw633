@@ -39,6 +39,98 @@ async function screenshot(browser: Browser, name: string) {
   await browser.command('screenshot', `${artifacts}/${name}.png`)
 }
 
+test('posty na dole głównej są dostępne bez JS i przewijają się wraz z fokusem klawiatury', async () => {
+  await withBrowser(async (browser, cdp) => {
+    await cdp.send('Emulation.setScriptExecutionDisabled', { value: true })
+    for (const width of [320, 390, 1440]) {
+      await browser.command('set', 'viewport', String(width), '900')
+      await browser.command('open', url)
+      const state = await browser.evaluate<{ links: string[], months: string[], scrollable: boolean, controlsHidden: boolean, lastSection: string }>(`({
+        links: [...document.querySelectorAll('#facebook-posts a')].map(a => a.href),
+        months: [...document.querySelectorAll('#facebook-posts time')].map(t => t.dateTime),
+        scrollable: document.querySelector('#facebook-posts').scrollWidth > document.querySelector('#facebook-posts').clientWidth,
+        controlsHidden: document.querySelector('[data-facebook-controls]').hidden,
+        lastSection: document.querySelector('main > section:last-child').id
+      })`)
+      assert.deepEqual(state.links, siteData.updates.items.map(item => item.url))
+      assert.deepEqual(state.months, siteData.updates.items.map(item => item.month))
+      assert.equal(state.lastSection, 'facebook')
+      assert.equal(state.scrollable, true)
+      assert.equal(state.controlsHidden, true)
+      await browser.evaluate(`(() => {
+        const track = document.querySelector('#facebook-posts');
+        track.scrollIntoView({block: 'center', behavior: 'instant'});
+        track.focus();
+      })()`)
+      for (let i = 0; i < siteData.updates.items.length; i++) {
+        await browser.command('press', 'Tab')
+        await focused(browser, `#facebook-posts li:nth-child(${i + 1}) a`)
+        await browser.command('wait', '--fn', `(() => {
+          const card = document.activeElement.getBoundingClientRect();
+          const box = document.querySelector('#facebook-posts').getBoundingClientRect();
+          return card.left >= box.left - 1 && card.right <= box.right + 1;
+        })()`)
+      }
+      assert.equal(await browser.evaluate(`(() => {
+        const track = document.querySelector('#facebook-posts');
+        const card = document.activeElement.getBoundingClientRect();
+        const box = track.getBoundingClientRect();
+        return track.scrollLeft > 0 && card.left >= box.left - 1 && card.right <= box.right + 1;
+      })()`), true)
+      await noOverflow(browser)
+      await screenshot(browser, `facebook-no-js-${width}`)
+    }
+  })
+})
+
+test('oś postów obsługuje przyciski, granice listy, ograniczenie animacji i gest dotykowy', async () => {
+  await withBrowser(async (browser, cdp) => {
+    await cdp.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] })
+    for (const { width, height } of viewports) {
+      await browser.command('set', 'viewport', String(width), String(height))
+      await browser.command('open', 'about:blank')
+      await browser.command('open', new URL('#facebook', url).href)
+      await browser.command('wait', '[data-facebook-controls]:not([hidden])')
+      assert.equal(await browser.evaluate('document.querySelector("[data-facebook-previous]").disabled'), true)
+      await browser.command('click', '[data-facebook-next]')
+      await browser.command('wait', '--fn', 'document.querySelector("#facebook-posts").scrollLeft > 100')
+      assert.equal(await browser.evaluate('document.querySelector("[data-facebook-previous]").disabled'), false)
+      for (let i = 0; i < siteData.updates.items.length; i++) {
+        if (await browser.evaluate('document.querySelector("[data-facebook-next]").disabled')) break
+        await browser.command('click', '[data-facebook-next]')
+      }
+      await browser.command('wait', '--fn', 'document.querySelector("[data-facebook-next]").disabled')
+      await screenshot(browser, `facebook-end-${width}`)
+      await browser.command('click', '[data-facebook-previous]')
+      await browser.command('wait', '--fn', '!document.querySelector("[data-facebook-next]").disabled')
+      await noOverflow(browser)
+    }
+    await cdp.send('Emulation.setEmulatedMedia', { features: [] })
+    await browser.command('set', 'viewport', '390', '844')
+    await browser.command('open', 'about:blank')
+    await browser.command('open', url)
+    await browser.command('click', '[data-facebook-next]')
+    await browser.command('wait', '--fn', 'document.querySelector("#facebook-posts").scrollLeft > 100')
+    await browser.command('click', '[data-facebook-previous]')
+    await browser.command('wait', '--fn', 'document.querySelector("[data-facebook-previous]").disabled')
+    await cdp.send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 })
+    const point = await browser.evaluate<{ x: number, y: number }>(`(() => {
+      const track = document.querySelector('#facebook-posts');
+      track.scrollIntoView({block: 'center', behavior: 'instant'});
+      const box = track.getBoundingClientRect();
+      return {x: box.right - 30, y: Math.max(160, box.top + 140)};
+    })()`)
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [point] })
+    for (let distance = 30; distance <= 240; distance += 30) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: point.x - distance, y: point.y }] })
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+    await browser.command('wait', '--fn', 'document.querySelector("#facebook-posts").scrollLeft > 100')
+    await noOverflow(browser)
+    await screenshot(browser, 'facebook-touch-390')
+  })
+})
+
 test('pełna treść w odpowiedzi HTTP i przy wyłączonym JS', async () => {
   const response = await fetch(url)
   assert.equal(response.status, 200)
