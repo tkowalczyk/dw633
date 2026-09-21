@@ -136,8 +136,9 @@ describe('chodnik i przejścia', () => {
     for (const step of siteData.nextSteps) assert.ok(html.includes(step.description), step.title)
     assert.match(html, /Wnioski o dokumenty/)
     assert.match(html, /Wnioski o działania/)
-    assert.match(html, /Odpowiedź Gminy otrzymana 14 września, sporządzona 11 września, dotyczy osobnego wniosku o działania\./)
-    assert.match(html, /Nie zmienia terminu 12 października dla dokumentów\./)
+    assert.match(html, /Nowe pisma MZDW i Urzędu Marszałkowskiego z 18 września dotyczą działań i nie zmieniają tych dat\./)
+    assert.match(html, /Termin 15 października nie jest terminem wizji lokalnej\./)
+    assert.match(html, /Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633\./)
   })
 
   test('bezpośrednie wejście i odświeżenie zwracają gotowy HTML z kodem 200', async () => {

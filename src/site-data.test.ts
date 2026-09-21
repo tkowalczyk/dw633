@@ -15,10 +15,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('17 września 2026 r.')
+    expect(siteData.asOf).toBe('21 września 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '6 otrzymanych',
+      value: '8 otrzymanych',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -56,9 +56,9 @@ describe('dane publicznej strony DW633', () => {
       'Wyjaśnić rok wypadku przy Przyleśnej',
     )
     expect(
-      siteData.nextSteps.find((step) => step.title === 'Ustalić, kto uruchomi analizę i projekt')
+      siteData.nextSteps.find((step) => step.title === 'Ustalić termin i zakres wizji lokalnej')
         ?.description,
-    ).toContain('MZDW i Marszałka')
+    ).toContain('Urząd Marszałkowski zapowiada analizę i oględziny')
     expect(JSON.stringify(siteData)).not.toContain(
       'czy KPP wykonała zapowiedzianą analizę i przekazała wnioski',
     )
@@ -100,10 +100,8 @@ describe('dane publicznej strony DW633', () => {
       )?.description,
     ).toContain('Gmina wyznaczyła 12 października')
     expect(
-      siteData.nextSteps.find(
-        (step) => step.title === 'Ustalić, kto uruchomi analizę i projekt',
-      )?.description,
-    ).toContain('Częściową odpowiedź Gminy otrzymano 14 września')
+      siteData.initiative.find((event) => event.sourceId === 'gmina-actions')?.confirmed,
+    ).toContain('Odpowiedź otrzymano 14 września')
   })
 
   it('odnotowuje termin MZDW tylko dla wniosku o dokumenty', () => {
