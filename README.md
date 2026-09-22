@@ -94,4 +94,4 @@ Dokumentacja Cloudflare: [Build image i wersje narzędzi](https://developers.clo
 - W repozytorium nie umieszczamy podpisanych pism, dowodów e-Doręczeń ani skanów zawierających dane prywatne.
 - Odpowiedzi KPP, MZDW, UMWM i Gminy oraz rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
 
-Stan danych widoczny na stronie: 21 września 2026 r.
+Stan danych widoczny na stronie: 22 września 2026 r.

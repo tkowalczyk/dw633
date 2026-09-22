@@ -120,7 +120,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '21 września 2026 r.',
+  asOf: '22 września 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -131,7 +131,7 @@ export const siteData = {
     readings: [
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -158,19 +158,28 @@ export const siteData = {
         title: 'Co wiadomo o chodniku przy Jana Kazimierza?',
         paragraphs: [
           'Celem inicjatywy jest ciągła trasa piesza po stronie, po której brakuje chodnika, oraz bezpieczne przekraczanie jezdni pomiędzy istniejącymi przejściami.',
-          'Mazowiecki Zarząd Dróg Wojewódzkich (MZDW) w piśmie z 18 września widzi możliwość zaprojektowania zachodniego chodnika w km 11+000-11+410. To 410 m. Obecnie sam nie planuje projektu ani budowy w tym zakresie; dalsze prowadzenie zadania wiąże z umową o współpracy z Gminą.',
-          'Urząd Marszałkowski zapowiada analizę organizacji ruchu i wizję lokalną. Oba pisma otrzymano 18 września. Nie podają terminu budowy ani oględzin.',
+          'Mazowiecki Zarząd Dróg Wojewódzkich (MZDW) wyjaśnił, że proponowane 410 m chodnika ma uzupełnić przerwę między dwoma dłuższymi odcinkami. Dla tych odcinków przygotowywane są porozumienia z Gminą Nieporęt. Gmina miałaby opracować dokumentację oraz uzyskać uzgodnienia i decyzje.',
+          'Pismo sporządzono 18 września, a otrzymano 22 września. Nie potwierdza podpisania porozumień, finansowania ani terminu budowy. Osobno Urząd Marszałkowski zapowiedział analizę organizacji ruchu i wizję lokalną, również bez terminu.',
         ],
-        sourceIds: ['mzdw-sidewalk', 'umwm-inspection'],
+        sourceIds: ['mzdw-point-response', 'umwm-inspection'],
       },
       {
         title: 'Co oznacza wskazane przez MZDW 410 m chodnika?',
         paragraphs: [
-          'Odcinek w km 11+000-11+410 jest krótszy niż cała badana trasa Przyleśna-Sonaty. Potrzebna jest mapa z początkiem, końcem i połączeniami z istniejącymi dojściami. Wskazanie możliwości projektu nie zastępuje oceny technicznej całej trasy.',
-          'Pismo jest skierowane do Gminy Nieporęt, a wnioskodawca otrzymał je do wiadomości. MZDW prosi o analizę możliwości uwzględnienia propozycji mieszkańców w dokumentacji i proponuje współpracę.',
-          'MZDW odwołuje się do zawartych porozumień, a dalej do przyszłej umowy. Do wyjaśnienia pozostaje, które uzgodnienia obejmują wskazane 410 m i jakie obowiązki przypadną Gminie oraz zarządcy. Pismo dotyczy też osobnego odcinka DW632; jego zakresu nie łączymy z naszą trasą.',
+          'W piśmie otrzymanym 22 września MZDW wskazuje dwa odcinki objęte przygotowywanymi porozumieniami: km 10+310-11+000 oraz 11+410-13+900. Brakujące 410 m, od km 11+000 do km 11+410, ma je połączyć. Dla tego fragmentu zaproponowano Gminie osobne porozumienie.',
+          'Wcześniejsze pismo do Gminy wskazuje zachodnią stronę dla 410 m. Nowa odpowiedź nie określa wprost strony dwóch sąsiednich odcinków. We wcześniejszej odpowiedzi poproszono MZDW o mapę i wyjaśnienie ciągłości trasy.',
+          'Dokumentacja miałaby powstać po stronie Gminy. Szczegóły współpracy pozostają do ustalenia; sam ciąg kilometrażu nie potwierdza jeszcze projektu chodnika po jednej stronie całej trasy.',
         ],
-        sourceIds: ['mzdw-sidewalk'],
+        sourceIds: ['mzdw-sidewalk', 'mzdw-point-response'],
+      },
+      {
+        title: 'Co MZDW odpowiedział o bezpieczeństwie i przejściach?',
+        paragraphs: [
+          'MZDW obecnie nie widzi potrzeby przeprowadzenia analizy bezpieczeństwa ruchu drogowego. Wskazuje, że może ona powstać przy opracowaniu dokumentacji. Pismo opisuje regularne kontrole drogi, lecz nie podaje wyników pomiarów uzasadniających tę ocenę. Wysłano jedno pytanie o ustalenia, na których ją oparto.',
+          'Według pisma z 18 września trwa budowa sygnalizacji na istniejącym przejściu przy Sonaty. Urząd Marszałkowski przygotowuje zmianę organizacji ruchu, która ma objąć skrzyżowanie i przejście w rejonie Przyleśnej obszarem zabudowanym. Rejon Drogowy ma wprowadzić oznakowanie po otrzymaniu zatwierdzonego projektu; terminów nie podano.',
+          'Ocenę przejścia wewnątrz odcinka i wariantów MZDW wiąże z etapem projektowania. Nie odrzuca żadnego wariantu. Zapowiedziana osobno przez Urząd Marszałkowski analiza organizacji ruchu i wizja lokalna pozostają kolejnym krokiem w sprawie.',
+        ],
+        sourceIds: ['mzdw-point-response', 'umwm-inspection'],
       },
       {
         title: 'Co zapowiada Urząd Marszałkowski?',
@@ -194,9 +203,9 @@ export const siteData = {
         paragraphs: [
           'Brakuje dokładnego zakresu i strony drogi, kwot oraz harmonogramu. Pismo nie potwierdza podpisania umów ani przyznania pieniędzy. Rok 2027 oznacza horyzont planowania budżetu, a nie potwierdzony termin budowy.',
           'Gmina nie odniosła się do udziału w oględzinach i przekazania danych o dojściach dzieci. Nie wyjaśniła też zakresu koncepcji bezpiecznego przekraczania jezdni pomiędzy istniejącymi przejściami ani związku z niewykonanym zadaniem z 2023 r.',
-          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Wysłano pytanie, czy rozmowy i przygotowywane umowy obejmują zachodni chodnik na odcinku Przyleśna-Sonaty. Późniejsze pismo MZDW wskazuje zachodnią stronę i 410 m; nadal czekamy na odpowiedź Gminy o zakresie jej przygotowań.',
+          'W piśmie Gmina opisuje odcinek od Sonaty w Stanisławowie Pierwszym do ul. Przyleśnej w Kątach Węgierskich. Wysłano pytanie, czy rozmowy i przygotowywane umowy obejmują zachodni chodnik na odcinku Przyleśna-Sonaty. MZDW wskazał zachodnią stronę dla 410 m i wyjaśnił, że ten fragment ma łączyć dwa dłuższe odcinki. Nadal czekamy na odpowiedź Gminy o zakresie jej przygotowań.',
         ],
-        sourceIds: ['gmina-actions', 'mzdw-sidewalk', 'budget-2023'],
+        sourceIds: ['gmina-actions', 'mzdw-sidewalk', 'mzdw-point-response', 'budget-2023'],
       },
       {
         title: 'Jakiego odcinka dotyczą wnioski?',
@@ -234,7 +243,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '8 otrzymanych' },
+      { label: 'Pisma z instytucji', value: '9 otrzymanych' },
     ],
   },
   traffic: {
@@ -439,7 +448,7 @@ export const siteData = {
       confirmed:
         'MZDW widzi możliwość zaprojektowania chodnika po zachodniej stronie DW633 w km 11+000-11+410. Pismo skierowano do Gminy; wnioskodawca otrzymał je do wiadomości 18 września. Zarząd obecnie sam nie planuje projektu ani budowy w tym zakresie, a dalsze prowadzenie zadania wiąże z umową z Gminą.',
       pending:
-        'Potrzebne są mapa i wyjaśnienie ciągłości dojścia na pozostałej trasie Przyleśna-Sonaty. Do ustalenia pozostaje stan porozumień, podział obowiązków oraz terminy. Pismo nie zawiera pełnej odpowiedzi na wniosek o bezpieczeństwo całego odcinka.',
+        'W odpowiedzi otrzymanej 22 września MZDW wyjaśnił rolę 410 m jako uzupełnienia sąsiednich odcinków i proponowaną rolę Gminy przy dokumentacji. Nadal potrzebne są mapa, potwierdzenie stanu porozumień oraz terminy.',
       sourceId: 'mzdw-sidewalk',
     },
     {
@@ -452,11 +461,21 @@ export const siteData = {
         'Nie podano terminu oględzin ani odpowiedzi z wynikami. Do doprecyzowania pozostaje udział instytucji i obserwacja ruchu pieszego w godzinach szkolnych.',
       sourceId: 'umwm-inspection',
     },
+    {
+      date: '22.09.2026',
+      title: 'MZDW wyjaśnia ciągłość chodnika i stanowisko o bezpieczeństwie',
+      status: 'Otrzymana odpowiedź punktowa',
+      confirmed:
+        'Pismo z 18 września otrzymano 22 września. Proponowane 410 m ma uzupełnić przerwę między odcinkami km 10+310-11+000 i 11+410-13+900. Gmina miałaby przygotować dokumentację. MZDW obecnie nie widzi potrzeby analizy bezpieczeństwa, dopuszczając ją przy projektowaniu. Według pisma trwa budowa sygnalizacji przy Sonaty i przygotowanie zmiany obszaru zabudowanego przy Przyleśnej.',
+      pending:
+        'Wysłano pytanie o podstawę oceny braku potrzeby analizy bezpieczeństwa. Czekamy też na ustalenia dotyczące ciągłości trasy i zapowiedzianej wizji Urzędu Marszałkowskiego. Pismo nie potwierdza podpisania porozumień ani terminów realizacji.',
+      sourceId: 'mzdw-point-response',
+    },
   ],
   updates: {
     title: 'Posty na Facebooku',
     intro:
-      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania.',
+      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania. Dzisiejszy wpis, z 22 września, oczekuje na zatwierdzenie; link dodamy po publikacji.',
     hint: 'Od najstarszego wpisu. Przesuń kafelki, aby zobaczyć kolejne.',
     previousLabel: 'Poprzednie posty',
     nextLabel: 'Następne posty',
@@ -518,6 +537,14 @@ export const siteData = {
           'Gmina opisuje przygotowania do umów dotyczących chodników. Urząd Marszałkowski przesunął termin przekazania dokumentów na 15 października.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2320813645442613/',
       },
+      {
+        month: '2026-09',
+        monthLabel: 'Wrzesień 2026',
+        title: '410 m chodnika i zapowiedź wizji lokalnej',
+        description:
+          'Pierwsze pismo MZDW o zachodnim chodniku w km 11+000-11+410 oraz zapowiedź analizy organizacji ruchu i wizji lokalnej przez Urząd Marszałkowski.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2324417808415530/',
+      },
     ],
   },
   knowledge: {
@@ -576,7 +603,7 @@ export const siteData = {
       'GPR pokazuje skalę ruchu na dłuższym odcinku, OSM pomaga oszacować długość trasy, mapy publiczne pokazują układ terenu, a SEWiK historię zdarzeń. Do wyboru rozwiązania potrzebne są jeszcze pomiary terenowe i analiza BRD.',
   },
   nextIntro:
-    'Po pismach z 18 września chcemy ustalić przebieg wskazanych 410 m chodnika, stan umów z Gminą i termin zapowiedzianej wizji lokalnej. Celem pozostaje bezpieczeństwo całej trasy Przyleśna-Sonaty.',
+    'MZDW wyjaśnił rolę 410 m jako brakującego połączenia. Wysłano odpowiedzi do MZDW i Urzędu Marszałkowskiego. Czekamy na ustalenia dotyczące całej trasy, wizji lokalnej i podstawy oceny bezpieczeństwa.',
   nextSteps: [
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
@@ -586,12 +613,12 @@ export const siteData = {
     {
       title: 'Ustalić termin i zakres wizji lokalnej',
       description:
-        'Urząd Marszałkowski zapowiada analizę i oględziny w odpowiedzi na wniosek o działania. Przygotowano prośbę o termin wizji w godzinach szkolnych i odpowiedzi z wynikami. Projekt podtrzymuje ocenę dojść i przekraczania jezdni; pozostaje niewysłany.',
+        'Urząd Marszałkowski zapowiada analizę i oględziny w odpowiedzi na wniosek o działania. Wysłano prośbę o termin wizji w godzinach szkolnych i odpowiedzi z wynikami. Podtrzymano ocenę dojść oraz przekraczania jezdni.',
     },
     {
       title: 'Wyjaśnić przebieg chodnika i stan porozumień',
       description:
-        'Przygotowano odpowiedź do MZDW z prośbą o mapę odcinka km 11+000-11+410, ciągłość pozostałej trasy i wyjaśnienie umów z Gminą. Obejmuje też dalszą analizę bezpieczeństwa, pozostaje niewysłana. Nadal czekamy na odpowiedź Gminy na wcześniejsze pytanie o zachodni chodnik.',
+        'Do MZDW wysłano prośbę o mapę, ciągłość trasy i wyjaśnienie porozumień. Nowe pismo częściowo wyjaśnia zakres i rolę Gminy. W kolejnej odpowiedzi zadano już tylko jedno pytanie o podstawę oceny, że analiza bezpieczeństwa nie jest teraz potrzebna. Nadal czekamy na odpowiedź Gminy o zachodnim chodniku.',
     },
     {
       title: 'Otrzymać gotową część dokumentów',
@@ -611,12 +638,20 @@ export const siteData = {
   ],
   sources: [
     {
+      id: 'mzdw-point-response',
+      title: 'Pismo I-7.448.3.34.2026.1.JW: ciągłość chodnika i ocena bezpieczeństwa',
+      owner: 'Mazowiecki Zarząd Dróg Wojewódzkich',
+      scope: 'odpowiedź na wniosek z 18 sierpnia: zakres chodników, dokumentacja po stronie Gminy, analiza bezpieczeństwa i organizacja ruchu',
+      asOf: 'sporządzone 18.09.2026, otrzymane 22.09.2026',
+      note: '410 m ma uzupełnić dwa odcinki objęte przygotowywanymi porozumieniami. MZDW obecnie nie widzi potrzeby analizy bezpieczeństwa. Pismo opisuje sygnalizację przy Sonaty w budowie i przygotowanie zmiany obszaru zabudowanego przy Przyleśnej. Nie jest odpowiedzią na późniejsze pismo wnioskodawcy. Oryginał pozostaje niepubliczny ze względu na dane adresata.',
+    },
+    {
       id: 'mzdw-sidewalk',
       title: 'Pismo I-7.448.3.34.2026.2.JW: chodnik i współpraca z Gminą',
       owner: 'Mazowiecki Zarząd Dróg Wojewódzkich',
       scope: 'możliwość zaprojektowania zachodniego chodnika na DW633 w km 11+000-11+410; propozycja współpracy',
       asOf: 'sporządzone i otrzymane 18.09.2026',
-      note: 'Pismo do Gminy, otrzymane do wiadomości. MZDW obecnie sam nie planuje projektu ani budowy w tym zakresie. Stan porozumień i ciągłość całej trasy wymagają wyjaśnienia. Oryginał z załącznikami pozostaje niepubliczny ze względu na dane prywatne.',
+      note: 'Pismo do Gminy, otrzymane do wiadomości. MZDW obecnie sam nie planuje projektu ani budowy w tym zakresie. Później otrzymana odpowiedź z końcówką .1.JW wyjaśnia rolę 410 m jako połączenia sąsiednich odcinków i proponowaną rolę Gminy. Oryginał z załącznikami pozostaje niepubliczny ze względu na dane prywatne.',
     },
     {
       id: 'umwm-inspection',
@@ -725,11 +760,11 @@ export const siteData = {
     },
     {
       id: 'delivery-register',
-      title: 'Rejestr wysyłki pierwszej rundy',
+      title: 'Rejestr wysyłki i dalszej korespondencji',
       owner: 'dokumentacja inicjatywy',
-      scope: '8 osobnych przesyłek e-Doręczeń z 18.08.2026',
-      asOf: '20.08.2026',
-      note: 'Dokumentacja jest przechowywana niepublicznie ze względu na dane prywatne.',
+      scope: '8 osobnych przesyłek e-Doręczeń z 18.08.2026 oraz dalsze odpowiedzi wnioskodawcy',
+      asOf: '22.09.2026',
+      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
     },
     {
       id: 'kpp-response',
