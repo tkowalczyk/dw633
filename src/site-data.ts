@@ -475,7 +475,7 @@ export const siteData = {
   updates: {
     title: 'Posty na Facebooku',
     intro:
-      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania. Dzisiejszy wpis, z 22 września, oczekuje na zatwierdzenie; link dodamy po publikacji.',
+      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania.',
     hint: 'Od najstarszego wpisu. Przesuń kafelki, aby zobaczyć kolejne.',
     previousLabel: 'Poprzednie posty',
     nextLabel: 'Następne posty',
@@ -544,6 +544,14 @@ export const siteData = {
         description:
           'Pierwsze pismo MZDW o zachodnim chodniku w km 11+000-11+410 oraz zapowiedź analizy organizacji ruchu i wizji lokalnej przez Urząd Marszałkowski.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2324417808415530/',
+      },
+      {
+        month: '2026-09',
+        monthLabel: 'Wrzesień 2026',
+        title: 'Ciągłość chodnika i odpowiedź MZDW o bezpieczeństwie',
+        description:
+          'MZDW wyjaśnia rolę brakujących 410 m i opisuje działania przy Sonaty oraz Przyleśnej. Wysłano pytanie o podstawę oceny, że analiza bezpieczeństwa nie jest teraz potrzebna.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2325492854974692/',
       },
     ],
   },
