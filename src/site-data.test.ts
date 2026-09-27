@@ -15,10 +15,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('22 września 2026 r.')
+    expect(siteData.asOf).toBe('27 września 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '9 otrzymanych',
+      value: '10 otrzymanych',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -118,7 +118,7 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
       )?.description,
-    ).toContain('MZDW wyznaczył 25 września')
+    ).toContain('Odpowiedź MZDW na wniosek o dokumenty otrzymano 25 września')
   })
 
   it('zachowuje zakres GPR 2025 i wartość 15 753 pojazdów na dobę', () => {

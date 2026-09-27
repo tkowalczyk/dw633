@@ -120,7 +120,7 @@ describe('chodnik i przejścia', () => {
     const html = await (await fetch(new URL(path, base))).text()
     assert.ok(html.includes(siteData.asOf))
     for (const question of [
-      'Co wiadomo o chodniku przy Jana Kazimierza?',
+      'Co wiadomo o przygotowaniu chodnika?',
       'Jakiego odcinka dotyczą wnioski?',
       'Na jakie odpowiedzi czekamy?',
     ]) assert.ok(html.includes(question), question)
@@ -136,7 +136,7 @@ describe('chodnik i przejścia', () => {
     for (const step of siteData.nextSteps) assert.ok(html.includes(step.description), step.title)
     assert.match(html, /Wnioski o dokumenty/)
     assert.match(html, /Wnioski o działania/)
-    assert.match(html, /Nowe pisma MZDW i Urzędu Marszałkowskiego z 18 września dotyczą działań i nie zmieniają tych dat\./)
+    assert.match(html, /Pakiet MZDW otrzymano 25 września\./)
     assert.match(html, /Termin 15 października nie jest terminem wizji lokalnej\./)
     assert.match(html, /Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633\./)
   })
