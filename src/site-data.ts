@@ -120,7 +120,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '27 września 2026 r.',
+  asOf: '28 września 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -547,16 +547,16 @@ export const siteData = {
     {
       date: 'potwierdzono 27.09.2026',
       title: 'Wysłano pytania do MZDW o zakres i warunki projektu',
-      status: 'E-mail wysłany; post oczekuje na zatwierdzenie',
+      status: 'E-mail wysłany',
       confirmed: 'Wysłano odpowiedź dotyczącą całej zachodniej trasy, 410 m, rozbieżności kilometrażu oraz wymagań i ocen przeszkód. Post o działaniach Gminy i pytaniu na zebranie sołeckie zgłoszono do grupy.',
-      pending: 'Czekamy na stanowisko MZDW i potwierdzenie zakresu przez Gminę. Nowy post nie ma jeszcze zatwierdzonej publikacji ani publicznego linku.',
+      pending: 'Czekamy na stanowisko MZDW i potwierdzenie zakresu przez Gminę. Zatwierdzenie posta i jego link potwierdzono 28 września.',
       sourceId: 'delivery-register',
     },
   ],
   updates: {
     title: 'Posty na Facebooku',
     intro:
-      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania. Nowy post o działaniach Gminy i zakresie umów oczekuje na zatwierdzenie; poniżej są dotychczasowe opublikowane wpisy.',
+      'Wpisy w grupie Sołectwa Stanisławów Pierwszy, od pierwszego pytania po kolejne odpowiedzi i działania.',
     hint: 'Od najstarszego wpisu. Przesuń kafelki, aby zobaczyć kolejne.',
     previousLabel: 'Poprzednie posty',
     nextLabel: 'Następne posty',
@@ -634,6 +634,14 @@ export const siteData = {
           'MZDW wyjaśnia rolę brakujących 410 m i opisuje działania przy Sonaty oraz Przyleśnej. Wysłano pytanie o podstawę oceny, że analiza bezpieczeństwa nie jest teraz potrzebna.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2325492854974692/',
       },
+      {
+        month: '2026-09',
+        monthLabel: 'Wrzesień 2026',
+        title: 'Działania Gminy i pytanie o zakres umów',
+        description:
+          'Przygotowania Gminy w 2026 r. i warunkowy plan umów na 2027 r. Pytanie dotyczy objęcia projektem całej zachodniej trasy Przyleśna-Sonaty, w tym brakujących 410 m.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2330505287806782/',
+      },
     ],
   },
   knowledge: {
@@ -692,7 +700,7 @@ export const siteData = {
       'GPR pokazuje skalę ruchu na dłuższym odcinku, OSM pomaga oszacować długość trasy, mapy publiczne pokazują układ terenu, a SEWiK historię zdarzeń. Do wyboru rozwiązania potrzebne są jeszcze pomiary terenowe i analiza BRD.',
   },
   nextIntro:
-    'Po analizie pakietu MZDW najważniejsze jest potwierdzenie zakresu całej zachodniej trasy i warunków zlecenia projektu przez Gminę. E-mail do MZDW został wysłany. Post z pytaniem do Gminy oczekuje na zatwierdzenie w grupie sołeckiej.',
+    'Po analizie pakietu MZDW najważniejsze jest potwierdzenie zakresu całej zachodniej trasy i warunków zlecenia projektu przez Gminę. E-mail do MZDW został wysłany. Post o działaniach Gminy i pytaniu o zakres umów został zatwierdzony w grupie sołeckiej.',
   nextSteps: [
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
@@ -876,8 +884,8 @@ export const siteData = {
       title: 'Rejestr wysyłki i dalszej korespondencji',
       owner: 'dokumentacja inicjatywy',
       scope: '8 osobnych przesyłek e-Doręczeń z 18.08.2026 oraz dalsze odpowiedzi wnioskodawcy',
-      asOf: '27.09.2026',
-      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta oczekującego na zatwierdzenie. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
+      asOf: '28.09.2026',
+      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta do grupy. 28 września przekazał link do zatwierdzonego wpisu. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
     },
     {
       id: 'kpp-response',

@@ -15,7 +15,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('27 września 2026 r.')
+    expect(siteData.asOf).toBe('28 września 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
       value: '10 otrzymanych',
@@ -162,7 +162,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('zbiera opublikowane aktualizacje z Facebooka w rozszerzalnej liście', () => {
-    expect(siteData.updates.items).toHaveLength(9)
+    expect(siteData.updates.items).toHaveLength(10)
     expect(siteData.updates.items.map((update) => update.url)).toEqual([
       'https://www.facebook.com/groups/1759173624939954/permalink/2287523548771623/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2293366984853946/',
@@ -173,6 +173,7 @@ describe('dane publicznej strony DW633', () => {
       'https://www.facebook.com/groups/1759173624939954/permalink/2320813645442613/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2324417808415530/',
       'https://www.facebook.com/groups/1759173624939954/permalink/2325492854974692/',
+      'https://www.facebook.com/groups/1759173624939954/permalink/2330505287806782/',
     ])
     const html = renderWalk()
     for (const update of siteData.updates.items) {
