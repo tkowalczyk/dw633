@@ -256,7 +256,8 @@ test('opóźniony skrypt zachowuje dokument i uruchamia nawigację', async () =>
       await cdp.send('Emulation.setScriptExecutionDisabled', { value: false })
       // Start the real production module after the complete document is visible.
       await browser.evaluate(`import(document.querySelector('script[type="module"]').src).then(() => true)`)
-      await browser.command('wait', '--fn', 'document.querySelector(".is-enhanced") !== null')
+      await browser.command('wait', '--fn', 'document.querySelector(".has-menu") !== null')
+      assert.equal(await browser.evaluate('document.querySelector("[data-route-scrolly]").classList.contains("is-enhanced")'), width > 900)
       assert.equal(await browser.evaluate(`window.originalMain === document.querySelector('main') && window.originalMain.isConnected && window.originalText === window.originalMain.textContent && document.querySelectorAll('h1').length === 1`), true)
       await screenshot(browser, `js-${width}-start`)
       await browser.command('focus', '[data-route-step]:last-child')
@@ -266,6 +267,7 @@ test('opóźniony skrypt zachowuje dokument i uruchamia nawigację', async () =>
       await browser.command('press', 'Tab')
       await focused(browser, '[data-route-step]:last-child a')
       for (const id of ['start', 'odcinek', 'dane', 'dzialania', 'zrodla']) {
+        if (width <= 1100 && id !== 'start') await browser.command('click', '.menu-toggle')
         await browser.command('find', 'first', `a[href="#${id}"]`, 'click')
         assert.equal(await browser.evaluate('location.hash'), `#${id}`)
       }

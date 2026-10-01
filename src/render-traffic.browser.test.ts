@@ -44,13 +44,8 @@ describe('ruch i zdarzenia na DW633', () => {
         await browser.command('focus', region)
         assert.notEqual(await browser.evaluate('getComputedStyle(document.activeElement).outlineStyle'), 'none')
         await browser.command('screenshot', `test-results/agent-browser/traffic-no-js-${width}-table.png`)
-        if (width === 390) {
-          await browser.command('press', 'ArrowRight')
-          await browser.command('wait', '--fn', `document.querySelector('${region}').scrollLeft > 0`)
-          await browser.evaluate(`document.querySelector('${region}').scrollLeft = document.querySelector('${region}').scrollWidth`)
-          assert.equal(await browser.evaluate(`document.querySelector('tfoot td:last-child').getBoundingClientRect().right <= innerWidth`), true)
-          await browser.command('screenshot', `test-results/agent-browser/traffic-no-js-${width}-table-end.png`)
-        }
+        assert.equal(await browser.evaluate(`document.querySelector('${region}').scrollWidth <= document.querySelector('${region}').clientWidth`), true, 'pełna tabela mieści się bez przewijania w bok')
+        assert.equal(await browser.evaluate(`document.querySelector('tfoot td:last-child').getBoundingClientRect().right <= innerWidth`), true)
         for (const id of ['traffic-page-title', 'gpr-title']) {
           await browser.evaluate(`document.getElementById('${id}').scrollIntoView({ behavior: 'instant', block: 'center' })`)
           await browser.command('screenshot', `test-results/agent-browser/traffic-no-js-${width}-${id}.png`)

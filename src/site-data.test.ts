@@ -263,7 +263,7 @@ describe('dane publicznej strony DW633', () => {
 
   it('nie uruchamia animacji przewijania przy systemowym ograniczeniu ruchu', () => {
     expect(mainSource).toContain("matchMedia('(prefers-reduced-motion: reduce)')")
-    expect(mainSource).toContain('if (!reduceMotion.matches)')
+    expect(mainSource).toContain('const enhanced = !reduceMotion.matches && wideScreen.matches')
     expect(mainSource).toContain('positionRouteElements(reduceMotion.matches ? 0.5 : 0)')
   })
 })
