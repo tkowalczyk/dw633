@@ -132,6 +132,7 @@ export const siteData = {
     homeIntro: 'Katalog zbiera źródła danych i historii działań. Przy każdym materiale podajemy jego zakres, datę i ograniczenia.',
     linkLabel: 'Przejdź do katalogu dokumentów DW633',
     readings: [
+      { sourceIds: ['canard-structure', 'serock-fotoradar-2023'], url: '/chodnik-stanislawow-pierwszy/#faq-fotoradar', label: 'Przeczytaj odpowiedź o fotoradarze' },
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
       { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
@@ -393,6 +394,25 @@ export const siteData = {
           {
             "sourceId": "mzdw-documents",
             "label": "MZDW, 25.09.2026, pkt 11"
+          }
+        ]
+      },
+      {
+        "id": "fotoradar",
+        "title": "A co z dawnym fotoradarem przy Sonaty?",
+        "paragraphs": [
+          "W protokole komisji Rady Miejskiej w Serocku z 9 października 2023 zapisano wypowiedź przedstawiciela KPP Legionowo o nieczynnym fotoradarze na DW633. Policjant wskazał ul. Jana Kazimierza i powiedział, że w tej sprawie interweniuje wójt Gminy Nieporęt.",
+          "Protokół nie wymienia skrzyżowania z Sonaty, więc dokładna lokalizacja wymaga potwierdzenia. Nie podaje też przyczyny ani daty wyłączenia, właściciela urządzenia czy wyniku interwencji. Jest świadectwem stanu opisanego w 2023 roku, nie potwierdzeniem obecnego stanu technicznego.",
+          "Instalacją i utrzymaniem urządzeń systemu automatycznego nadzoru zajmuje się CANARD, jednostka Głównego Inspektoratu Transportu Drogowego. Żeby ocenić możliwość ponownego uruchomienia fotoradaru, trzeba ustalić własność i stan urządzenia oraz poznać dotychczasową korespondencję Gminy z Inspekcją. O te informacje można wystąpić do Gminy i CANARD."
+        ],
+        "sources": [
+          {
+            "sourceId": "serock-fotoradar-2023",
+            "label": "Protokół komisji w Serocku, 9.10.2023, s. 3"
+          },
+          {
+            "sourceId": "canard-structure",
+            "label": "CANARD, zadania wydziałów, sprawdzono 1.10.2026"
           }
         ]
       },
@@ -1137,6 +1157,24 @@ export const siteData = {
           url: 'https://miejskireporter.pl/potracenie-na-pasach-piesza-w-szpitalu-policja-zatrzymala-prawo-jazdy-kierowcy/',
         },
       ],
+    },
+    {
+      "id": "canard-structure",
+      "title": "Struktura CANARD i zadania wydziałów",
+      "owner": "Centrum Automatycznego Nadzoru nad Ruchem Drogowym",
+      "scope": "instalacja urządzeń i współpraca z zarządcami dróg",
+      "asOf": "strona sprawdzona 1.10.2026; brak daty publikacji",
+      "note": "Opis kompetencji CANARD. Nie jest stanowiskiem w sprawie lokalizacji urządzenia na odcinku Przyleśna-Sonaty.",
+      "url": "https://www.canard.gitd.gov.pl/cms/o-nas/struktura-canard"
+    },
+    {
+      "id": "serock-fotoradar-2023",
+      "title": "Nieczynny fotoradar na DW633 w protokole komisji w Serocku",
+      "owner": "Rada Miejska w Serocku, wypowiedź przedstawiciela KPP Legionowo",
+      "scope": "fotoradar przy ul. Jana Kazimierza i interwencja wójta Nieporętu, s. 3",
+      "asOf": "posiedzenie 9.10.2023, dokument sprawdzony 1.10.2026",
+      "note": "Historyczna wzmianka. Bez dokładnej lokalizacji przy Sonaty, przyczyny wyłączenia i wyniku interwencji. Wypowiedź o odmowie z 2021 roku na s. 4 dotyczy osobnej sprawy Serocka.",
+      "url": "https://www.bip.serock.pl/plik,19208,protokol-z-posiedzenia-komisji-rozwoju-gospodarczego-innowacji-i-bezpieczenstwa-w-dniu-9-pazdziernika-2023r.pdf"
     },
   ],
 } satisfies SiteData

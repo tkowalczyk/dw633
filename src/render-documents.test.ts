@@ -8,7 +8,7 @@ describe('katalog dokumentów', () => {
   it('przy każdym źródle wskazuje opracowanie, w którym czytelnik znajdzie jego kontekst', () => {
     const cards = [...renderDocuments().matchAll(/<li class="source-card"[^>]*>[\s\S]*?<\/li>/g)].map(match => match[0])
     for (const card of cards) {
-      expect(card).toMatch(/href="\/(?:#odcinek|chodnik-stanislawow-pierwszy\/#dzialania|ruch-i-wypadki-dw633\/#(?:ruch|zdarzenia))"/)
+      expect(card).toMatch(/href="\/(?:#odcinek|chodnik-stanislawow-pierwszy\/#(?:dzialania|faq-fotoradar)|ruch-i-wypadki-dw633\/#(?:ruch|zdarzenia))"/)
     }
   })
 
