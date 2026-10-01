@@ -1,6 +1,6 @@
 import { renderNavigation } from './render-navigation.ts'
 import { siteData } from './site-data.ts'
-import { renderInitiativeEvent, renderSocialUpdate, sourceLink } from './render-actions.ts'
+import { renderInitiativeEvent, renderSocialUpdate, sourceAnchor, sourceLink } from './render-actions.ts'
 
 export function renderWalk(): string {
   return `
@@ -11,13 +11,24 @@ export function renderWalk(): string {
         <h1 id="walk-title">${siteData.walk.title}</h1>
         <p>${siteData.walk.intro}</p>
       </section>
-      ${siteData.walk.questions.map((question, index) => `
-        <section class="section" aria-labelledby="question-${index}">
-          <h2 id="question-${index}">${question.title}</h2>
-          ${question.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
-          ${question.sourceIds.map(id => sourceLink(id)).join('')}
-        </section>
-      `).join('')}
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">${siteData.walk.faqTitle}</h2>
+        <p>${siteData.walk.faqIntro}</p>
+        <div class="faq__list">
+          ${siteData.walk.questions.map(question => `
+            <details class="faq__item" id="faq-${question.id}">
+              <summary>${question.title}</summary>
+              <div class="faq__answer">
+                ${question.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
+                <div class="faq__sources">
+                  <p>Źródła odpowiedzi:</p>
+                  <ul>${question.sources.map(source => `<li><a href="/dokumenty-dw633/#${sourceAnchor(source.sourceId)}">${source.label}</a></li>`).join('')}</ul>
+                </div>
+              </div>
+            </details>
+          `).join('')}
+        </div>
+      </section>
       <section class="section" aria-labelledby="waiting-title">
         <h2 id="waiting-title">${siteData.walk.waiting.title}</h2>
         <h3>${siteData.walk.waiting.documents}</h3>

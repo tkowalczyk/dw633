@@ -16,6 +16,7 @@ export function renderNavigation(page: 'home' | 'walk' | 'traffic' | 'documents'
       <a href="/chodnik-stanislawow-pierwszy/"${page === 'walk' ? ' aria-current="page"' : ''}>Chodnik i przejścia</a>
       <a href="/ruch-i-wypadki-dw633/"${page === 'traffic' ? ' aria-current="page"' : ''}>Ruch i zdarzenia</a>
       <a href="/dokumenty-dw633/"${page === 'documents' ? ' aria-current="page"' : ''}>Dokumenty</a>
+      <a href="/chodnik-stanislawow-pierwszy/#faq">FAQ</a>
     </nav>
   </header>
   `

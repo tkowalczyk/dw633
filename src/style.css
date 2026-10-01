@@ -231,6 +231,65 @@ h3 {
   text-decoration: underline;
 }
 
+.faq__list {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 5rem;
+}
+
+.faq__item summary {
+  padding: 1.25rem 0.5rem;
+  color: var(--forest-dark);
+  cursor: pointer;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.faq__item summary::marker {
+  color: var(--forest-dark);
+}
+
+.faq__item summary:hover {
+  background: var(--surface-muted);
+}
+
+.faq__item summary:focus-visible {
+  outline: 2px solid var(--forest-dark);
+  outline-offset: 3px;
+}
+
+.faq__answer {
+  padding: 0 0.5rem 1.5rem;
+}
+
+.faq__sources {
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--surface-muted);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.faq__sources p {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.faq__sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.faq__sources li + li {
+  margin-top: 0.5rem;
+}
+
 .section-heading > p:not(.eyebrow) {
   color: var(--ink-soft);
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);

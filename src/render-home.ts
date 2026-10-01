@@ -364,6 +364,7 @@ export function renderHome(): string {
       </div>
       <ol class="history-list">${siteData.initiative.slice(-3).reverse().map(renderInitiativeEvent).join('')}</ol>
       <a class="text-link" href="/chodnik-stanislawow-pierwszy/">Historia działań i odpowiedzi instytucji</a>
+      <p><a class="text-link" href="/chodnik-stanislawow-pierwszy/#faq">${siteData.walk.faqLinkLabel}</a></p>
     </section>
 
     <section class="knowledge section" aria-labelledby="knowledge-title">

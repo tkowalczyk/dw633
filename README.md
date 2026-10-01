@@ -11,6 +11,7 @@ Docelowy adres: [dw633.pl](https://dw633.pl/)
 - schemat badanego odcinka i najważniejszych miejsc;
 - obraz skali ruchu drogowego wraz z animacją dwukierunkowego ruchu i pieszych;
 - dane GPR 2025 oraz zestawienie zdarzeń przekazane przez KPP Legionowo;
+- FAQ o chodniku, wcześniejszych próbach i planach, ze źródłami przy odpowiedziach;
 - chronologię dotychczasowych działań i listę następnych kroków;
 - źródła oraz rozwijaną listę aktualizacji z Facebooka;
 - komplet metadanych Open Graph, ikon i manifest dla urządzeń mobilnych.
@@ -94,4 +95,4 @@ Dokumentacja Cloudflare: [Build image i wersje narzędzi](https://developers.clo
 - W repozytorium nie umieszczamy podpisanych pism, dowodów e-Doręczeń ani skanów zawierających dane prywatne.
 - Odpowiedzi KPP, MZDW, UMWM i Gminy oraz rejestr wysyłki są opisane na stronie tylko w zakresie przeznaczonym do publicznej komunikacji.
 
-Stan danych widoczny na stronie: 28 września 2026 r.
+Stan danych widoczny na stronie: 1 października 2026 r.

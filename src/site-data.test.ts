@@ -15,7 +15,7 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('28 września 2026 r.')
+    expect(siteData.asOf).toBe('1 października 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
       value: '10 otrzymanych',

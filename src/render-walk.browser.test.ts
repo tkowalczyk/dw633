@@ -45,6 +45,18 @@ describe('chodnik i przejścia', () => {
         assert.equal(await browser.evaluate(`document.querySelector('h1').checkVisibility({ visibilityProperty: true })`), true)
         assert.equal(await browser.evaluate(`document.querySelector('main').innerText.includes(${JSON.stringify(siteData.initiative[0].confirmed)})`), true)
         assert.equal(await browser.evaluate(`document.querySelector('nav a[aria-current="page"]').getAttribute('href')`), path)
+        assert.equal(await browser.evaluate(`document.querySelectorAll('#faq details').length`), siteData.walk.questions.length)
+        await browser.command('focus', '#faq-przeszkody-gruntowe summary')
+        assert.notEqual(await browser.evaluate('getComputedStyle(document.activeElement).outlineStyle'), 'none')
+        await browser.command('press', 'Enter')
+        assert.equal(await browser.evaluate(`document.querySelector('#faq-przeszkody-gruntowe').open`), true)
+        assert.equal(await browser.evaluate(`document.querySelector('#faq-przeszkody-gruntowe .faq__answer').checkVisibility()`), true)
+        assert.equal(await browser.evaluate(`document.querySelector('#faq-przeszkody-gruntowe').innerText.includes('nieuregulowany stan prawny głównej działki drogowej nr 87')`), true)
+        assert.equal(await browser.evaluate('document.documentElement.scrollWidth <= innerWidth'), true)
+        await browser.command('screenshot', `test-results/agent-browser/faq-no-js-${width}-land.png`)
+        await browser.command('press', 'Space')
+        assert.equal(await browser.evaluate(`document.querySelector('#faq-przeszkody-gruntowe').open`), false)
+        await browser.evaluate(`document.querySelector('h1').scrollIntoView({ behavior: 'instant' })`)
         await browser.command('screenshot', `test-results/agent-browser/walk-no-js-${width}-start.png`)
         for (const id of ['waiting-title', 'history-title', 'updates-title']) {
           await browser.evaluate(`document.getElementById('${id}').scrollIntoView({ behavior: 'instant', block: 'center' })`)
@@ -120,10 +132,18 @@ describe('chodnik i przejścia', () => {
     const html = await (await fetch(new URL(path, base))).text()
     assert.ok(html.includes(siteData.asOf))
     for (const question of [
-      'Co wiadomo o przygotowaniu chodnika?',
-      'Jakiego odcinka dotyczą wnioski?',
+      'Pytania i odpowiedzi',
+      'Dlaczego zabiegamy o chodnik, a nie tylko o przejście dla pieszych?',
       'Na jakie odpowiedzi czekamy?',
     ]) assert.ok(html.includes(question), question)
+    for (const question of siteData.walk.questions) {
+      assert.ok(html.includes(`<summary>${question.title}</summary>`), question.title)
+      for (const paragraph of question.paragraphs) assert.ok(html.includes(paragraph), question.title)
+      for (const source of question.sources) {
+        assert.ok(siteData.sources.some(item => item.id === source.sourceId), source.sourceId)
+        assert.ok(html.includes(`href="/dokumenty-dw633/#${source.sourceId}">${source.label}</a>`), source.label)
+      }
+    }
     assert.equal((html.match(/class="history-card"/g) || []).length, siteData.initiative.length)
     for (const event of siteData.initiative) {
       for (const text of [event.date, event.title, event.status, event.confirmed, event.pending]) {
