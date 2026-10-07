@@ -34,7 +34,7 @@ export function renderWalk(): string {
         <h3>${siteData.walk.waiting.documents}</h3>
         <p>${siteData.nextSteps[0].description}</p>
         <p>${siteData.walk.waiting.note}</p>
-        ${['umwm-extension-2', 'mzdw-documents', 'gmina-extension'].map(id => sourceLink(id)).join('')}
+        ${['umwm-extension-2', 'mzdw-project-conditions', 'mzdw-documents', 'gmina-extension'].map(id => sourceLink(id)).join('')}
         <h3 class="section-subheading">${siteData.walk.waiting.actions}</h3>
         <p>${siteData.nextSteps[1].description}</p>
         ${sourceLink('umwm-inspection')}
