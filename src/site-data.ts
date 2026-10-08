@@ -926,6 +926,13 @@ export const siteData = {
         description: 'MZDW wyjaśnia przygotowanie projektu i rozpoznanie przeszkód. Wniosek o projekt złożono pani wójt na zebraniu. Następny krok dotyczy środków Gminy i harmonogramu prowadzącego do budowy.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2339353946921916/',
       },
+      {
+        month: '2026-10',
+        monthLabel: 'Październik 2026',
+        title: '410 m między Brzozy a Sonaty: potrzebne osobne porozumienie',
+        description: 'MZDW wskazał położenie brakującego odcinka i potrzebę osobnego porozumienia z Gminą. Priorytetem pozostają środki na projekt oraz jego zlecenie z uwzględnieniem ciągłości trasy.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2340892840101360/',
+      },
     ],
   },
   knowledge: {
