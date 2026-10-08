@@ -123,7 +123,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '7 października 2026 r.',
+  asOf: '8 października 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -135,7 +135,7 @@ export const siteData = {
       { sourceIds: ['canard-structure', 'serock-fotoradar-2023'], url: '/chodnik-stanislawow-pierwszy/#faq-fotoradar', label: 'Przeczytaj odpowiedź o fotoradarze' },
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'mzdw-continuity-october', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -327,7 +327,8 @@ export const siteData = {
         "id": "brakujace-410-metrow",
         "title": "Czym jest brakujące 410 metrów?",
         "paragraphs": [
-          "W pismach z 18 września 2026 MZDW wskazał odcinek km 11+000-11+410 jako połączenie dwóch sąsiednich odcinków objętych przygotowywanymi porozumieniami. Zaproponował Gminie współpracę przy projekcie zachodniego chodnika na tych 410 metrach. 5 października wyjaśnił, że kilometraż jest orientacyjny. Ostateczny zakres ma powstać przy projektowaniu i konsultacjach. Potrzebne jest potwierdzenie, że projekt obejmie sprawdzenie ciągłości całej trasy."
+          "W piśmie z 2 października 2026, otrzymanym 8 października, MZDW wskazał położenie około 410 m między ul. Brzozy a zatoką autobusową przy skrzyżowaniu z Sonaty. Odcinek km ok. 11+000-11+410 ma połączyć dwa sąsiednie zadania i wymaga osobnego porozumienia z Gminą. W przekazanym piśmie nie ma mapy.",
+          "MZDW wiąże uwzględnienie tych 410 m z ciągłością drogi dla pieszych i rowerów od rejonu Przyleśnej do ul. Epopei w Nieporęcie. Późniejsze pismo z 5 października określa kilometraż jako orientacyjny; ostateczny zakres ma powstać przy projektowaniu i konsultacjach."
         ],
         "sources": [
           {
@@ -341,6 +342,10 @@ export const siteData = {
           {
             "sourceId": "mzdw-project-conditions",
             "label": "MZDW, 5.10.2026, s. 1; otrzymano 6.10.2026 e-mailem"
+          },
+          {
+            "sourceId": "mzdw-continuity-october",
+            "label": "MZDW, 2.10.2026, s. 1-2; otrzymano 8.10.2026"
           }
         ]
       },
@@ -348,8 +353,8 @@ export const siteData = {
         "id": "zakres-umow",
         "title": "Czy przygotowywane umowy obejmują całą trasę od Przyleśnej do Sonaty?",
         "paragraphs": [
-          "MZDW w odpowiedzi z 5 października 2026 nadal nie potwierdził objęcia całej zachodniej trasy. Wyjaśnił, że podawany kilometraż jest orientacyjny. Ostateczny zakres dokumentacji i odcinki objęte realizacją mają zostać ustalone podczas projektowania oraz konsultacji.",
-          "Wyjaśnienie dotyczy także wcześniejszej różnicy 11+480/11+410: znamy orientacyjny charakter tych zapisów, ale nadal nie znamy zakresu przyjętego do zlecenia. Gmina i MZDW powinny uzgodnić cel obejmujący ciągłe połączenie Przyleśna-Sonaty, wraz z odcinkiem wcześniej opisanym jako 410 m. To proponowany następny krok."
+          "Pismo z 2 października 2026, otrzymane 8 października, wyjaśnia cel połączenia odcinków. Według MZDW uwzględnienie brakujących 410 m zapewniłoby ciągłość drogi dla pieszych i rowerów od rejonu Przyleśnej do Epopei, ok. km 10+310-13+900. Te 410 m wymaga osobnego porozumienia i pozostaje poza listą pięciu przygotowywanych zadań.",
+          "To warunkowe potwierdzenie celu ciągłości. Nadal nie potwierdzono podpisania porozumień ani przebiegu całej trasy po zachodniej stronie. Pismo z 5 października pozostawia ostateczny zakres projektowaniu i konsultacjom. Przy ustalaniu środków i zlecenia Gmina powinna uwzględnić brakujące połączenie."
         ],
         "sources": [
           {
@@ -367,6 +372,10 @@ export const siteData = {
           {
             "sourceId": "mzdw-project-conditions",
             "label": "MZDW, 5.10.2026, s. 1; otrzymano 6.10.2026 e-mailem"
+          },
+          {
+            "sourceId": "mzdw-continuity-october",
+            "label": "MZDW, 2.10.2026, s. 1-2; otrzymano 8.10.2026"
           }
         ]
       },
@@ -394,9 +403,10 @@ export const siteData = {
       },
       {
         "id": "analiza-bezpieczenstwa",
-        "title": "Dlaczego nadal pytamy o analizę bezpieczeństwa, skoro droga jest kontrolowana?",
+        "title": "Co MZDW odpowiedział w sprawie analizy bezpieczeństwa?",
         "paragraphs": [
-          "MZDW opisał regularne kontrole drogi i oznakowania, ale we wrześniu 2026 nie widział potrzeby osobnej analizy bezpieczeństwa ruchu drogowego. Dopuścił ją przy projektowaniu. Urząd Marszałkowski w swoim piśmie zapowiedział analizę organizacji ruchu, pozyskanie danych Policji oraz wizję lokalną. Odpowiedzi wskazują więc różne czynności; zapowiedź analizy nie jest jeszcze jej wynikiem."
+          "MZDW w piśmie z 2 października 2026 podtrzymał przeprowadzenie oględzin oraz analiz bezpieczeństwa i przekraczania jezdni przy opracowywaniu projektu. Uzasadnił to odpowiedzialnością projektanta za rozwiązania, które następnie sprawdzą właściwe komórki MZDW. Na pytanie o podstawę odłożenia osobnej analizy odwołał się do tego stanowiska i przygotowywanych porozumień. Nie przedstawił pomiarów ani terenowej oceny badanego odcinka.",
+          "Spośród rozwiązań przejściowych MZDW planuje tylko wydłużenie obszaru zabudowanego. Urząd Marszałkowski osobno zapowiedział analizę organizacji ruchu i wizję lokalną. Otrzymane pismo nie odwołuje tej zapowiedzi i nie zawiera wyników wizji."
         ],
         "sources": [
           {
@@ -406,6 +416,10 @@ export const siteData = {
           {
             "sourceId": "umwm-inspection",
             "label": "Urząd Marszałkowski, 18.09.2026, s. 1"
+          },
+          {
+            "sourceId": "mzdw-continuity-october",
+            "label": "MZDW, 2.10.2026, s. 1-2; otrzymano 8.10.2026"
           }
         ]
       },
@@ -476,7 +490,7 @@ export const siteData = {
       title: 'Na jakie odpowiedzi czekamy?',
       documents: 'Wnioski o dokumenty',
       actions: 'Wnioski o działania',
-      note: 'Pakiet MZDW otrzymano 25 września. Uzupełnienie z 5 października otrzymano 6 października e-mailem. Wyjaśnia etap badania przeszkód i orientacyjny kilometraż; pełny zakres zachodniej trasy pozostaje do uzgodnienia. Termin 12 października dotyczy dokumentów Gminy, a 15 października dokumentów Urzędu Marszałkowskiego. Nie są to terminy odpowiedzi na wniosek z zebrania ani wizji lokalnej.',
+      note: 'Pakiet MZDW otrzymano 25 września. Uzupełnienie z 5 października otrzymano 6 października e-mailem. 8 października otrzymano także odpowiedź na pisma z 21 i 22 września: lokalizację 410 m, warunek osobnego porozumienia i stanowisko o analizach przy projektowaniu. Termin 12 października dotyczy dokumentów Gminy, a 15 października dokumentów Urzędu Marszałkowskiego. Nie są to terminy odpowiedzi na wniosek z zebrania ani wizji lokalnej.',
     },
   },
   notFound: {
@@ -499,7 +513,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '11 otrzymanych' },
+      { label: 'Pisma z instytucji', value: '12 otrzymanych' },
     ],
   },
   traffic: {
@@ -744,7 +758,7 @@ export const siteData = {
       confirmed:
         'MZDW widzi możliwość zaprojektowania chodnika po zachodniej stronie DW633 w km 11+000-11+410. Pismo skierowano do Gminy; wnioskodawca otrzymał je do wiadomości 18 września. Zarząd obecnie sam nie planuje projektu ani budowy w tym zakresie, a dalsze prowadzenie zadania wiąże z umową z Gminą.',
       pending:
-        'W odpowiedzi otrzymanej 22 września MZDW wyjaśnił rolę 410 m jako uzupełnienia sąsiednich odcinków i proponowaną rolę Gminy przy dokumentacji. Nadal potrzebne są mapa, potwierdzenie stanu porozumień oraz terminy.',
+        'W odpowiedzi otrzymanej 8 października MZDW zlokalizował 410 m między Brzozy a zatoką przy Sonaty i potwierdził potrzebę osobnego porozumienia. Brak mapy i terminów realizacji.',
       sourceId: 'mzdw-sidewalk',
     },
     {
@@ -772,7 +786,7 @@ export const siteData = {
       confirmed:
         'Pismo z 18 września otrzymano 22 września. Proponowane 410 m ma uzupełnić przerwę między odcinkami km 10+310-11+000 i 11+410-13+900. Gmina miałaby przygotować dokumentację. MZDW obecnie nie widzi potrzeby analizy bezpieczeństwa, dopuszczając ją przy projektowaniu. Według pisma trwa budowa sygnalizacji przy Sonaty i przygotowanie zmiany obszaru zabudowanego przy Przyleśnej.',
       pending:
-        'Wysłano pytanie o podstawę oceny braku potrzeby analizy bezpieczeństwa. Czekamy też na ustalenia dotyczące ciągłości trasy i zapowiedzianej wizji Urzędu Marszałkowskiego. Pismo nie potwierdza podpisania porozumień ani terminów realizacji.',
+        'Odpowiedź na pytanie o podstawę odłożenia analizy otrzymano 8 października. MZDW odwołał się do etapu projektowania i przygotowywanych porozumień, bez przedstawienia pomiarów ani terenowej oceny odcinka. Osobno pozostaje zapowiedziana wizja Urzędu Marszałkowskiego.',
       sourceId: 'mzdw-point-response',
     },
     {
@@ -806,6 +820,14 @@ export const siteData = {
       "confirmed": "Dokumentację zleci Gmina. MZDW wymaga uchwały Rady Gminy dotyczącej środków przed podpisaniem porozumienia. Nie posiada dokumentów o ewentualnych przeszkodach; mają zostać sprawdzone przy projektowaniu. Kilometraż jest orientacyjny, a ostateczny zakres ma powstać przy projektowaniu i konsultacjach.",
       "pending": "Uzyskać stanowisko Gminy o środkach na projekt w planowaniu 2027 oraz terminach zlecenia i ukończenia dokumentacji. To następny etap prowadzący do ustalenia możliwości i terminu budowy chodnika.",
       "sourceId": "mzdw-project-conditions"
+    },
+    {
+      "date": "8.10.2026",
+      "title": "MZDW lokalizuje 410 m i potwierdza potrzebę osobnego porozumienia",
+      "status": "Otrzymano odpowiedź z 2 października",
+      "confirmed": "Około 410 m leży między ul. Brzozy a zatoką przy Sonaty. MZDW wiąże uwzględnienie tego odcinka z ciągłością drogi dla pieszych i rowerów od Przyleśnej do Epopei. Potrzebne jest osobne porozumienie. Analizy mają nastąpić przy projektowaniu; spośród rozwiązań przejściowych MZDW planuje tylko wydłużenie obszaru zabudowanego.",
+      "pending": "Priorytetem pozostają środki Gminy na projekt i jego zlecenie, z uwzględnieniem brakującego połączenia. Pismo nie podaje terminu budowy. Osobno pozostaje zapowiedziana wizja Urzędu Marszałkowskiego.",
+      "sourceId": "mzdw-continuity-october"
     },
   ],
   updates: {
@@ -909,6 +931,12 @@ export const siteData = {
   knowledge: {
     known: [
       {
+      "type": "known",
+      "title": "410 m między Brzozy a zatoką przy Sonaty wymaga osobnego porozumienia",
+      "description": "MZDW w piśmie z 2 października wiąże uwzględnienie tego odcinka z ciągłością drogi dla pieszych i rowerów od Przyleśnej do Epopei. To wskazanie celu i warunku połączenia, bez potwierdzonego terminu budowy.",
+      "sourceId": "mzdw-continuity-october"
+    },
+      {
         "type": "known",
         "title": "Projekt zleci Gmina; trwają przygotowania do porozumienia",
         "description": "MZDW 5 października wskazał uchwałę Rady Gminy o środkach jako warunek podpisania porozumienia. Dokumentację zleci Gmina. Sprawdzenie przeszkód ma być częścią projektu.",
@@ -987,7 +1015,7 @@ export const siteData = {
     },
     {
       "title": "Ustalić drogę od projektu do budowy",
-      "description": "Po zabezpieczeniu środków potrzebne będą porozumienie i zlecenie dokumentacji przez Gminę. Projekt ma sprawdzić ciągłość trasy, rozwiązania techniczne i ewentualne przeszkody. Na tej podstawie Gmina i MZDW będą mogły określić finansowanie oraz możliwy termin budowy. Chodzi o harmonogram realizacji, a w razie przeszkód o ich wskazanie i sposób usunięcia."
+      "description": "Po zabezpieczeniu środków potrzebne będą porozumienia i zlecenie dokumentacji przez Gminę. MZDW wskazał potrzebę osobnego porozumienia dla brakujących 410 m między Brzozy a zatoką przy Sonaty. Projekt ma sprawdzić ciągłość trasy, rozwiązania techniczne i ewentualne przeszkody. Na tej podstawie Gmina i MZDW będą mogły określić finansowanie oraz możliwy termin budowy. Chodzi o harmonogram realizacji, a w razie przeszkód o ich wskazanie i sposób usunięcia."
     },
     {
       title: 'Otrzymać gotową część dokumentów',
@@ -1006,6 +1034,14 @@ export const siteData = {
     },
   ],
   sources: [
+    {
+      "id": "mzdw-continuity-october",
+      "title": "Pismo I-7.448.3.34.2026.4.JW: lokalizacja 410 m i analiza bezpieczeństwa",
+      "owner": "Mazowiecki Zarząd Dróg Wojewódzkich",
+      "scope": "odpowiedź na pisma z 21 i 22 września: położenie 410 m, ciągłość trasy, osobne porozumienie i działania przejściowe",
+      "asOf": "sporządzone 2.10.2026, otrzymane 8.10.2026",
+      "note": "Dwie strony. Około 410 m między Brzozy a zatoką przy Sonaty; uwzględnienie odcinka miałoby zapewnić ciągłość drogi dla pieszych i rowerów od Przyleśnej do Epopei. Potrzebne osobne porozumienie. Analizy MZDW wiąże z projektowaniem; spośród rozwiązań przejściowych planuje tylko wydłużenie obszaru zabudowanego. Bez mapy, potwierdzonego finansowania i terminu robót. Oryginał pozostaje niepubliczny ze względu na dane adresata."
+    },
     {
       "id": "mzdw-project-conditions",
       "title": "Pismo W-5.0143.230.2026.3.AW: warunki projektu i zakres dokumentacji",
