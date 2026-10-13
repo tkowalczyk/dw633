@@ -123,7 +123,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '8 października 2026 r.',
+  asOf: '13 października 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -135,7 +135,7 @@ export const siteData = {
       { sourceIds: ['canard-structure', 'serock-fotoradar-2023'], url: '/chodnik-stanislawow-pierwszy/#faq-fotoradar', label: 'Przeczytaj odpowiedź o fotoradarze' },
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'mzdw-continuity-october', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['budget-request-2027-public', 'gmina-documents-october', 'bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'mzdw-continuity-october', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -161,6 +161,20 @@ export const siteData = {
     faqIntro: 'Dlaczego chodnik, co zatrzymało wcześniejsze prace i co wiadomo o dalszych planach? Odpowiedzi wynikają z otrzymanych pism i dokumentów. Pod każdą znajdziesz datę oraz źródło.',
     faqLinkLabel: 'FAQ: pytania i odpowiedzi o chodniku',
     questions: [
+{
+      "id": "uczniowie-i-dojscia",
+      "title": "Ile dzieci uczy się w pobliskich placówkach i co wiadomo o ich dojściach?",
+      "paragraphs": [
+            "Według danych Gminy za październik 2026 szkoła podstawowa w Stanisławowie Pierwszym ma 456 uczniów, Modelowe Przedszkole 27, a Jodłowy Zakątek 12. Urząd przekazał zestawienie miesięczne dla roku szkolnego 2025/2026 oraz września i października 2026.",
+            "Gmina nie posiada badań sposobu dojścia lub dojazdu dzieci do tych placówek. Liczby uczniów opisują skalę placówek, ale nie pokazują, ile dzieci chodzi wzdłuż DW633 lub przekracza jezdnię. Do tej oceny potrzebna jest obserwacja rzeczywistych tras."
+      ],
+      "sources": [
+            {
+                  "sourceId": "gmina-documents-october",
+                  "label": "Gmina, 12.10.2026, Ad. 11, s. 2; otrzymano 12.10.2026"
+            }
+      ]
+},
       {
         "id": "chodnik-i-przejscie",
         "title": "Dlaczego zabiegamy o chodnik, a nie tylko o przejście dla pieszych?",
@@ -182,9 +196,12 @@ export const siteData = {
         "id": "zachodnia-strona",
         "title": "Dlaczego chodzi o chodnik po zachodniej stronie?",
         "paragraphs": [
-          "O zachodni chodnik Gmina występowała już w 2020 i 2023 roku. W piśmie z marca 2023 uzasadniała go poprawą bezpieczeństwa i dojściem do istniejących przejść. MZDW 18 września 2026 wskazał możliwość zaprojektowania zachodniego chodnika na brakujących 410 metrach. W odpowiedzi z 5 października określił kilometraż jako orientacyjny. Zakres całej zachodniej trasy nadal wymaga uzgodnienia."
-        ],
+  "O zachodni chodnik Gmina występowała już w 2020 i 2023 roku. W piśmie z 12 października 2026 wyraźnie wskazała zachodnią stronę pięciu planowanych odcinków między ul. Przyleśną w Kątach Węgierskich a ul. Protazego w Nieporęcie.",
+  "Dla naszej trasy trzeba jeszcze dopilnować połączenia sąsiednich odcinków. MZDW wskazał około 410 m między Brzozy a zatoką przy Sonaty, wymagające osobnego porozumienia. Pismo Gminy nie potwierdza uwzględnienia tego połączenia. Ostateczne rozwiązania mają powstać przy projektowaniu i konsultacjach."
+],
         "sources": [
+{"sourceId": "mzdw-continuity-october", "label": "MZDW, 2.10.2026, s. 1-2; otrzymano 8.10.2026"},
+{"sourceId": "gmina-documents-october", "label": "Gmina, 12.10.2026, s. 3; otrzymano 12.10.2026"},
           {
             "sourceId": "mzdw-agreement-records",
             "label": "Wnioski Gminy z 2020 i 2023, załącznik o porozumieniach, s. 1 i 3"
@@ -229,9 +246,11 @@ export const siteData = {
         "id": "dokumentacja-2023",
         "title": "Dlaczego w 2023 roku nie wykonano dokumentacji chodników?",
         "paragraphs": [
-          "W sprawozdaniu z wykonania budżetu Gmina podała, że zrezygnowała z zadania z powodu braku warunków od zarządcy drogi potrzebnych do dokumentacji. Wykonanie wydatków wyniosło 0,00 zł. Wniosek Gminy z marca 2023 potwierdza wystąpienie o porozumienie i wytyczne. W otrzymanym pakiecie brakuje odpowiedzi, która wyjaśniałaby, dlaczego tych warunków zabrakło."
-        ],
+  "W sprawozdaniu z wykonania budżetu Gmina podała rezygnację z zadania z powodu braku warunków od zarządcy drogi potrzebnych do dokumentacji. Wykonanie wydatków wyniosło 0,00 zł. Odpowiedź z 12 października 2026 potwierdza to wyjaśnienie. Według Gminy zadanie za 50 tys. zł pozostawało w planie przez cały 2023 rok i nie wróciło do budżetu na 2024 ani lata następne objęte odpowiedzią.",
+  "Załączona uchwała budżetowa potwierdza plan 50 tys. zł. Wniosek Gminy z marca 2023 zawiera zachodnią stronę i kilometraż odcinków. Nowa odpowiedź mówi o braku map i opisów konkretnych odcinków; nie wyjaśnia, jak to stwierdzenie odnosi się do wcześniejszego pisma. Nadal nie otrzymaliśmy korespondencji wyjaśniającej, dlaczego warunków nie uzyskano."
+],
         "sources": [
+{"sourceId": "gmina-documents-october", "label": "Gmina, 12.10.2026, s. 1-2; uchwała LXVII/135/2022, tabela 2a, poz. 21, s. 22 PDF"},
           {
             "sourceId": "budget-2023",
             "label": "Sprawozdanie za 2023, pozycja 21, s. 139 PDF (numer drukowany 138)"
@@ -306,9 +325,11 @@ export const siteData = {
         "id": "rok-2027",
         "title": "Czy chodnik powstanie w 2027 roku?",
         "paragraphs": [
-          "Pismo Gminy z 21 września 2026 nie podaje terminu budowy. Gmina deklaruje podpisanie czterech umów w 2027 roku po zabezpieczeniu pieniędzy na dokumentację i podjęciu wymaganych uchwał. MZDW 5 października opisał przygotowania do wstępnego porozumienia, bez terminu podpisania i zlecenia projektu. Rok 2027 pozostaje planem dotyczącym umów."
-        ],
+  "Terminu budowy jeszcze nie podano. W piśmie z 12 października 2026 Gmina opisuje pięć planowanych odcinków po zachodniej stronie w ramach przyszłorocznych projektów. Wiąże przygotowania z budżetem na 2027 rok i kolejne lata, ale nie podaje kwoty na dokumentację ani terminu jej zlecenia.",
+  "We wrześniu Gmina deklarowała cztery umowy na 2027 rok po zabezpieczeniu środków i podjęciu uchwał. Październikowe pismo nie zawiera listy pięciu odcinków, więc nie pozwala dokładnie porównać obu planów. Rok 2027 pozostaje planem dotyczącym przygotowania inwestycji, bez potwierdzonego terminu robót."
+],
         "sources": [
+{"sourceId": "gmina-documents-october", "label": "Gmina, 12.10.2026, s. 3; otrzymano 12.10.2026"},
           {
             "sourceId": "mzdw-agreement-records",
             "label": "Gmina, 21.09.2026, załącznik o porozumieniach, s. 13"
@@ -354,9 +375,10 @@ export const siteData = {
         "title": "Czy przygotowywane umowy obejmują całą trasę od Przyleśnej do Sonaty?",
         "paragraphs": [
           "Pismo z 2 października 2026, otrzymane 8 października, wyjaśnia cel połączenia odcinków. Według MZDW uwzględnienie brakujących 410 m zapewniłoby ciągłość drogi dla pieszych i rowerów od rejonu Przyleśnej do Epopei, ok. km 10+310-13+900. Te 410 m wymaga osobnego porozumienia i pozostaje poza listą pięciu przygotowywanych zadań.",
-          "To warunkowe potwierdzenie celu ciągłości. Nadal nie potwierdzono podpisania porozumień ani przebiegu całej trasy po zachodniej stronie. Pismo z 5 października pozostawia ostateczny zakres projektowaniu i konsultacjom. Przy ustalaniu środków i zlecenia Gmina powinna uwzględnić brakujące połączenie."
+          "Gmina 12 października wskazała zachodnią stronę pięciu planowanych odcinków między Przyleśną w Kątach Węgierskich a Protazego w Nieporęcie. Nie potwierdziła jednak włączenia dodatkowych 410 m ani podpisania porozumień. Przy ustalaniu środków i zlecenia potrzebne jest uwzględnienie tego połączenia; szczegółowy przebieg ustali projektowanie."
         ],
         "sources": [
+{"sourceId": "gmina-documents-october", "label": "Gmina, 12.10.2026, s. 3; otrzymano 12.10.2026"},
           {
             "sourceId": "mzdw-agreement-records",
             "label": "MZDW, 28.07.2026, załącznik o porozumieniach, s. 8-9"
@@ -490,7 +512,7 @@ export const siteData = {
       title: 'Na jakie odpowiedzi czekamy?',
       documents: 'Wnioski o dokumenty',
       actions: 'Wnioski o działania',
-      note: 'Pakiet MZDW otrzymano 25 września. Uzupełnienie z 5 października otrzymano 6 października e-mailem. 8 października otrzymano także odpowiedź na pisma z 21 i 22 września: lokalizację 410 m, warunek osobnego porozumienia i stanowisko o analizach przy projektowaniu. Termin 12 października dotyczy dokumentów Gminy, a 15 października dokumentów Urzędu Marszałkowskiego. Nie są to terminy odpowiedzi na wniosek z zebrania ani wizji lokalnej.',
+      note: 'Pakiet MZDW otrzymano 25 września. Uzupełnienie z 5 października otrzymano 6 października e-mailem. 8 października otrzymano także odpowiedź na pisma z 21 i 22 września: lokalizację 410 m, warunek osobnego porozumienia i stanowisko o analizach przy projektowaniu. Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października. Zawiera nowe informacje i uchwałę budżetową, ale nie rozstrzyga całego zakresu wniosku. Na dokumenty Urzędu Marszałkowskiego czekamy do 15 października. To termin dla dokumentów, nie odpowiedzi na wniosek z zebrania ani wizji lokalnej.',
     },
   },
   notFound: {
@@ -513,7 +535,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '12 otrzymanych' },
+      { label: 'Pisma z instytucji', value: '13 otrzymanych' },
     ],
   },
   traffic: {
@@ -829,6 +851,22 @@ export const siteData = {
       "pending": "Priorytetem pozostają środki Gminy na projekt i jego zlecenie, z uwzględnieniem brakującego połączenia. Pismo nie podaje terminu budowy. Osobno pozostaje zapowiedziana wizja Urzędu Marszałkowskiego.",
       "sourceId": "mzdw-continuity-october"
     },
+{
+      "date": "12.10.2026",
+      "title": "Gmina wskazuje zachodnią stronę i przekazuje dane o uczniach",
+      "status": "Otrzymano odpowiedź na wniosek o dokumenty",
+      "confirmed": "Gmina opisuje pięć planowanych zachodnich odcinków między Przyleśną w Kątach Węgierskich a Protazego w Nieporęcie. Przekazuje uchwałę z planem 50 tys. zł na 2023 rok i liczby uczniów. Potwierdza brak badań dojść i dojazdów dzieci w Urzędzie.",
+      "pending": "Potrzebne są środki i termin zlecenia dokumentacji oraz uwzględnienie dodatkowych 410 m. Pismo nie potwierdza terminu budowy ani objęcia planami tego połączenia. Odpowiedź na wniosek o dokumenty jest częściowa.",
+      "sourceId": "gmina-documents-october"
+},
+{
+    "date": "13.10.2026",
+    "title": "Potwierdzenie wysłania wniosku o projekt chodnika",
+    "status": "Wysłanie potwierdzone przez wnioskodawcę",
+    "confirmed": "Wnioskodawca potwierdził wysłanie krótkiej odpowiedzi do Gminy oraz osobnego wniosku o środki na projekt zachodniego chodnika Przyleśna-Sonaty i porozumienia z MZDW, z uwzględnieniem brakujących 410 m.",
+    "pending": "Czekamy na stanowisko Gminy. Nie przekazano kopii wysyłki ani dowodów doręczenia; nie ustalono terminu odpowiedzi.",
+    "sourceId": "budget-request-2027-public"
+}
   ],
   updates: {
     title: 'Posty na Facebooku',
@@ -937,6 +975,12 @@ export const siteData = {
   },
   knowledge: {
     known: [
+{
+      "type": "known",
+      "title": "Gmina planuje pięć odcinków po zachodniej stronie",
+      "description": "Pismo z 12 października wskazuje odcinki między Przyleśną w Kątach Węgierskich a Protazego w Nieporęcie w planach na 2027 rok. Brak kwoty i terminu zlecenia dokumentacji; uwzględnienie dodatkowych 410 m pozostaje do potwierdzenia.",
+      "sourceId": "gmina-documents-october"
+},
       {
       "type": "known",
       "title": "410 m między Brzozy a zatoką przy Sonaty wymaga osobnego porozumienia",
@@ -1003,12 +1047,12 @@ export const siteData = {
       'GPR pokazuje skalę ruchu na dłuższym odcinku, OSM pomaga oszacować długość trasy, mapy publiczne pokazują układ terenu, a SEWiK historię zdarzeń. Do wyboru rozwiązania potrzebne są jeszcze pomiary terenowe i analiza BRD.',
   },
   nextIntro:
-    'Najbliższy krok to decyzja Gminy o środkach na projekt chodnika w planowaniu budżetu na 2027 rok. Wniosek złożono pani wójt na zebraniu 28 września. Chcemy ustalić termin zlecenia i ukończenia projektu, a następnie możliwy termin budowy. Jeśli zadanie nie będzie realizowane, potrzebne jest wskazanie przyczyny.',
+    'Gmina potwierdziła planowanie pięciu zachodnich odcinków na 2027 rok. Wnioskodawca potwierdził wysłanie osobnego wniosku o środki na projekt ciągłej trasy Przyleśna-Sonaty, w tym brakujących 410 m, oraz o porozumienia z MZDW. To rozwinięcie postulatu zgłoszonego pani wójt na zebraniu 28 września.',
   nextSteps: [
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        'Odpowiedź MZDW na wniosek o dokumenty otrzymano 25 września, a jej uzupełnienie 6 października. Na odpowiedź UMWM na wniosek o dokumenty organizacji ruchu i projektu BOM nr 266 czekamy do 15 października. Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633.',
+        'Odpowiedź MZDW na wniosek o dokumenty otrzymano 25 września, a jej uzupełnienie 6 października. Na odpowiedź UMWM na wniosek o dokumenty organizacji ruchu i projektu BOM nr 266 czekamy do 15 października. Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października. Pozostają braki, m.in. w korespondencji o zadaniu z 2023 roku i odpowiedzi o projekcie BOM nr 266.',
     },
     {
       title: 'Ustalić termin i zakres wizji lokalnej',
@@ -1016,9 +1060,9 @@ export const siteData = {
         'Urząd Marszałkowski zapowiada analizę i oględziny w odpowiedzi na wniosek o działania. Wysłano prośbę o termin wizji w godzinach szkolnych i odpowiedzi z wynikami. Podtrzymano ocenę dojść oraz przekraczania jezdni.',
     },
     {
-      title: 'Uzyskać stanowisko Gminy wobec wniosku z zebrania',
+      title: 'Uzyskać stanowisko Gminy wobec wniosku o projekt',
       description:
-        'Na zebraniu sołeckim 28 września złożono pani wójt wniosek o projekt budowy chodnika na omawianym odcinku. Potrzebne są odpowiedź Gminy o zakresie i finansowaniu oraz wskazanie prowadzącego sprawę i terminu następnej czynności. Uchwała Rady Gminy dotycząca środków jest warunkiem porozumienia wskazanym przez MZDW.',
+        'Wnioskodawca potwierdził wysłanie dwóch pism: krótkiej odpowiedzi z podziękowaniem za informacje oraz osobnego wniosku o środki w budżecie 2027, zlecenie projektu przez Gminę i porozumienia z MZDW. Wniosek obejmuje ciągłą zachodnią trasę Przyleśna-Sonaty wraz z około 410 m między Brzozy a zatoką przy Sonaty. Czekamy na stanowisko Gminy i termin zlecenia dokumentacji.',
     },
     {
       "title": "Ustalić drogę od projektu do budowy",
@@ -1041,6 +1085,23 @@ export const siteData = {
     },
   ],
   sources: [
+{
+    "id": "budget-request-2027-public",
+    "title": "Wniosek o projekt zachodniego chodnika Przyleśna-Sonaty (PDF)",
+    "owner": "wnioskodawca",
+    "scope": "środki na projekt w budżecie 2027, zlecenie dokumentacji i porozumienia z MZDW, w tym dla 410 m",
+    "asOf": "wysłanie potwierdzone 13.10.2026",
+    "note": "Wersja do publikacji z pominięciem danych adresowych. Odtworzona z przygotowanej treści wniosku; nie jest eksportem wiadomości ani urzędowym dowodem nadania. Wysłanie potwierdził autor.",
+    "url": "/dokumenty/wniosek-chodnik-2027.pdf"
+},
+{
+      "id": "gmina-documents-october",
+      "title": "Odpowiedź Gminy PI.1431.169.2026 z 12 października 2026",
+      "owner": "Urząd Gminy Nieporęt",
+      "scope": "planowane zachodnie odcinki, zadanie z 2023 roku, liczby uczniów, dokumentacja oświetlenia i zakres posiadanych materiałów",
+      "asOf": "sporządzone i otrzymane 12.10.2026",
+      "note": "Trzy strony i załączona uchwała LXVII/135/2022. S. 1-2: historia zadania za 50 tys. zł. S. 2: październik 2026, szkoła 456, Modelowe Przedszkole 27, Jodłowy Zakątek 12; brak badań dojść i dojazdów w Gminie. S. 3: pięć planowanych zachodnich odcinków. Odpowiedź częściowa, bez kwoty na 2027 i terminu zlecenia dokumentacji. Oryginał pozostaje niepubliczny ze względu na dane adresata."
+},
     {
       "id": "mzdw-continuity-october",
       "title": "Pismo I-7.448.3.34.2026.4.JW: lokalizacja 410 m i analiza bezpieczeństwa",
@@ -1164,7 +1225,7 @@ export const siteData = {
       owner: 'Gmina Nieporęt',
       scope: '50 tys. zł na projektowanie chodników przy DW633; wykonanie 0,00 zł',
       asOf: 'rok budżetowy 2023',
-      note: 'Do wyjaśnienia pozostaje treść warunków od zarządcy i przebieg korespondencji.',
+      note: 'Uchwałę LXVII/135/2022 z 22.12.2022 otrzymano także jako załącznik do odpowiedzi Gminy z 12.10.2026: tabela 2a, poz. 21, s. 22 PDF, plan 50 tys. zł. Wykonanie 0,00 zł wynika ze sprawozdania, s. 139 PDF. Według odpowiedzi Gminy zadanie pozostawało w planie przez cały 2023 rok, a potem nie wróciło do budżetu. Nadal brak korespondencji wyjaśniającej nieotrzymanie warunków.',
       url: 'https://nieporet.esesja.pl/zalaczniki/295600/zarz130sprawozdanie-wykonanie-budzetu_2782350.pdf',
     },
     {
@@ -1215,8 +1276,8 @@ export const siteData = {
       title: 'Rejestr wysyłki i dalszej korespondencji',
       owner: 'dokumentacja inicjatywy',
       scope: '8 osobnych przesyłek e-Doręczeń z 18.08.2026 oraz dalsze odpowiedzi wnioskodawcy',
-      asOf: '6.10.2026',
-      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta do grupy. 28 września przekazał link do zatwierdzonego wpisu. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
+      asOf: '13.10.2026',
+      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta do grupy. 28 września przekazał link do zatwierdzonego wpisu. 13 października potwierdził wysłanie krótkiej odpowiedzi do Gminy oraz osobnego wniosku o projekt i porozumienia, bez kopii wysyłki i dowodów doręczenia. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
     },
     {
       id: 'kpp-response',
@@ -1248,7 +1309,7 @@ export const siteData = {
       owner: 'Wójt Gminy Nieporęt',
       scope: 'nowy termin dla wniosku o dokumenty dotyczące działań Gminy przy DW633',
       asOf: 'pismo z 25.08.2026',
-      note: 'Gmina wyznaczyła termin 12.10.2026 r. Pismo nie zawiera jeszcze żądanych dokumentów i jest przechowywane niepublicznie ze względu na dane adresata.',
+      note: 'Gmina wyznaczyła termin 12.10.2026 r. Odpowiedź merytoryczną z uchwałą budżetową otrzymano tego dnia; została opisana jako osobne źródło. Zawiadomienie pozostaje niepubliczne ze względu na dane adresata.',
     },
     {
       id: 'mzdw-extension',

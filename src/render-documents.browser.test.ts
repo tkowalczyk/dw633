@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import { describe, test } from 'node:test'
 import { setTimeout } from 'node:timers/promises'
@@ -57,7 +58,15 @@ describe('katalog dokumentów DW633', () => {
       for (const text of [source.title, source.owner, source.scope, source.asOf, source.note]) assert.ok(cards[index].includes(text), `${source.id}: ${text}`)
     })
     const files = (await readdir('dist', { recursive: true })).sort()
-    assert.deepEqual(files.filter(file => /\.(pdf|docx?|eml|msg|md|map)$/i.test(file) || /(?:odpowiedzi|wyslane|sprawa-dw633)/.test(file)), [])
+    const approvedPdf = 'dokumenty/wniosek-chodnik-2027.pdf'
+    const approvedSha256 = '312e8a77f9d38e5518c36ff07992316079d65064cd74c5c2294af2c630e2aa27'
+    assert.deepEqual(files.filter(file => /\.(pdf|docx?|eml|msg|md|map)$/i.test(file) || /(?:odpowiedzi|wyslane|sprawa-dw633)/.test(file)), [approvedPdf])
+    // Only the reviewed public version may be shipped, never an original with address data.
+    assert.equal(createHash('sha256').update(await readFile(`dist/${approvedPdf}`)).digest('hex'), approvedSha256)
+    const pdfResponse = await fetch(new URL(`/${approvedPdf}`, base))
+    assert.equal(pdfResponse.status, 200)
+    assert.match(pdfResponse.headers.get('content-type') || '', /^application\/pdf\b/)
+    assert.equal(createHash('sha256').update(Buffer.from(await pdfResponse.arrayBuffer())).digest('hex'), approvedSha256)
     for (const file of files.filter(file => /\.(html|js|css|xml|webmanifest)$/.test(file))) {
       assert.doesNotMatch(await readFile(`dist/${file}`, 'utf8'), /AE:PL-|(?:sprawa-dw633|odpowiedzi|wyslane)\/|file:\/\/|\/Users\//, file)
     }

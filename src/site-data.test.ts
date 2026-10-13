@@ -15,10 +15,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('8 października 2026 r.')
+    expect(siteData.asOf).toBe('13 października 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '12 otrzymanych',
+      value: '13 otrzymanych',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -98,7 +98,7 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
       )?.description,
-    ).toContain('Gmina wyznaczyła 12 października')
+    ).toContain('Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października')
     expect(
       siteData.initiative.find((event) => event.sourceId === 'gmina-actions')?.confirmed,
     ).toContain('Odpowiedź otrzymano 14 września')

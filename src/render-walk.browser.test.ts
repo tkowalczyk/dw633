@@ -157,8 +157,8 @@ describe('chodnik i przejścia', () => {
     assert.match(html, /Wnioski o dokumenty/)
     assert.match(html, /Wnioski o działania/)
     assert.match(html, /Pakiet MZDW otrzymano 25 września\./)
-    assert.match(html, /Nie są to terminy odpowiedzi na wniosek z zebrania ani wizji lokalnej\./)
-    assert.match(html, /Gmina wyznaczyła 12 października dla wniosku o dokumenty dotyczące DW633\./)
+    assert.match(html, /To termin dla dokumentów, nie odpowiedzi na wniosek z zebrania ani wizji lokalnej\./)
+    assert.match(html, /Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października\./)
   })
 
   test('bezpośrednie wejście i odświeżenie zwracają gotowy HTML z kodem 200', async () => {
