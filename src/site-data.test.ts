@@ -15,10 +15,10 @@ describe('dane publicznej strony DW633', () => {
   })
 
   it('uwzględnia doprecyzowanie KPP i korektę roku wypadku', () => {
-    expect(siteData.asOf).toBe('13 października 2026 r.')
+    expect(siteData.asOf).toBe('26 października 2026 r.')
     expect(siteData.hero.snapshot).toContainEqual({
       label: 'Pisma z instytucji',
-      value: '13 otrzymanych',
+      value: '14 otrzymanych',
     })
     expect(siteData.kppIntro).toContain('4 osoby ranne')
     expect(siteData.kppIntro).toContain('25 maja 2026 r.')
@@ -66,7 +66,7 @@ describe('dane publicznej strony DW633', () => {
     expect(JSON.stringify(siteData)).not.toContain('Oczekiwanie na odpowiedź')
   })
 
-  it('odnotowuje nowy termin UMWM bez przedstawiania go jako odpowiedzi merytorycznej', () => {
+  it('zachowuje historię przedłużenia UMWM i odnotowuje otrzymanie dokumentów', () => {
     expect(siteData.initiative).toContainEqual(
       expect.objectContaining({
         date: '24.08.2026',
@@ -80,7 +80,7 @@ describe('dane publicznej strony DW633', () => {
       siteData.nextSteps.find(
         (step) => step.title === 'Sprawdzić odpowiedzi na informację publiczną',
       )?.description,
-    ).toContain('15 października')
+    ).toContain('13 października')
     expect(JSON.stringify(siteData)).toContain('odpowiedź UMWM na wniosek o dokumenty')
   })
 
