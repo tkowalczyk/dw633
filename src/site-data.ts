@@ -1038,6 +1038,13 @@ export const siteData = {
         description: 'MZDW wskazał położenie brakującego odcinka i potrzebę osobnego porozumienia z Gminą. Priorytetem pozostają środki na projekt oraz jego zlecenie z uwzględnieniem ciągłości trasy.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2340892840101360/',
       },
+      {
+        month: '2026-10',
+        monthLabel: 'Październik 2026',
+        title: 'Dokumenty Urzędu Marszałkowskiego i prośba o uzupełnienie',
+        description: 'Urząd przekazał projekty organizacji ruchu, kontrole i dawną korespondencję. Wysłano prośbę o sprawdzenie powtórzonych załączników oraz dosłanie brakujących dokumentów, w tym oceny projektu budżetu obywatelskiego.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2358861741637803/',
+      },
     ],
   },
   knowledge: {
