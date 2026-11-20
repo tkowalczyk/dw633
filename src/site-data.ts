@@ -123,7 +123,7 @@ type SiteData = {
 }
 
 export const siteData = {
-  asOf: '26 października 2026 r.',
+  asOf: '20 listopada 2026 r.',
   documents: {
     title: 'Dokumenty w sprawie DW633 w Stanisławowie Pierwszym',
     pageTitle: 'Dokumenty w sprawie DW633 | Stanisławów Pierwszy',
@@ -135,7 +135,7 @@ export const siteData = {
       { sourceIds: ['canard-structure', 'serock-fotoradar-2023'], url: '/chodnik-stanislawow-pierwszy/#faq-fotoradar', label: 'Przeczytaj odpowiedź o fotoradarze' },
       { sourceIds: ['kpp-response', 'event-categories', 'accident-date-check'], url: '/ruch-i-wypadki-dw633/#zdarzenia', label: 'Zobacz zestawienie zdarzeń KPP i korektę roku' },
       { sourceIds: ['gpr-2025'], url: '/ruch-i-wypadki-dw633/#ruch', label: 'Zobacz dane o natężeniu ruchu' },
-      { sourceIds: ['umwm-documents-october', 'budget-request-2027-public', 'gmina-documents-october', 'bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'mzdw-continuity-october', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
+      { sourceIds: ['umwm-supplement-november', 'umwm-completeness-october', 'umwm-documents-october', 'budget-request-2027-public', 'gmina-documents-october', 'bom-266', 'budget-2023', 'delivery-register', 'umwm-extension', 'gmina-extension', 'mzdw-extension', 'gmina-actions', 'umwm-extension-2', 'mzdw-sidewalk', 'umwm-inspection', 'mzdw-point-response', 'mzdw-project-conditions', 'mzdw-continuity-october', 'meeting-request-2026', 'mzdw-documents', 'mzdw-agreement-records', 'umwm-assessment-2025'], url: '/chodnik-stanislawow-pierwszy/#dzialania', label: 'Zobacz historię działań i odpowiedzi instytucji' },
       { sourceIds: ['stops-mzdw', 'bom-crossings', 'school-area', 'education-places', 'spatial-data'], url: '/#odcinek', label: 'Zobacz opis badanego odcinka' },
     ],
   },
@@ -179,17 +179,20 @@ export const siteData = {
       "id": "dokumenty-umwm-pazdziernik",
       "title": "Co wynika z dokumentów otrzymanych 13 października?",
       "paragraphs": [
-            "Urząd Marszałkowski przekazał projekty organizacji ruchu, protokoły kontroli oznakowania i dawną korespondencję. Pismo odpowiada na 11 pytań naszego wniosku o dokumenty. Pozwala odtworzyć część historii zmian i wcześniejszych próśb o poprawę bezpieczeństwa.",
-            "Pismo deklaruje brak analiz bezpieczeństwa i pomiarów dla wskazanego odcinka. Załączniki zawierają jednak historyczną analizę Policji z grudnia 2021 dla przejścia przy szkole i po 500 m po obu stronach. Jest też pismo z 2025 roku opisujące obserwację pięciu pieszych. Projekt sygnalizacji przy Sonaty podaje 60 pieszych na godzinę, bez daty obserwacji. Materiały te nie zastępują aktualnej oceny całej trasy; osobny wniosek o analizę i oględziny pozostaje otwarty.",
-            "W dostarczonym zestawie dwa katalogi są kopiami innych. Nie odnaleziono osobnych wpisów ewidencji ani zapowiedzianej dokumentacji projektu Budżetu Obywatelskiego Mazowsza nr 266. Wnioskodawca potwierdził 26 października wysłanie prośby o sprawdzenie duplikatów i uzupełnienie brakujących dokumentów. Czekamy na odpowiedź Urzędu."
-      ],
+  "Urząd Marszałkowski przekazał projekty organizacji ruchu, protokoły kontroli oznakowania i dawną korespondencję. Pismo odpowiada na 11 pytań naszego wniosku o dokumenty. Pozwala odtworzyć część historii zmian i wcześniejszych próśb o poprawę bezpieczeństwa.",
+  "Pismo deklaruje brak analiz bezpieczeństwa i pomiarów dla wskazanego odcinka. Załączniki zawierają jednak historyczną analizę Policji z grudnia 2021 dla przejścia przy szkole i po 500 m po obu stronach. Jest też pismo z 2025 roku opisujące obserwację pięciu pieszych. Projekt sygnalizacji przy Sonaty podaje 60 pieszych na godzinę, bez daty obserwacji. Materiały te nie zastępują aktualnej oceny całej trasy; osobny wniosek o analizę i oględziny pozostaje otwarty.",
+  "W październikowym zestawie powtarzały się dwa katalogi i brakowało ewidencji oraz dokumentacji projektu Budżetu Obywatelskiego Mazowsza nr 266. Urząd dosłał sześć brakujących plików z pismem z 16 listopada. Materiały sprawdzono 20 listopada; znamy już uzasadnienie oceny projektu z 2020 roku."
+],
       "sources": [
-          {"sourceId": "delivery-register", "label": "Potwierdzenie wysłania odpowiedzi do UMWM, 26.10.2026"},
-            {
-                  "sourceId": "umwm-documents-october",
-                  "label": "UMWM, 12.10.2026, Ad. 1-6 i 9; kontrola załączników otrzymanych 13.10.2026"
-            }
-      ]
+  {
+    "sourceId": "umwm-documents-october",
+    "label": "UMWM, 12.10.2026, Ad. 1-6 i 9; pakiet otrzymany 13.10.2026"
+  },
+  {
+    "sourceId": "umwm-supplement-november",
+    "label": "UMWM, 16.11.2026, s. 1 i sześć załączników; analiza 20.11.2026"
+  }
+]
 },
 {
       "id": "obszar-zabudowany",
@@ -277,17 +280,21 @@ export const siteData = {
         "id": "budzet-obywatelski-2020",
         "title": "Dlaczego odrzucono projekt budżetu obywatelskiego z 2020 roku?",
         "paragraphs": [
-          "Znamy wynik, ale nie szczegółowe uzasadnienie. Oficjalny wykaz umieszcza projekt nr 266, dotyczący przejścia, chodnika i doświetlenia na DW633, wśród projektów ocenionych negatywnie. Sam wykaz nie podaje przyczyny odrzucenia ani dokładnego przebiegu. Do wyjaśnienia potrzebna jest karta oceny projektu.",
-          "Pismo Urzędu Marszałkowskiego z 12 października 2026 zapowiada przekazanie wniosku, kosztorysu, mapy i karty oceny. W udostępnionych do analizy katalogach nie odnaleziono tego kompletu; część folderów powtarza inne materiały. Urząd informuje też, że omówienie projektu odbyło się w MZDW bez wytworzenia dodatkowych dokumentów. Wnioskodawca potwierdził 26 października wysłanie prośby o dosłanie zapowiedzianej dokumentacji, w tym karty oceny. Termin uzupełnienia nie jest ustalony."
-        ],
+  "Karta oceny wskazuje potrzebę rozbudowy drogi i pozyskania gruntów. Projekt nr 266 przeszedł ocenę formalną, ale otrzymał negatywną ocenę zgodności z prawem i wykonalności technicznej. W kryterium dotyczącym tytułu prawnego Województwa do nieruchomości zaznaczono odpowiedź „nie”.",
+  "Wniosek z 2020 roku obejmował przejście z doświetleniem i 400 m chodnika po zachodniej stronie DW633, w rejonie działki nr 66. Tych 400 m nie należy utożsamiać z obecnym odcinkiem około 410 m Brzozy-Sonaty.",
+  "To ocena konkretnego wariantu z 2020 roku, która nie rozstrzyga wykonalności całej obecnie proponowanej trasy. Karta nie podaje działek do pozyskania ani analizy wariantów. Przy obecnym projekcie trzeba sprawdzić granice pasa drogowego i ewentualną potrzebę pozyskania gruntów.",
+  "Brakujące dokumenty Urząd dosłał z pismem z 16 listopada 2026. Otrzymaliśmy wniosek z kosztorysem, kartę oceny, mapę, listy poparcia oraz dwie ewidencje organizacji ruchu. Materiały sprawdzono 20 listopada."
+],
         "sources": [
-          {"sourceId": "delivery-register", "label": "Potwierdzenie wysłania odpowiedzi do UMWM, 26.10.2026"},
-          {"sourceId": "umwm-documents-october", "label": "UMWM, 12.10.2026, Ad. 9-10, s. 2; kontrola otrzymanych katalogów"},
-          {
-            "sourceId": "bom-266",
-            "label": "Wykaz projektów po ocenie, 7.09.2020, część II, projekt nr 266, s. 17 PDF"
-          }
-        ]
+  {
+    "sourceId": "umwm-supplement-november",
+    "label": "Karta oceny BOM nr 266, s. 2-3, 5, 8-9; wniosek, s. 1-2; analiza 20.11.2026"
+  },
+  {
+    "sourceId": "bom-266",
+    "label": "Wykaz projektów po ocenie, 7.09.2020, projekt nr 266, s. 17 PDF"
+  }
+]
       },
       {
         "id": "dokumentacja-2023",
@@ -498,14 +505,19 @@ export const siteData = {
         "id": "sygnalizacja-sonaty",
         "title": "Co wiadomo o uruchomieniu sygnalizacji przy Sonaty?",
         "paragraphs": [
-          "Według odpowiedzi MZDW z 25 września 2026 budowa była na końcowym etapie, a procedury dotyczyły podłączenia zasilania. Uruchomienie uzależniono od dopełnienia formalności związanych z energią elektryczną. Pismo nie podaje daty włączenia sygnalizacji."
-        ],
+  "Według odpowiedzi MZDW z 25 września 2026 budowa była na końcowym etapie, a procedury dotyczyły podłączenia zasilania. Uruchomienie uzależniono od dopełnienia formalności związanych z energią elektryczną. Pismo nie podaje daty włączenia sygnalizacji.",
+  "W uzupełnionej ewidencji data 13 lipca 2026 figuruje jako rzeczywiste wprowadzenie organizacji czasowej związanej z budową sygnalizacji. Pole wprowadzenia organizacji stałej pozostaje puste. Wskazany przy niej termin 30 kwietnia 2027 nie jest obietnicą uruchomienia świateł. Te wpisy nie potwierdzają aktualnego działania urządzenia."
+],
         "sources": [
-          {
-            "sourceId": "mzdw-documents",
-            "label": "MZDW, 25.09.2026, pkt 11"
-          }
-        ]
+  {
+    "sourceId": "mzdw-documents",
+    "label": "MZDW, 25.09.2026, pkt 11"
+  },
+  {
+    "sourceId": "umwm-supplement-november",
+    "label": "Ewidencja czasowa: arkusz 2026, projekt 376; stała: arkusz 2025, projekt 513; analiza 20.11.2026"
+  }
+]
       },
       {
         "id": "fotoradar",
@@ -563,7 +575,7 @@ export const siteData = {
       title: 'Na jakie odpowiedzi czekamy?',
       documents: 'Wnioski o dokumenty',
       actions: 'Wnioski o działania',
-      note: 'Pakiet MZDW otrzymano 25 września. Uzupełnienie z 5 października otrzymano 6 października e-mailem. 8 października otrzymano także odpowiedź na pisma z 21 i 22 września: lokalizację 410 m, warunek osobnego porozumienia i stanowisko o analizach przy projektowaniu. Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października. Zawiera nowe informacje i uchwałę budżetową, ale nie rozstrzyga całego zakresu wniosku. Odpowiedź Urzędu Marszałkowskiego z załącznikami otrzymano 13 października. Wnioskodawca potwierdził 26 października wysłanie prośby o uzupełnienie pakietu, w tym dokumentów BOM nr 266 i wpisów ewidencji. Czekamy na odpowiedź Urzędu. Osobno oczekujemy stanowiska Gminy wobec wniosku o projekt chodnika oraz wyniku zapowiedzianej analizy i oględzin.',
+      note: "Brak sześciu załączników UMWM został uzupełniony. Dokumentację projektu BOM nr 266 i obie ewidencje sprawdzono 20 listopada; wnioskodawca potwierdził wysłanie podziękowania. Nadal czekamy na stanowisko Gminy wobec wniosku o środki na projekt i porozumienia oraz wynik zapowiedzianej analizy i oględzin. W odpowiedzi Gminy na wniosek o dokumenty pozostają braki w korespondencji o zadaniu z 2023 roku.",
     },
   },
   notFound: {
@@ -586,7 +598,7 @@ export const siteData = {
     snapshot: [
       { label: 'Badany odcinek', value: 'około 1 km*' },
       { label: 'Pierwsza runda', value: '8 pism wysłanych' },
-      { label: 'Pisma z instytucji', value: '14 otrzymanych' },
+      { label: 'Pisma z instytucji', value: '16 otrzymanych' },
     ],
   },
   traffic: {
@@ -677,12 +689,12 @@ export const siteData = {
     {
       date: '2020',
       title: 'Projekt BOM nr 266',
-      status: 'Potwierdzone częściowo',
+      status: 'Uzasadnienie potwierdzone dokumentem',
       confirmed:
-        'Urzędowy wykaz potwierdza projekt przejścia, chodnika i doświetlenia na DW633 oraz negatywny wynik oceny.',
+        'Projekt obejmował przejście z doświetleniem i 400 m zachodniego chodnika. Karta oceny wskazuje potrzebę rozbudowy drogi i pozyskania gruntów. Ocena formalna była pozytywna, a ocena zgodności z prawem i wykonalności technicznej negatywna.',
       pending:
-        'Do pozyskania: uzasadnienie oceny, mapa i wskazanie strony drogi.',
-      sourceId: 'bom-266',
+        'Dokumenty przeanalizowano 20 listopada 2026. Historyczna ocena nie rozstrzyga wykonalności obecnej całej trasy; potrzebne jest sprawdzenie aktualnego stanu gruntów.',
+      sourceId: 'umwm-supplement-november',
     },
     {
       date: '25.03.2020',
@@ -923,7 +935,7 @@ export const siteData = {
       "title": "Urząd Marszałkowski przekazuje dokumenty organizacji ruchu",
       "status": "Otrzymano odpowiedź na wniosek nr 06",
       "confirmed": "Pismo z 12 października i pakiet projektów, protokołów kontroli oraz korespondencji otrzymano 13 października. Urząd wskazuje etap zbierania opinii dla zmiany granicy obszaru zabudowanego Przyleśna-Smyczkowa. Deklaruje brak analiz bezpieczeństwa i pomiarów dla badanego odcinka, choć załączniki zawierają starsze analizy i wyniki obserwacji pieszych.",
-      "pending": "W dostarczonych katalogach powtarzają się pliki. Nie odnaleziono osobnej ewidencji ani zapowiedzianego kompletu BOM nr 266. Odpowiedź na wniosek o dokumenty nie zamyka osobnego wątku oględzin i oceny bezpieczeństwa.",
+      "pending": "W tym pakiecie brakowało ewidencji i kompletu BOM nr 266. Sześć plików dosłano z pismem z 16 listopada i sprawdzono 20 listopada. Osobny wątek oględzin i oceny bezpieczeństwa pozostaje otwarty.",
       "sourceId": "umwm-documents-october"
 },
 {
@@ -931,8 +943,32 @@ export const siteData = {
       "title": "Potwierdzenie wysłania prośby o uzupełnienie pakietu UMWM",
       "status": "Wysłanie potwierdzone przez wnioskodawcę",
       "confirmed": "Wnioskodawca potwierdził wysłanie odpowiedzi do Urzędu Marszałkowskiego. Wskazał powtórzone katalogi 2/3 i 6/7 oraz poprosił o brakującą dokumentację BOM nr 266 i wpisy ewidencji zatwierdzonych projektów.",
-      "pending": "Czekamy na uzupełnienie lub wyjaśnienie Urzędu. Nie ustalono terminu odpowiedzi. Data wydarzenia oznacza potwierdzenie wysłania; nie przekazano kopii wiadomości ani dowodu doręczenia.",
+      "pending": "Sześć brakujących plików otrzymano i sprawdzono 20 listopada. Data tego wydarzenia oznacza potwierdzenie wysłania prośby; nie przekazano kopii wiadomości ani dowodu doręczenia.",
       "sourceId": "delivery-register"
+},
+{
+  "date": "28.10.2026",
+  "title": "UMWM wskazuje wykaz załączników",
+  "status": "Data pisma; doręczenie bez ustalonej daty",
+  "confirmed": "Urząd podtrzymał kompletność dokumentów w swoim systemie i wymienił dwie ewidencje oraz cztery PDF-y BOM. Wnioskodawca 12 listopada potwierdził otrzymanie samego pisma, bez nowych załączników.",
+  "pending": "Pismo UMWM z 16 listopada odwołuje się do odpowiedzi wnioskodawcy z 12 listopada. Brak sześciu plików został następnie uzupełniony.",
+  "sourceId": "umwm-completeness-october"
+},
+{
+  "date": "16.11.2026",
+  "title": "UMWM dosyła dokumentację BOM i ewidencje",
+  "status": "Data pisma; materiały sprawdzono 20 listopada",
+  "confirmed": "Otrzymaliśmy wszystkie sześć brakujących plików. Karta oceny BOM nr 266 wskazuje potrzebę rozbudowy drogi i pozyskania gruntów jako uzasadnienie oceny negatywnej w 2020 roku.",
+  "pending": "Dokładnej daty doręczenia nie ustalono. Uzupełnienie dokumentów nie przynosi decyzji o finansowaniu ani terminie budowy i nie zamyka osobnej sprawy oględzin.",
+  "sourceId": "umwm-supplement-november"
+},
+{
+  "date": "20.11.2026",
+  "title": "Potwierdzenie wysłania podziękowania do UMWM",
+  "status": "Wysłanie potwierdzone przez wnioskodawcę",
+  "confirmed": "Wnioskodawca potwierdził wysłanie odpowiedzi po otrzymaniu brakujących dokumentów. Przygotowane podziękowanie dotyczyło obu ewidencji i czterech plików BOM.",
+  "pending": "Nie przekazano kopii wysłanej wiadomości ani dowodu doręczenia. Data oznacza potwierdzenie wysłania. Priorytetem pozostają środki Gminy na projekt i potrzebne porozumienia.",
+  "sourceId": "delivery-register"
 }
   ],
   updates: {
@@ -1050,6 +1086,12 @@ export const siteData = {
   knowledge: {
     known: [
 {
+  "type": "known",
+  "title": "Znamy uzasadnienie oceny projektu BOM z 2020 roku",
+  "description": "Karta oceny wskazuje potrzebę rozbudowy drogi i pozyskania gruntów. Dotyczy konkretnego historycznego wariantu; obecny projekt musi sprawdzić aktualny stan gruntów i rozwiązania dla całej trasy.",
+  "sourceId": "umwm-supplement-november"
+},
+{
       "type": "known",
       "title": "Gmina planuje pięć odcinków po zachodniej stronie",
       "description": "Pismo z 12 października wskazuje odcinki między Przyleśną w Kątach Węgierskich a Protazego w Nieporęcie w planach na 2027 rok. Brak kwoty i terminu zlecenia dokumentacji; uwzględnienie dodatkowych 410 m pozostaje do potwierdzenia.",
@@ -1110,7 +1152,7 @@ export const siteData = {
         type: 'unknown',
         title: 'Potrzebne dokumenty wcześniejszych prób',
         description:
-          'Do pozyskania pozostają pełna ocena BOM nr 266 i dokumenty dotyczące warunków, których Gmina nie otrzymała w 2023 r.',
+          'Kartę oceny BOM nr 266 otrzymano. Nadal brakuje korespondencji wyjaśniającej, dlaczego Gmina nie uzyskała warunków potrzebnych do dokumentacji w 2023 roku.',
         sourceId: 'budget-2023',
       },
     ],
@@ -1126,7 +1168,7 @@ export const siteData = {
     {
       title: 'Sprawdzić odpowiedzi na informację publiczną',
       description:
-        'Odpowiedź MZDW na wniosek o dokumenty otrzymano 25 września, a jej uzupełnienie 6 października. Częściowa odpowiedź UMWM na wniosek o dokumenty dotarła 13 października. Wysłanie prośby o sprawdzenie duplikatów i dosłanie dokumentacji BOM nr 266 oraz wpisów ewidencji potwierdzono 26 października. Czekamy na uzupełnienie. Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października. Pozostają braki, m.in. w korespondencji o zadaniu z 2023 roku i odpowiedzi o projekcie BOM nr 266.',
+        'Odpowiedź MZDW na wniosek o dokumenty otrzymano 25 września, a jej uzupełnienie 6 października. Częściowa odpowiedź UMWM na wniosek o dokumenty dotarła 13 października. Sześć brakujących załączników dosłano z pismem z 16 listopada i sprawdzono 20 listopada. Odpowiedź Gminy na wniosek o dokumenty otrzymano 12 października. Pozostają braki, m.in. w korespondencji o zadaniu z 2023 roku i odpowiedzi o projekcie BOM nr 266.',
     },
     {
       title: 'Ustalić termin i zakres wizji lokalnej',
@@ -1143,9 +1185,9 @@ export const siteData = {
       "description": "Po zabezpieczeniu środków potrzebne będą porozumienia i zlecenie dokumentacji przez Gminę. MZDW wskazał potrzebę osobnego porozumienia dla brakujących 410 m między Brzozy a zatoką przy Sonaty. Projekt ma sprawdzić ciągłość trasy, rozwiązania techniczne i ewentualne przeszkody. Na tej podstawie Gmina i MZDW będą mogły określić finansowanie oraz możliwy termin budowy. Chodzi o harmonogram realizacji, a w razie przeszkód o ich wskazanie i sposób usunięcia."
     },
     {
-      title: 'Otrzymać brakujące załączniki od UMWM',
+      title: 'Uwzględnić dawną ocenę gruntów w obecnym projekcie',
       description:
-        'Wnioskodawca potwierdził wysłanie odpowiedzi wskazującej duplikaty katalogów 2/3 i 6/7. Poprosił o dokumentację BOM nr 266, wpisy ewidencji oraz przewidywaną datę przekazania materiałów, jeśli uzupełnienie wymaga czasu. Czekamy na dokumenty lub wyjaśnienie Urzędu.',
+        'Karta BOM z 2020 roku wskazuje potrzebę rozbudowy drogi i pozyskania gruntów. Przy projektowaniu całej zachodniej trasy trzeba sprawdzić granice pasa drogowego i aktualne potrzeby gruntowe. Historyczna ocena nie zastępuje tego rozpoznania.',
     },
     {
       title: 'Uzupełnić dowody i dokumentację terenową',
@@ -1160,12 +1202,28 @@ export const siteData = {
   ],
   sources: [
 {
+  "id": "umwm-supplement-november",
+  "title": "Uzupełnienie UMWM z 16 listopada 2026: BOM nr 266 i ewidencje",
+  "owner": "Urząd Marszałkowski Województwa Mazowieckiego w Warszawie",
+  "scope": "uzasadnienie oceny BOM z 2020 roku, wniosek, mapa, listy poparcia i ewidencje organizacji ruchu z lat 2016-2026",
+  "asOf": "pismo z 16.11.2026; przekazano do analizy 20.11.2026; dokładna data doręczenia nieustalona",
+  "note": "Sprawa OR-OP-I.1431.113.2026.JG. Trzy strony pisma, cztery PDF-y BOM i dwa Excele. Karta s. 5 i 8: brak tytułu prawnego, potrzeba rozbudowy drogi i pozyskania gruntów. Wniosek s. 1: 400 m zachodniego chodnika. Ewidencje: 12 wpisów stałych i 23 czasowe. Nie potwierdzają uruchomienia sygnalizacji. Dokumenty pozostają w lokalnym archiwum; nie publikujemy surowych załączników."
+},
+{
+  "id": "umwm-completeness-october",
+  "title": "Pismo UMWM z 28 października 2026 o kompletności załączników",
+  "owner": "Urząd Marszałkowski Województwa Mazowieckiego w Warszawie",
+  "scope": "deklarowana zawartość pakietu i wykaz dwóch ewidencji oraz czterech PDF-ów BOM nr 266",
+  "asOf": "pismo z 28.10.2026; przeanalizowane 12.11.2026; dokładna data doręczenia nieustalona",
+  "note": "Sprawa OR-OP-I.1431.113.2026.JG. Dwie strony. Urząd wskazał komplet dokumentów w swoim systemie. Wnioskodawca potwierdził otrzymanie samego pisma. Brakujące pliki przekazano z odpowiedzią z 16 listopada. Oryginał zawiera prywatne dane adresata."
+},
+{
       "id": "umwm-documents-october",
       "title": "Odpowiedź UMWM OR-OP-I.1431.113.2026.JG z 12 października 2026 i załączniki",
       "owner": "Urząd Marszałkowski Województwa Mazowieckiego w Warszawie",
       "scope": "projekty organizacji ruchu, kontrole oznakowania, korespondencja, stan projektu Przyleśna-Smyczkowa i zakres posiadanych analiz",
       "asOf": "sporządzone 12.10.2026; otrzymane 13.10.2026",
-      "note": "Odpowiedź na wniosek nr 06 z 18 sierpnia. Pismo i sześć katalogów: 152 PDF-y, po porównaniu treści plików 75 różnych PDF-ów. Katalogi 2 i 3 oraz 6 i 7 są parami identyczne. W przekazanym zestawie nie odnaleziono osobnej ewidencji ani zapowiedzianej dokumentacji BOM nr 266. Oryginały pozostają niepubliczne ze względu na dane osobowe."
+      "note": "Odpowiedź na wniosek nr 06 z 18 sierpnia. Pismo i sześć katalogów: 152 PDF-y, po porównaniu treści plików 75 różnych PDF-ów. Katalogi 2 i 3 oraz 6 i 7 są parami identyczne. W tym zestawie brakowało osobnej ewidencji i dokumentacji BOM nr 266. Sześć plików dosłano z pismem z 16 listopada i sprawdzono 20 listopada. Oryginały pozostają niepubliczne ze względu na dane osobowe."
 },
 {
     "id": "budget-request-2027-public",
@@ -1358,8 +1416,8 @@ export const siteData = {
       title: 'Rejestr wysyłki i dalszej korespondencji',
       owner: 'dokumentacja inicjatywy',
       scope: '8 osobnych przesyłek e-Doręczeń z 18.08.2026 oraz dalsze odpowiedzi wnioskodawcy',
-      asOf: '26.10.2026',
-      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta do grupy. 28 września przekazał link do zatwierdzonego wpisu. 13 października potwierdził wysłanie krótkiej odpowiedzi do Gminy oraz osobnego wniosku o projekt i porozumienia, bez kopii wysyłki i dowodów doręczenia. 26 października potwierdził wysłanie odpowiedzi do UMWM o duplikatach i brakujących załącznikach, bez kopii wiadomości i dowodu doręczenia. Nie jest to techniczny dowód doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
+      asOf: '20.11.2026',
+      note: 'Wysłanie dalszych odpowiedzi do MZDW i Urzędu Marszałkowskiego potwierdził wnioskodawca. 27 września potwierdził także wysłanie e-maila do MZDW o zakres i warunki projektu oraz zgłoszenie posta do grupy. 28 września przekazał link do zatwierdzonego wpisu. 13 października potwierdził wysłanie krótkiej odpowiedzi do Gminy oraz osobnego wniosku o projekt i porozumienia, bez kopii wysyłki i dowodów doręczenia. 26 października potwierdził wysłanie odpowiedzi do UMWM o duplikatach i brakujących załącznikach, bez kopii wiadomości i dowodu doręczenia. 20 listopada potwierdził wysłanie podziękowania do UMWM po otrzymaniu sześciu brakujących plików. Nie przekazano kopii tej wiadomości ani dowodu doręczenia. Dokumentacja pozostaje niepubliczna ze względu na dane prywatne.',
     },
     {
       id: 'kpp-response',
