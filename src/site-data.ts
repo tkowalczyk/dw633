@@ -1081,6 +1081,13 @@ export const siteData = {
         description: 'Urząd przekazał projekty organizacji ruchu, kontrole i dawną korespondencję. Wysłano prośbę o sprawdzenie powtórzonych załączników oraz dosłanie brakujących dokumentów, w tym oceny projektu budżetu obywatelskiego.',
         url: 'https://www.facebook.com/groups/1759173624939954/permalink/2358861741637803/',
       },
+      {
+        month: '2026-11',
+        monthLabel: 'Listopad 2026',
+        title: 'Uzupełnienie dokumentów i ocena projektu z 2020 roku',
+        description: 'Urząd Marszałkowski dosłał brakujące dokumenty. Dawna ocena projektu wskazuje potrzebę rozbudowy drogi i pozyskania gruntów; obecna trasa wymaga sprawdzenia aktualnych warunków.',
+        url: 'https://www.facebook.com/groups/1759173624939954/permalink/2387102328813744/',
+      },
     ],
   },
   knowledge: {
