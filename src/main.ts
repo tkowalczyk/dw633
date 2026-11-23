@@ -140,6 +140,7 @@ function setupFacebookTimeline(): void {
   const move = (direction: number): void => {
     const step = track.firstElementChild?.getBoundingClientRect().width ?? track.clientWidth
     track.scrollBy({ left: direction * step, behavior: reduceMotion.matches ? 'instant' : 'smooth' })
+    updateControls()
   }
   previous.addEventListener('click', () => move(-1))
   next.addEventListener('click', () => move(1))
